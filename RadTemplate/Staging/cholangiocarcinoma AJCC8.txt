@@ -1,0 +1,45 @@
+﻿Imaging Report Form for Cholangiocarcinoma
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan|MRI||]
+	Imaging Protocol
+		[MRI of the abdomen without/with contrast enhancement]
+2. Tumor size
+	[c)Measurable: ||][//w50]cm (greatest dimension) 
+	[c)Non-measurable]
+3. Tumor invasion
+	[c)Primary tumor cannot be assessed]
+	[c)No evidence of primary tumor]
+	[c)Intrahepatic duct (peripheral to the 2nd order bile ducts)]
+		Location:[//w200]
+		[c)Solitary tumor ≤5cm without vascular invasion]
+		[c)Solitary tumor >5cm without vascular invasion]
+		[c)Solitary tumor with intrahepatic vascular invasion]
+		[c)Multiple tumors, with or without tumor vascular invasion]
+		[c)Tumor perforates the visceral peritoneum]
+		[c)Tumor involving the local extrahepatic structures by direct invasion]
+	[c)Perihilar extrahepatic duct (extrahepatic duct to cystic duct origin)]
+		Location:[//w200]
+		[c)Tumor confines in the bile duct]
+		[c)Tumor invades]
+			[c)Surrounding periductal adipose tissue]
+			[c)Adjacent hepatic parenchyma]
+			[c)Unilateral branches of the portal vein or hepatic artery]
+			[c)Main portal vein or portal branches bilaterally]
+			[c)Common hepatic artery]
+			[c)2nd order branch bile duct bilaterally]
+			[c)Unilateral 2nd order branch bile duct and contralateral portal vein or hepatic artery]
+	[c)Distal extrahepatic duct (between ampulla vatar and cystic duct origin)]
+		[c)Tumor invades the bile duct wall with a depth] [//w50]mm
+		[c)Tumor invades]
+			[c)Celiac axis|SMA|Common hepatic artery]
+			[c)Other adjacent organ:][//w200]
+4. Regional nodal metastasis
+	[c)Regional lymph nodes cannot be assessed]
+	[c)No regional lymph node metastasis]
+	[c)Regional lymph node metastasis,] number:[//w50]
+5. Distant metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes, location: ][//w200]
+6. Other findings: [//w500]

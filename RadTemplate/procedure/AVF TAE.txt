@@ -1,0 +1,20 @@
+Procedure name: [transvenous embolization].
+Indication: [dAVF||CCF].
+Anesthesia: Lidocaine HCL (Xylocaine 2%, 20 mg/mL) 400 mg local injection.
+Route: [Left] femoral artery and [right] femoral vein approach.
+Equipment: [5Fr H1 catheter (Cook); 6Fr introducer sheath, 6Fr ENVOY guiding catheter (MPC 0.070", Codman), 1.7Fr Excelsior SL-10 microcatheter (Boston Scientific), 0.014" Transcend Floppy microguidewire (Boston Scientific)].
+Coils: [
+].
+Stent: [Nil||].
+Contrast medium: [Hexabrix||Ultravist] [70] ml
+Complication: [Nil].
+
+Procedure:
+- Angiography shows early opacification of [cavernous sinus and engorged superior ophthalmic vein] [with numerous arterial feeders from ].
+- Navigate catheter to [right||left] internal jugular vein. Advance microcatheter via [anterior facial vein||inferior petrosal sinus] into the [right cavernous sinus].
+- Deploy detachable coils into [].
+- Angiography shows [dense packing of coils in right cavernous sinus without early opacification of venous circulation].
+- Apply [gelatin sponge||Angio-Seal closure device (6Fr, St. Jude Medical)] for hemostasis of [left||right] femoral artery.
+
+Impression:
+[Cavernous sinus dural AVF] status post transvenous embolization.

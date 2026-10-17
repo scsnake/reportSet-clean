@@ -1,0 +1,40 @@
+CLINICAL STATEMENT:
+Indication for test: [for coronary artery evaluation].
+
+PROCEDURE DATA:
+Description: [Coronary calcium scoring, coronary CT angiography]
+Equipment: [128-slice MDCT scanner (Optima CT660, GE Healthcare)||128-slice MDCT scanner (Ingenuity CT, Philips) with 0.4s tube rotation time|256-slice MDCT scanner (Revolution CT, GE Healthcare)|640-slice MDCT scanner (Aquilion ONE ViSION, Toshiba)].
+Acquisition: [Retrospectively EKG-gated axial scan with dose modulation. 128x0.625mm collimation].
+
+RESULTS:
+Overall technical quality: [Good].
+
+Agatston score: 
+- LM: [0//w50]
+- LAD: [//w50]
+- LCX: [//w50]
+- RCA: [//w50]
+- Total: [0 (No detectable calcified plaque) atherosclerotic burden)]
+
+Coronary artery analysis:
+- [No evidence of congenital vascular anomaly.]
+- Dominance: [Right||Left].
+- LM: [Patent.//w300] 
+- LAD: [Patent.//w300]
+- LCX: [Patent.//w300]
+- RCA: [Patent.//w300]
+- Uninterpretable segments: None. 
+
+Noncoronary cardiac findings:
+- [Trileaflet aortic valve with no significant lesion. No definite lesion in the mitral valve. ]
+- [Normal left atrial appendage with no evidence of thrombosis.]
+- [Normal pericardium without pericardial thickening, calcification or effusion.]
+
+Noncardiac findings:
+- [Unremarkable lung parenchyma at the level of the heart.]
+- [No demonstrated mediastinal or hilar adenopathy.]
+
+Impression:
+Coronary artery: [Calcified atherosclerotic plaque(s) in the coronary arteries.]
+CAD-RADS: [0]
+[//w50]

@@ -1,0 +1,19 @@
+History: [RUL//vlesionLobe] [GGN//vlesion].
+
+[||Dyna-]CT guided localization of the lung is performed in [supine||prone] position with the use of a 22G chiba needle. 
+-- Indication: pre-operative localization.
+[||-- Equipment: ARTIS pheno, Siemens.]
+-- Size and location of the lesion: [a] [||part-solid][//v=lesion] (size [] mm)[] in [//v=lesionLobe].[]
+-- Underlying lung condition: [no emphysema.]
+-- Total length of the needle from skin to lesion: [] mm.
+-- Total length of the needle traversing lung: [] mm.
+-- Amount of dye (Patent Blue V) injection: [0.15] ml [||at lesion and 0.15ml at subpleura].
+-- Amount of dye (Indocyanine Green, 0.125mg/ml) injection: [0.15] ml [||at subpleura].
+-- Pneumothorax: [nil||minimal|mild|moderate|severe].
+-- Hemorrhage: [nil||minimal|mild|moderate|severe].
+-- Hemoptysis: [nil||minimal|mild|moderate|severe].
+-- Vital signs after procedure: [stable.]
+-- Recommended position after procedure: [supine||prone]. Suggest complete bed rest and perform surgical resection as soon as possible.
+
+Impression:
+[A] [//v=lesion] in [//v=lesionLobe][ status post CT-guided dye localization.]

@@ -1,0 +1,28 @@
+﻿1. Imaging Date
+	[2018//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan|MRI||]
+	Imaging Protocol
+		[MRI of the knee without/with contrast enhancement]
+2. Tumor Location
+		[ bone//w200]
+			[c)Intramedullary|Juxtacortical|Within soft tissue]
+	Tumor Size
+		[c)Measurable: ||][//w50]cm (greatest dimension of the largest tumor)
+		[c)Non-measurable]
+3. Tumor Invasion
+	[c)Primary tumor cannot be assessed]
+	[c)No evidence of primary tumor]
+	[c)Tumor <= 8cm in greatest dimension]
+	[c)Tumor > 8cm in greatest dimension]
+	[c)Discontinuous (skip) tumors in primary bone sites]
+4. Regional Nodal Metastasis
+	[c)Regional lymph nodes cannot be assessed]
+	[c)No regional lymph node metastasis]
+	[c)Regional lymph node metastasis]
+5. Distant metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes, location: ][//w200]
+6. Other findings:
+	[c)Periosteal reaction|Physeal invasion|Epiphyseal invasion|Pathological fracture|Joint invasion]
+	[nil//w500]

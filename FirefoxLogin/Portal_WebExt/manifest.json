@@ -1,0 +1,380 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "scsnake@gmail.com", 
+			"strict_min_version": "57.0",
+			"update_url": "https://example.com/update.json"
+    }
+  },
+  "manifest_version": 2,
+  "name": "N hospital Portal Scripts",
+  "version": "3.15",
+  "description": "Helpful scripts for N hospital portal websites\n\nIf automatic updating failed, please download from the homepage link shown below ↓↓",
+  "author": "scsnake@gmail.com",
+	"homepage_url": "https://example.com/downloads/",
+	
+	"icons": {
+		"48": "icon/ic_assignment_ind_black_48px.svg"
+	},
+	
+	"browser_action": {
+    "default_icon": "icon/ic_assignment_ind_black_48px.svg",
+    "default_title": "Auto-Login",
+    "default_popup": "popup/PortalLogin.html"
+  },
+	
+	"permissions": [
+		"*://*.hospital-n.local/*",
+		"*://testenv/*",
+		"*://portal/*",
+		"tabs",
+		"activeTab",
+		"webRequest",
+		"webRequestBlocking",
+		"nativeMessaging",
+		"bookmarks", 
+		"idle"
+	],
+	
+	"background": {
+		"scripts": ["popup/md5.js", "jquery.js", "browser-polyfill.js", "update_bookmarks.js", "background-script.js"]
+	},
+	
+	"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'", 
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.hospital-n.local/*", "*://testenv/*", "*://portal/*"],
+      "js": ["jquery.js", "browser-polyfill.js", "getPageSource.user.js", "Logout.user.js", "selectionEvent.user.js", "inj_load.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/OPManagement/AddScheduleForPatientIDOnly.aspx*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "AddScheduleForPatientIDOnly.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/OPManagement/AddScheduleForSingleInPatient.aspx*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "AddScheduleForSingleInPatient.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/InsertAdmissionNoteContent.aspx*"],
+      "js": ["admissionNote.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/AllergyMenu.aspx*"],
+      "js": ["allergy.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/OtherIndependentProj/PatientBasicInfoEdit/PatientBloodTrans.aspx*"],
+      "js": ["bloodTrans.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*ChangePassword.aspx*"],
+      "js": ["ChangePW.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*CheckPassword.aspx*"],
+      "js": ["CheckPW.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*OtherIndependentProj/Chemotherapy/MainPage.aspx*"],
+      "js": ["chemotherapy.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/ConfirmDiagnosisOrder.aspx*"],
+      "js": ["confirmDiagnosis.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*ShowInfo.aspx*", "*://*.hospital-n.local/*ShowAllInfo1time.aspx*"],
+      "js": ["ConfirmMessages.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/NotifyOtherDoctor.aspx*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "consult.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/DoctorDietMain.aspx*"],
+      "js": ["diet.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/DigitalSignature/DsQuery.aspx*", "*://*.hospital-n.local/*WebApplication/DigitalSignature/DSQuery.aspx*"],
+      "js": ["digitalSignature.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/InsertDisChargeNoteContent.aspx*"],
+      "js": ["dischargeNote.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*phar/intranet/druginfo/*"],
+      "js": ["DrugSearch.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/Administration/SalaryNH/RDoctorDuty.aspx*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "dutyFee.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/ahisaw.hospital-n.local/EIP/login.aspx"],
+      "js": ["EIP.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/DoctorEnterOrder.aspx*"],
+      "js": ["enterOrder.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/Emergency/*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "ER.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/Administration/PersonNH/EmpQuery.aspx*"],
+      "js": ["findPerson.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/MedicationV2.aspx*"],
+      "js": ["focusTextInput.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Nursing/HealthEducationNote.aspx*"],
+      "js": ["HealthEducationNote.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/ElectronicMedicalReportViewer/MedicalReportOpen.aspx*", "*://*.hospital-n.local/*WebApplication/ElectronicMedicalReportViewer/MedicalReportContent.aspx*"],
+      "js": ["Lab4.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/OtherIndependentProj/PatientBasicInfoEdit/MedicalManagementAuthor.aspx*"],
+      "js": ["MedicalManagementAuthor.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/MedicationV2.aspx*"],
+      "js": ["medication.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/DrScheduling/NoticeDrScheduling.aspx*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "NoticeDrScheduling.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*", "*://portal/*", "*://testenv/*"],
+      "js": ["NPortal.inj.user.js"], 
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.mc.hospital-n.local/*"],
+      "exclude_matches": ["*://*.mc.hospital-n.local/DigReport/mainframe.htm"],
+      "js": ["oldPortal.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/OPManagement/OPNoteInsertUpdate_V2.aspx*"],
+      "js": ["OpNote.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/OPManagement/DREnterOPOrder.aspx*"],
+      "js": ["OpOrder.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/OPManagement/SimpleQueryOpSchedule.aspx*"],
+      "js": ["OpSchedule.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/OrderConfirm.aspx*"],
+      "js": ["orderConfirm.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/OtherIndependentProj/PatientBasicInfoEdit/PACSImageShowList.aspx*"],
+      "js": ["PACS.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*DigReport/Lab/PathExam.asp*", "*://*.hospital-n.local/*WebApplication/OtherIndependentProj/MedicalReportQuery/PathExam.aspx*"],
+      "js": ["Patho.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/OtherIndependentProj/PatientBasicInfoEdit/PatientFamilyEducation*"],
+      "js": ["PatientFamilyEducation.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*Lab/NewQuery*.asp*"],
+      "js": ["PatientLabData.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/OtherIndependentProj/PatientBasicInfoEdit/PatientMedicalRecordListQuery*"],
+      "js": ["PatientMedicalRecordListQuery.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*Xray/XrayExam.asp*"],
+      "js": ["PatientXrayExam.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*", "*://testenv/*", "*://portal/*"],
+      "js": ["portal.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*Login.aspx*"],
+      "js": ["PortalLogin.inj.user.js"], 
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*General/Redirect.aspx*"],
+      "js": ["portalMain.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/OPManagement/PreOperativeAssessment.aspx*"],
+      "js": ["PreOp.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/InsertProgressNoteContent.aspx*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "ProgressNote.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/QueryNotifyRecordByDr.aspx*"],
+      "js": ["browser-polyfill.js", "popup/md5.js", "NRAD_contacts.inj.user.js", "QueryNotifyRecordByDr.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/Radiology/PatientMainPage.aspx*"],
+      "js": ["radPtMain.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/OrderRenew.aspx*"],
+      "js": ["renewOrder.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/Administration/UrgentAviso/AvisoPage/AvisoForm.aspx*"],
+      "js": ["report.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InspectionReport/ReportOfCase.aspx*"],
+      "js": ["ReportOfCase.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/Radiology/RISPatientRegistration.aspx*"],
+      "js": ["RISPatientRegistration.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*/Radiology/RISPatientRegistration.aspx*"],
+      "js": ["tablePosition.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/EnterTakeCarePersonInfo.aspx*"],
+      "js": ["takeCare.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Nursing/VitalSign_TPR.aspx*"],
+      "js": ["TPR.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/MedicalRecordManagement/VSConfirmList.aspx*"],
+      "js": ["VSConfirmList.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/Ward/OpenWard.aspx*"],
+      "js": ["Ward.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*WebApplication/OtherIndependentProj/PatientBasicInfoEdit/SimpleShowiframePage.aspx*", "*://*.hospital-n.local/*WebApplication/OtherIndependentProj/PatientBasicInfoEdit/SimpleInfoShowUsingPlaceHolder.aspx*"],
+      "js": ["WebPatientInfo.inj.user.js"]
+    },
+    {
+      "matches": ["*://*.hospital-n.local/*OtherIndependentProj/PatientBasicInfoEdit/SimpleInfoShowUsingPlaceHolder.aspx*"],
+      "js": ["WebPatientInfoIFrame.inj.user.js"]
+    },
+		{
+      "matches": ["*://*.hospital-n.local/General/NewRedirect.aspx*"],
+      "js": ["NewPortal.inj.user.js"]
+    },
+		{
+      "matches": ["*://*.hospital-n.local/*WebApplication/MedicalRecordManagement/VSConfirmTargetPage.aspx*"],
+      "js": ["VSConfirmTargetPage.inj.user.js"], 
+      "run_at": "document_end"
+    },
+		{
+      "matches": ["*://*.hospital-n.local/General/ConfirmTargetPage.aspx*"],
+      "js": ["ConfirmTargetPage.inj.user.js"], 
+			"run_at": "document_end"
+    },
+		{
+      "matches": ["*://*.hospital-n.local/*WebApplication/DigitalSignature/ProcessEntry.aspx*"],
+      "js": ["OpenInIE.inj.user.js"],
+			"run_at": "document_start"
+    },
+		{
+      "matches": ["*://*.hospital-n.local/*WebApplication/InPatient/OPManagement/SimpleQueryOpSchedule_New.aspx*"],
+      "js": ["OPManagement.inj.user.js"]
+    },
+		{
+      "matches": ["http://rhisaw.hospital-n.local/WebApplication/CommunicationPlatform/General/Board/Home/*"],
+      "js": ["redirectCommPlatform.inj.user.js"],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "web_accessible_resources": [
+    "jquery.js",
+		"browser-polyfill.js",
+    "AddScheduleForPatientIDOnly.user.js",
+    "AddScheduleForSingleInPatient.user.js",
+    "admissionNote.user.js",
+    "allergy.user.js",
+    "bloodTrans.user.js",
+    "ChangePW.user.js",
+    "CheckPW.user.js",
+    "chemotherapy.user.js",
+    "confirmDiagnosis.user.js",
+    "ConfirmMessages.user.js",
+    "consult.user.js",
+    "diet.user.js",
+    "digitalSignature.user.js",
+    "dischargeNote.user.js",
+    "DrugSearch.user.js",
+    "dutyFee.user.js",
+    "EIP.user.js",
+    "enterOrder.user.js",
+    "ER.user.js",
+    "findPerson.user.js",
+    "focusTextInput.user.js",
+    "HealthEducationNote.user.js",
+    "Lab4.user.js",
+    "MedicalManagementAuthor.user.js",
+    "medication.user.js",
+    "NoticeDrScheduling.user.js",
+    "NPortal.user.js",
+    "oldPortal.user.js",
+    "OpNote.user.js",
+    "OpOrder.user.js",
+    "OpSchedule.user.js",
+    "orderConfirm.user.js",
+    "PACS.user.js",
+    "Patho.user.js",
+    "PatientFamilyEducation.user.js",
+    "PatientLabData.user.js",
+    "PatientMedicalRecordListQuery.user.js",
+    "PatientXrayExam.user.js",
+    "portal.user.js",
+    "PortalLogin.user.js",
+    "portalMain.user.js",
+    "PreOp.user.js",
+    "ProgressNote.user.js",
+    "QueryNotifyRecordByDr.user.js",
+    "radPtMain.user.js",
+    "renewOrder.user.js",
+    "report.user.js",
+    "ReportOfCase.user.js",
+    "RISPatientRegistration.user.js",
+    "tablePosition.user.js",
+    "takeCare.user.js",
+    "test.user.js",
+    "TPR.user.js",
+    "VSConfirmList.user.js",
+		"VSConfirmTargetPage.user.js",
+		"ConfirmTargetPage.user.js",
+    "Ward.user.js",
+    "WebPatientInfo.user.js",
+    "WebPatientInfoIFrame.user.js",
+		"DigitalSignatureProcessEntry.user.js",
+		"NewPortal.user.js",
+		"NRAD_contacts.inj.user.js", 
+		"procedureNames.js", 
+		"highlight.js", 
+		"floatPatientInfoDiv.js", 
+		"OPManagement.user.js", 
+		"ProgressNoteLib.js",
+		"crypto-js.js"
+  ]
+}

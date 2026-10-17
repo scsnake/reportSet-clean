@@ -1,0 +1,20 @@
+[project]
+name = "query-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.135.3",
+    "numpy>=2.3.4",
+    "oracledb>=3.4.2",
+    "pydicom>=3.0.2",
+    "pylibjpeg>=2.1.0",
+    "pylibjpeg-openjpeg>=2.5.0",
+    "uvicorn>=0.44.0",
+]
+
+[dependency-groups]
+dev = [
+    "playwright>=1.63.0",
+]

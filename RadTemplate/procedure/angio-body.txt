@@ -1,0 +1,14 @@
+History: [liver tumor||GI bleeding]
+
+--- Indication: [for UGI bleeding].
+--- Puncture site: [right||left] [common femoral artery].
+[--- A 5Fr vascular sheath insertion.]
+--- A [4]Fr [J catheter (Terumo)||RC1 catheter (Cook)|SIM-2 catheter (Cook)|RLG catheter (Cook)|RIM catheter (Cook)] and a [0.035" 150cm guidewire (Terumo)].
+--- Microcatheter: a [2.5]Fr [Cantata (Cook)||Renegade (Boston Scientific)|SL-10] and a [F-16||Floppy] microguidewire.
+
+--- Angiography findings:
+- [No definite active bleeding is noted on celiac axis, gastroduodenal artery or SMA. ]
+- The vascular sheath was placed in the [right||left] femoral artery for possible further angiography; please remove it as soon as possible to prevent thrombosis. 
+
+Impression:
+[].

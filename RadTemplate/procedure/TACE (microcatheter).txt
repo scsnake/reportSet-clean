@@ -1,0 +1,27 @@
+History: [HCCs||liver metastases].
+
+--- Indication: for TACE([1]).
+--- Puncture site: [right||left] [common femoral artery].
+--- A 5Fr vascular sheath insertion.
+--- A [4||5]Fr [J catheter (Terumo)||RC1 catheter (Cook)|SIM-2 catheter (Cook)|RLG catheter (Cook)|RIM catheter (Cook)//w300] and a [0.035" 150cm guidewire (Terumo)].
+--- Microcatheter: a [2.5||2.7|2.8|1.9]Fr [Cantata (Cook)||Progreat (110cm)|Renegade (Boston Scientific)|SL-10] and a [Fathom-16||Floppy|120 cm] microguidewire.
+
+--- Angiography findings:
+- [Multiple||One|Two] hypervascular tumor stain[s] is noted in the [both lobes||right lobe|left lobe] of liver; compatible with [HCCs]; supplied by the [right||left|right and left] hepatic artery.
+- [The main portal vein is patent.||Thrombosis of right portal vein.] [||Corkscrew appearance of intrahepatic vessels, indicating liver cirrhosis.|Normal variation of replaced right hepatic artery from the SMA.]
+
+--- Indication for microcatheter: superselective embolization of the tumors. 
+
+--- Procedures of TACE is performed
+- The tip of the catheter at the [proper hepatic artery||common hepatic artery|right hepatic artery|left hepatic artery|celiac trunk]. 
+- The tip of the microcatheter at the [branches of the ][right||left|right and left] hepatic artery. 
+- The [tumors are||tumor is] embolized with [20] ml of mixture (40mg adriamycin, [10]ml lipiodol and contrast media in total [20] ml) [||and 5 ml of lipiodol ]plus Gelfoam particles.
+- The tip of the microcatheter at the [branches of the ][right||left|right and left] hepatic artery. 
+- The [tumors are||tumor is] embolized with [20] ml of mixture [||and 5 ml of lipiodol ]plus Gelfoam particles.
+- [No immediate abdominal discomfort.]
+
+--- Suggestion:
+- Follow up liver functions.
+
+Impression:
+[Multiple HCCs status post TACE(1)].

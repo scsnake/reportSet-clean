@@ -1,0 +1,19 @@
+{
+  "form_url_regex": "\\/webcvis\\/MJB\\/MJB3N002\\.do",
+  "radio_same_dx": {
+    "selector": "input[name=recheck][value=\"0\"]",
+    "note": "與原始診斷一致 (recheck=0). Siblings: value=1 修改報告內容, value=2 其他說明."
+  },
+  "checkbox_stage_fmt": {
+    "selector": "input[name=cancer]",
+    "note": "癌症評鑑分期格式化 (single checkbox, value=Y)."
+  },
+  "btn_review_result": {
+    "selector": null,
+    "note": "'複閱結果' is a section header on the form, not a separate button. Nothing to click here."
+  },
+  "btn_reply_confirm": {
+    "selector": "button[type=submit]",
+    "note": "回覆確認 — only submit button on the form (has no id/name; value attr = '回覆確認')."
+  }
+}

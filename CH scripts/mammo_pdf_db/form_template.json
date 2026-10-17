@@ -1,0 +1,253 @@
+{
+  "tolerance_pt": 4,
+  "_doc": "Each y-row maps to one schema field. Each option {x, value} is one checkbox. needs_visual on an option means: if THAT specific checkbox is detected as checked, AHK GUI shows an Open-PDF button so the radiologist reads the handwritten companion text. The `label` field mirrors the marker shown on _page1_annotated.png — `T<n>` = template-only (never observed in corpus, blue marker).",
+  "field_labels_zh_tw": {
+    "education": "教育程度",
+    "disease_history": "疾病史",
+    "family_hx_breast_cancer": "乳癌家族史",
+    "menarche_other_text": "初經其他說明",
+    "is_menopause": "已停經",
+    "menopause_reason": "停經原因",
+    "menopause_reason_other": "停經其他原因",
+    "not_menopause": "未停經",
+    "breastfed_yn": "曾哺餵母乳",
+    "oral_contraceptive_usage": "曾使用口服避孕藥",
+    "hrt_usage": "曾使用荷爾蒙補充療法",
+    "palpable_mass": "自覺可觸摸腫塊",
+    "exam_in_two_years": "兩年內乳房檢查",
+    "breast_op_history": "乳房手術史"
+  },
+  "report_phrases": {
+    "_doc": "Positive findings to surface in the SCREENING INFO line of the radiology report. Keys are <field>.<value>. Order here = output order. Omit a key entirely to keep that positive private (education, breastfed, exam_in_two_years, etc. are intentionally excluded). 'detail_placeholder' wraps in (...) — when the structured DB value is unavailable (most are needs_visual handwritten), it is inserted as a literal placeholder for the radiologist to overwrite. 'skip_if' suppresses redundant clauses (e.g. L/R when bilateral Y is already emitted).",
+
+    "family_hx_breast_cancer.yes":             { "phrase": "family history",               "detail_placeholder": "relation" },
+    "disease_history.breast_cancer":           { "phrase": "history of breast cancer" },
+    "disease_history.breast_benign_lesion":    { "phrase": "history of benign breast lesion" },
+    "disease_history.breast_has_past_disease": { "phrase": "past breast disease",           "detail_placeholder": "specify" },
+    "disease_history.other_cancer":            { "phrase": "history of other cancer",      "detail_placeholder": "site" },
+    "hrt_usage.true":                          { "phrase": "HRT (+)" },
+    "oral_contraceptive_usage.true":           { "phrase": "OCP (+)" },
+    "palpable_mass.true":                      { "phrase": "palpable mass",                 "detail_placeholder": "side/location" },
+    "breast_op_history.Y":                     { "phrase": "prior breast operation",       "detail_placeholder": "side, year" },
+    "breast_op_history.L":                     { "phrase": "L breast operation",           "skip_if": "breast_op_history.Y" },
+    "breast_op_history.R":                     { "phrase": "R breast operation",           "skip_if": "breast_op_history.Y" },
+    "menopause_reason.hysterectomy":           { "phrase": "post-hysterectomy" },
+    "menopause_reason.oophorectomy":           { "phrase": "post-oophorectomy" }
+  },
+
+  "value_labels_zh_tw": {
+    "true": "是",
+    "false": "否",
+    "none": "無",
+    "elem": "國小",
+    "junior": "國中",
+    "senior": "高中職",
+    "college_univ": "專科大學",
+    "grad": "研究所以上",
+    "decline": "拒答",
+    "breast_has_past_disease": "曾有乳房疾病",
+    "breast_benign_lesion": "乳房良性病變",
+    "breast_cancer": "乳癌",
+    "other_cancer": "其他癌症",
+    "no": "否",
+    "yes": "是",
+    "natural": "自然停經",
+    "hysterectomy": "子宮切除",
+    "oophorectomy": "卵巢切除",
+    "not_self_examined": "未做過自我檢查",
+    "palpation": "觸診",
+    "mammo": "乳房攝影",
+    "breast_us": "乳房超音波",
+    "none_of_above": "以上皆無",
+    "Y": "有",
+    "L": "左側",
+    "R": "右側",
+    "N": "無"
+  },
+
+  "y_rows": [
+    {
+      "y": 296,
+      "field": "education",
+      "kind": "enum",
+      "options": [
+        { "label": "#1",  "x": 106, "value": "none"         },
+        { "label": "#2",  "x": 133, "value": "elem"         },
+        { "label": "#3",  "x": 172, "value": "junior"       },
+        { "label": "#4",  "x": 233, "value": "senior"       },
+        { "label": "#5",  "x": 300, "value": "college_univ" },
+        { "label": "#6",  "x": 370, "value": "grad"         },
+        { "label": "#7",  "x": 443, "value": "decline"      }
+      ]
+    },
+
+    {
+      "y": 397,
+      "field": "disease_history",
+      "kind": "multi",
+      "_note": "x=52 dropped (not a real form slot); 'other' nudged from x=350 → x=360 (T11 — still estimated).",
+      "options": [
+        { "label": "#8",  "x": 118, "value": "breast_has_past_disease" },
+        { "label": "#9",  "x": 194, "value": "breast_benign_lesion" },
+        { "label": "#10", "x": 311, "value": "breast_cancer" },
+        { "label": "T11", "x": 360, "value": "other_cancer",        "needs_visual": true, "_estimated_x": true }
+      ]
+    },
+
+    {
+      "y": 416,
+      "field": "disease_history",
+      "kind": "multi",
+      "_note": "single x=118 (87% of patients) — confirmed needs_visual per user.",
+      "options": [
+        { "label": "#12", "x": 118, "value": "none", "negative": true }
+      ]
+    },
+
+    {
+      "y": 444,
+      "field": "family_hx_breast_cancer",
+      "kind": "enum",
+      "options": [
+        { "label": "#13", "x": 108, "value": "no",  "negative": true },
+        { "label": "#14", "x": 146, "value": "yes", "needs_visual": true }
+      ]
+    },
+
+    {
+      "y": 525,
+      "field": "menarche_other_text",
+      "kind": "bool",
+      "_note": "x nudged left from 305 → 295 per user.",
+      "options": [
+        { "label": "T15", "x": 295, "value": true, "needs_visual": true, "_estimated_x": true }
+      ]
+    },
+
+    {
+      "y": 545,
+      "field": "is_menopause",
+      "kind": "bool",
+      "options": [
+        { "label": "#16", "x": 167, "value": true, "display_gray": true }
+      ]
+    },
+
+    {
+      "y": 562,
+      "field": "menopause_reason",
+      "kind": "enum",
+      "_note": "x=158 dropped per user (not a real form slot).",
+      "options": [
+        { "label": "#17", "x": 243, "value": "natural", "display_gray": true },
+        { "label": "#18", "x": 305, "value": "hysterectomy" },
+        { "label": "#19", "x": 365, "value": "oophorectomy" }
+      ]
+    },
+
+    {
+      "y": 582,
+      "field": "menopause_reason_other",
+      "kind": "bool",
+      "_note": "Inferior to #17 per user. Never observed; coords estimated.",
+      "options": [
+        { "label": "T20", "x": 243, "value": true, "needs_visual": true, "_estimated_x": true, "_estimated_y": true }
+      ]
+    },
+
+    {
+      "y": 596,
+      "field": "not_menopause",
+      "kind": "bool",
+      "options": [
+        { "label": "#21", "x": 167, "value": true }
+      ]
+    },
+
+    {
+      "y": 627,
+      "field": "breastfed_yn",
+      "kind": "bool",
+      "options": [
+        { "label": "#22", "x": 337, "value": true},
+        { "label": "#23", "x": 366, "value": false }
+      ]
+    },
+
+    {
+      "y": 661,
+      "field": "oral_contraceptive_usage",
+      "kind": "bool",
+      "options": [
+        { "label": "#24", "x": 221, "value": true,  "needs_visual": true },
+        { "label": "#25", "x": 427, "value": false }
+      ]
+    },
+
+    {
+      "y": 683,
+      "field": "hrt_usage",
+      "kind": "bool",
+      "_note": "earlier x=170 option dropped — back to 2-option bool.",
+      "options": [
+        { "label": "#26", "x": 221, "value": true,  "needs_visual": true },
+        { "label": "#27", "x": 427, "value": false }
+      ]
+    },
+
+    {
+      "y": 704,
+      "field": "palpable_mass",
+      "kind": "enum",
+      "_note": "tri-state: true=有摸到 / false=沒有 / 'not_self_examined'=未做過自我檢查. Three rows below all map to the same field.",
+      "options": [
+        { "label": "#28", "x": 112, "value": true, "needs_visual": true }
+      ]
+    },
+
+    {
+      "y": 723,
+      "field": "palpable_mass",
+      "kind": "enum",
+      "options": [
+        { "label": "#29", "x": 112, "value": false, "negative": true }
+      ]
+    },
+
+    {
+      "y": 743,
+      "field": "palpable_mass",
+      "kind": "enum",
+      "_note": "Below #29 per user. Never observed; coords estimated.",
+      "options": [
+        { "label": "T30", "x": 112, "value": "not_self_examined", "_estimated_x": true }
+      ]
+    },
+
+    {
+      "y": 780,
+      "field": "exam_in_two_years",
+      "kind": "multi",
+      "_note": "x=100 added per user (leftmost of y=780 row, x at #28 column). Never observed; coords estimated.",
+      "options": [
+        { "label": "T31", "x": 100, "value": "palpation",    "_estimated_x": true },
+        { "label": "#32", "x": 188, "value": "mammo"        },
+        { "label": "#33", "x": 294, "value": "breast_us"    },
+        { "label": "#34", "x": 386, "value": "none_of_above", "negative": true }
+      ]
+    },
+
+    {
+      "y": 799,
+      "field": "breast_op_history",
+      "kind": "multi",
+      "_note": "L+R together = bilateral. #35 'Y' is the parent yes flag; #38 = 'N' (no surgery).",
+      "options": [
+        { "label": "#35", "x": 221, "value": "Y", "needs_visual": true },
+        { "label": "#36", "x": 260, "value": "L", "needs_visual": true },
+        { "label": "#37", "x": 300, "value": "R", "needs_visual": true },
+        { "label": "#38", "x": 349, "value": "N", "negative": true }
+      ]
+    }
+  ]
+}

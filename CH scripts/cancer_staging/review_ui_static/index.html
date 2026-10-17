@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cancer staging review</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/review_ui.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">C hospital · HUMAN REVIEW</p>
+      <h1>Cancer staging</h1>
+    </div>
+    <div class="topbar-actions">
+      <div class="progress" aria-label="Review progress">
+        <span id="approved-count">0</span> approved
+        <span class="progress-divider">/</span>
+        <span id="total-count">0</span> total
+        <span class="progress-divider">·</span>
+        <span id="na-count">0</span> N/A
+      </div>
+      <button id="pasteback-toggle" class="topbar-button" type="button">Sheet paste-back</button>
+      <div class="safety-pill">Approval only · no RIS send</div>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="case-rail" aria-label="Study list">
+      <label class="search-wrap">
+        <span>Find study</span>
+        <input id="case-search" type="search" placeholder="Accession, chart, study…" autocomplete="off">
+      </label>
+      <div class="filter-row" role="group" aria-label="Approval filter">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="pending" type="button">Pending</button>
+        <button class="filter" data-filter="approved" type="button">Approved</button>
+      </div>
+      <div class="filter-row order-row" role="group" aria-label="List order">
+        <button class="order-option active" data-order="group" type="button">By cancer</button>
+        <button class="order-option" data-order="sheet" type="button">Sheet order</button>
+      </div>
+      <nav id="case-list" class="case-list" aria-live="polite"></nav>
+    </aside>
+
+    <main id="review-pane" class="review-pane" hidden>
+      <section class="study-heading">
+        <div>
+          <div class="heading-line">
+            <span id="approval-badge" class="badge pending">Pending</span>
+            <span id="case-position" class="muted"></span>
+          </div>
+          <h2 id="study-name"></h2>
+          <p id="study-subtitle" class="study-subtitle"></p>
+        </div>
+        <div class="nav-buttons">
+          <button id="prev-case" class="icon-button" type="button" aria-label="Previous study">←</button>
+          <button id="next-case" class="icon-button" type="button" aria-label="Next study">→</button>
+        </div>
+      </section>
+
+      <section class="identity-grid" aria-label="Patient and study identifiers">
+        <button class="copy-field" id="copy-accession" type="button">
+          <span>Accession</span><strong id="accession"></strong><small>Click to copy</small>
+        </button>
+        <button class="copy-field" id="copy-chart" type="button">
+          <span>Chart number</span><strong id="chart-no"></strong><small>Click to copy</small>
+        </button>
+        <button class="copy-field" id="copy-study-date" type="button">
+          <span>Study date</span><strong id="study-date"></strong><small>Click to copy</small>
+        </button>
+        <button class="copy-field" id="copy-report-date" type="button">
+          <span>Report date</span><strong id="report-date"></strong><small>Click to copy</small>
+        </button>
+      </section>
+
+      <section id="warning-panel" class="warning-panel" hidden>
+        <h3>Needs attention before approval</h3>
+        <ul id="warning-list"></ul>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel source-panel">
+          <div class="panel-heading">
+            <div><p class="section-kicker">SOURCE</p><h3>Original report</h3></div>
+            <button id="copy-report" class="quiet-button" type="button">Copy report</button>
+          </div>
+          <pre id="original-report" class="source-text"></pre>
+
+          <details open>
+            <summary>Pathology report</summary>
+            <pre id="pathology-report" class="secondary-text"></pre>
+          </details>
+          <details>
+            <summary>Clinical diagnosis and comments</summary>
+            <div class="detail-stack">
+              <div><span>Diagnosis</span><p id="clinical-diagnosis"></p></div>
+              <div><span>Comments</span><p id="case-notes"></p></div>
+            </div>
+          </details>
+        </section>
+
+        <div class="right-column">
+          <section class="panel digest-panel">
+            <div class="panel-heading">
+              <div><p class="section-kicker">AGENT DIGEST</p><h3>Proposed stage</h3></div>
+              <div id="tnm-stage" class="stage-mark"></div>
+            </div>
+            <div class="tnm-grid">
+              <div><span>T</span><strong id="t-value"></strong></div>
+              <div><span>N</span><strong id="n-value"></strong></div>
+              <div><span>M</span><strong id="m-value"></strong></div>
+              <div class="stage-cell"><span>Stage</span><strong id="stage-value"></strong></div>
+            </div>
+            <p id="cancer-type" class="cancer-type"></p>
+            <div class="digest-columns">
+              <div><h4>Evidence</h4><ul id="evidence-list"></ul></div>
+              <div><h4>Assumptions</h4><ul id="assumption-list"></ul></div>
+            </div>
+          </section>
+
+          <section class="panel proposal-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">EXACT TEXT</p>
+                <h3>Proposed cancer staging text</h3>
+              </div>
+              <button id="copy-staging" class="quiet-button" type="button">Copy text</button>
+            </div>
+            <details id="template-form" class="template-form" open>
+              <summary>Template form (cancer-tnm fields; changes rewrite the text below)</summary>
+              <div id="template-fields" class="template-fields"></div>
+              <div id="template-stage" class="template-stage" aria-live="polite"></div>
+            </details>
+            <textarea id="staging-text" spellcheck="false" aria-label="Editable proposed cancer staging text"></textarea>
+            <div class="text-meta">
+              <span id="edit-state">Saved</span>
+              <span id="text-length"></span>
+              <span id="text-sha" class="mono"></span>
+            </div>
+            <div id="action-message" class="action-message" role="status" aria-live="polite"></div>
+            <div class="action-row">
+              <button id="discard-edit" class="secondary-button" type="button" disabled>Discard edits</button>
+              <button id="save-edit" class="secondary-button" type="button" disabled>Save edits</button>
+              <button id="revoke-approval" class="danger-button" type="button" hidden>Revoke approval</button>
+              <button id="not-applicable" class="secondary-button" type="button"
+                title="Not applicable (unsupported cancer type): never sent to RIS; pasted back as 其他癌 / 已備註">N/A</button>
+              <button id="approve-text" class="primary-button" type="button" title="Approve this exact saved text (Ctrl+Enter)">Approve</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <main id="pasteback-pane" class="pasteback-pane" hidden>
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">SHEET PASTE-BACK</p>
+            <h3>癌別 · 完成, one line per ticked row, in sheet order</h3>
+          </div>
+          <button id="copy-pasteback" class="primary-button" type="button">Copy two columns</button>
+        </div>
+        <div class="filter-row pasteback-mode" role="group" aria-label="Unfinished rows">
+          <button class="mode-option active" data-mode="empty" type="button">Unfinished rows: leave empty</button>
+          <button class="mode-option" data-mode="keep" type="button">Unfinished rows: keep sheet values</button>
+        </div>
+        <p id="pasteback-help" class="pasteback-help"></p>
+        <p id="pasteback-warning" class="pasteback-warning" hidden></p>
+        <div class="pasteback-table-wrap">
+          <table class="pasteback-table">
+            <thead>
+              <tr>
+                <th><input id="paste-select-all" type="checkbox" aria-label="Copy all rows" title="Select all"></th>
+                <th>Row</th><th>Accession</th><th>Study</th><th>RIS</th><th>癌別</th><th>完成</th>
+              </tr>
+            </thead>
+            <tbody id="pasteback-rows"></tbody>
+          </table>
+        </div>
+        <details class="pasteback-plain">
+          <summary>Plain text (tab-separated)</summary>
+          <textarea id="pasteback-text" readonly spellcheck="false" aria-label="Paste-back text"></textarea>
+        </details>
+      </section>
+    </main>
+
+    <section id="empty-state" class="empty-state">
+      <h2>Loading review…</h2>
+      <p>The review file stays on this computer.</p>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/review_ui.js" defer></script>
+</body>
+</html>

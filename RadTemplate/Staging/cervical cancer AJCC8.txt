@@ -1,0 +1,43 @@
+Cervical Cancer Staging Form
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan|MRI||]
+	Imaging Protocol
+		[MRI of the abdomen and pelvis without/with contrast enhancement]
+2. Tumor Size
+		[c)Measurable:][//w50]cm (in maximal diameter) 
+		[c)Non-measurable]
+3. Tumor Invasion
+	[c)Not assessable]
+	[c)No or Equivocal]
+	[c)Yes: ]
+		[c)Cervix]
+		[c)Uterine body]
+		[c)Parametrial invasion] ([c)Rt|Lt])
+		[c)Vaginal invasion] ([c)Upper 2/3|Lower 1/3])
+		[c)Pelvic side wall or floor]
+		[c)Hydronephrosis or Hydroureter] ([c)Rt|Lt])
+		[c)Pelvic organ invasion]
+			[c)Bladder|Rectum|Sigmoid colon]
+			[c)Other:][//w200])		
+4. Regional Nodal Metastasis
+	[c)No or Equivocal]
+	[c)Yes: ] 
+		[c)R|L]Parametrial
+		[c)R|L]Obturator
+		[c)R|L]Internal iliac
+		[c)R|L]External iliac
+		[c)R|L]Common iliac
+		[c)Sacral]
+		[c)Paraaortic]
+		[c)Other: ][//w200]
+5. Distant metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes: ]
+		[c)Non-regional lymph nodes]
+			[c)Inguinal nodes, ] [c)Rt][//w100] [c)Lt][//w100]
+			[c)Other: ][//w200]	
+		[c)Peritoneum|Bone|Liver|Lung]
+		[c)Other: ][//w200]
+6. Other findings: [//w500]

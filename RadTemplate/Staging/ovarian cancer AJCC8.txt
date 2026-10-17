@@ -1,0 +1,33 @@
+﻿Ovarian Cancer Staging Form
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan|MRI||]
+	Imaging Protocol
+		[MRI of the abdomen and pelvis without/with contrast enhancement]
+2. Tumor Size
+		[c)Measurable:][//w50]cm (greatest dimension) 
+		[c)Non-measurable]
+	Tumor Location: [c)Right|Left|Bilateral|Difficult to determine]
+3. Tumor Invasion
+	[c)Limited to ovary]
+	[c)Visible tumor implant or peritoneal thickening on other pelvic tissue*]
+	[c)Visible tumor implant or peritoneal thickening outside pelvis]([r)< 2cm|> 2cm])
+	[c)Ascites]
+	[c)Others][//w200]
+4. Regional Nodal Metastasis
+	[c)No or Equivocal]
+	[c)Yes:] 
+		[c)R|L]External iliac
+		[c)R|L]Internal iliac (hypogastric)
+		[c)R|L]Obturator
+		[c)R|L]Common iliac
+		[c)R|L]Inguinal
+		[c)Paraaortic]([c)Inframesenteric|Infrarenal|Suprarenal])
+5. Distant metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes:]
+		[c)Liver|Lung|Pleura|Others][//w200]
+6. Other findings:
+	[c)Pleural effusion]
+	[//w500]

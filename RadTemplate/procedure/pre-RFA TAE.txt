@@ -1,0 +1,23 @@
+History: [HCCs||liver metastases].
+
+--- Indication: for RFA.
+--- Puncture site: [right||left] [common femoral artery].
+--- A 5Fr vascular sheath insertion.
+--- A [4||5]Fr [J catheter (Terumo)||RC1 catheter (Cook)|SIM-2 catheter (Cook)|RLG catheter (Cook)|RIM catheter (Cook)//w300] and a [0.035" 150cm guidewire (Terumo)].
+
+--- Angiography findings:
+- [Multiple||One|Two] hypervascular tumor stain[s] is noted in the [both lobes||right lobe|left lobe] of liver; compatible with [HCCs]; supplied by the [right||left|right and left] hepatic artery.
+- [The main portal vein is patent.||Thrombosis of right portal vein.] [||Normal variation of replaced right hepatic artery from the SMA.]
+
+--- Procedures of TAE is performed
+- The tip of the catheter at the [proper hepatic artery||common hepatic artery|right hepatic artery|left hepatic artery|celiac trunk]. 
+- The [tumors are||tumor is] embolized with [10] ml of lipiodol plus Gelfoam particles.
+- [No immediate abdominal discomfort.]
+
+--- Suggestion:
+- Follow up liver functions.
+- CT-guided RFA is arranged on [].
+
+Impression:
+[Multiple HCCs] status post [pre-RFA TAE].
+[CT-guided RFA is arranged on .]

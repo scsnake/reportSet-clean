@@ -1,0 +1,39 @@
+* {
+	font-family: "微軟正黑體";
+	font-size: 18px;
+}
+
+.logIn {
+	color: #331a00;
+	text-align: right;
+	width: 150px;
+}
+
+.input {
+	width: 200px;
+	height: 24px;
+}
+.input:hover, .input:focus {
+	background-color: #c6ebc6;
+	border: #331a00 solid 1px;
+}
+
+table {
+	align: center;
+	border: 0;
+	cellSpacing: 10;
+	cellPadding: 5;
+	background-color: #ffecb3;
+}
+
+td {
+	height: 40px;
+}
+
+span.ast {
+	color: red;
+}
+
+.version {
+	color: gray; font-size: 12px; text-align: center;
+}

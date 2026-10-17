@@ -1,0 +1,19 @@
+Procedure name: [aneurysm TAE], [right ICA].
+Indication: [aneurysm].
+Anesthesia: Lidocaine HCL (Xylocaine 2%, 20 mg/mL) 200 mg local injection.
+Route: [Right||Left] femoral artery approach.
+Equipment: [6Fr introducer sheath, 6Fr ENVOY guiding catheter (MPC 0.070", Codman), 1.7Fr Excelsior SL-10 microcatheter (Boston Scientific), 0.014" Transcend Floppy microguidewire (Boston Scientific)].
+Coils: []
+Stent: [Nil||].
+Contrast medium: [Hexabrix||Ultravist] [40] ml
+Complication: nil
+
+Procedure:
+- Angiography shows [an aneurysm at ].
+- Navigate microcatheter via [] into the aneurysm.
+- Deploy detachable coils into the aneurysm.
+- Angiography shows [].
+- Apply [Angio-Seal closure device (6Fr, St. Jude Medical)||gelatin sponge] for hemostasis.
+
+Impression:
+[Right ICA] aneurysm status post TAE.

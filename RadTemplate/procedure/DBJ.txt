@@ -1,0 +1,13 @@
+History: [].
+
+[Bilateral||Right|Left] antegrade DBJ insertion is done:
+- Advance 0.035" guidewire; exchange the [left||right] PCN with a [8]Fr introducer sheath.
+- Antegrade urogram shows [stenosis at distal third of ureter||stenosis at the UPJ|stenosis at the UVJ]
+- Advance the guidewire through ureter into the urinary bladder.
+- Dilatation of the stenotic site with a balloon ([6]mm [15]cm, [Rival, BARD||Conquest, BARD]).
+- Deflate and remove the balloon. Insert the DBJ ([7]Fr [24]cm, [Inlay||Optima, BARD, 12 months|TumorStent]).
+- Insert a new pigtail catheter ([8]Fr [25]cm[]) as PCN.
+[||- The same procedure for another side. Antegrade urogram shows stenosis at the UVJ. DBJ (7Fr 24cm, TumorStent) and PCN (8Fr 25cm) is inserted, too.]
+
+Impression:
+status post [bilateral||right|left] DBJ and PCN revision.

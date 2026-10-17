@@ -1,0 +1,66 @@
+PROCEDURE DATA:
+Description: [Coronary calcium scoring, Coronary CT angiography, CT angiography of abdomen and pelvis]
+Equipment: [256-slice MDCT scanner (Revolution CT, GE Healthcare)||640-slice MDCT scanner (Aquilion ONE ViSION, Toshiba)].
+Acquisition: [Retrospectively EKG-gated axial scan with dose modulation. 0.5mm collimation].
+Patient parameters: Mean heart rate [//w50] bpm, regular. [No complication].
+
+RESULTS:
+Overall technical quality: [Good].
+
+Agatston score: 
+- LM: [0//w50]
+- LAD: [//w50]
+- LCX: [//w50]
+- RCA: [//w50]
+- Total: [//w300]
+
+Coronary artery analysis:
+- [No evidence of congenital vascular anomaly.]
+- Dominance: [Right||Left].
+- Left main coronary artery: [Patent.//w300] 
+- Left anterior descending artery: [Patent.//w300]
+- Left circumflex artery: [Patent.//w300]
+- Right coronary artery: [Patent.//w300]
+- Uninterpretable segments: [None]. 
+
+LV functional analysis:
+- [No definite regional wall motion abnormality.]
+- End systolic volume: [//w50 vesv](ml)
+- End diastolic volume: [//w50 vedv](ml)
+- Stroke volume: [//w50 v=edv-esv vsv](ml)
+- Ejection fraction: [//w50 v="$0 100*sv/edv"]%
+
+Post-TAVI findings:
+
+- THV type: [CoreValve (Medtronic)||Sapien (Edwards Lifesciences)]
+- THV expansion: [oval||circular]
+- THV position: [normal], [no//w50] overlap with AMVL 
+- [No thickening, calcification or thrombosis of valve leaflet.]
+- [No evidence of pseudoaneurysm or paravalvular leak.]
+- [No evidence of obstruction at origins of coronary arteries.]
+
+Annulus
+- Diameter: [//w50 vd1] * [//w50 vd2], mean: [//w50 v=(d1+d2)/2]
+- Perimeter: [//w50], derived diameter: [//w50]
+- Area: [//w50], derived diameter: [//w50]
+- Annular angulation: [//w50]¢X
+- Perpendicular view: [LAO||RAO] [//w50]¢X, [caudal||cranial] [//w50]¢X
+
+Noncoronary cardiac findings:
+- [No thickening or calcifications of mitral valve.] [Cardiomegaly.]
+- [Normal left atrial appendage with no evidence of thrombosis.]
+- [Normal pericardium without pericardial thickening, calcification or effusion.]
+
+Noncardiac findings:
+- [Minor or non-specific lung parenchymal change.]
+- [Atherosclerosis with wall calcification of the aorta. Degenerative change of spine.]
+
+(THV: transcatheter heart valve; AMVL: anterior mitral valve leaflet)
+
+Impression:
+Agatston score: [//w50]
+Coronary artery: [Calcified atherosclerotic plaque(s) in the coronary arteries.]
+Ventricular function: [Normal.]
+Status post TAVI. 
+CAD-RADS: [2]
+[//w50]

@@ -1,0 +1,43 @@
+﻿1. Imaging Date [2019//w100]/[//w50]/[//w50] 
+   Imaging Modality [c)CT scan|MRI||]
+   Imaging Body Parts
+   [c)Brain|Neck||Chest|Abdomen|Pelvis|Others:] [//w200]
+   Contrast Enhancement
+   [r)Without/With||With|Without]
+2. Tumor location/Size    
+    Location (subsites)
+        [c)Right pyriform sinus|Left pyriform sinus|Postcricoid region|Posterior pharyngeal wall]
+        [c)Others:] [//w300]
+    Size
+        [r)Non-measurable|Measurable:||][//w50]cm (greatest dimension)
+3. Tumor Invasion
+    [c)TX:Not assessable]
+    [c)T1:|Tumor limited to 1 subsite|Tumor≦2cm in greatest dimension]
+    [c)T2:|Tumor invades >1 subsite or an adjacent site|2cm<Tumor≦4cm]
+    [c)T3:|Tumor>4cm in greatest dimension|Fixation of hemilarynx|Extension to esophageal mucosa]
+    [c)T4a:Moderately advanced local disease:] tumor invades
+        [c)Thyroid cartilage|Cricoid cartilage|Hyoid bone|Thyroid gland|Esophageal muscle]
+        [c)Central compartment of soft tissue (prelaryngeal strap muscles and subcutaneous fat)]
+    [c)T4b:Very advanced local disease:] tumor invades
+        [c)Prevertebral fascia|Encasement of carotid artery|Mediastinal structures]
+        [c)Others:][//w300]
+4. Neck lymph node
+    [c)NX:Not assessable]
+    [c)N0:No regional nodal metastasis]
+    [c)N1:Single ipsilateral lymph node, ≤3 cm in greatest dimension and ENE(-)]
+    [c)N2a:Single ipsilateral lymph node >3 cm, ≤6cm in greatest dimension and ENE(-)]
+    [c)N2b:Multiple ipsilateral lymph nodes, ≤6cm in greatest dimension and ENE(-)]
+    [c)N2c:Bilateral or contralateral lymph nodes, ≤6cm in greatest dimension and ENE(-)]
+    [c)N3a:Lymph node >6 cm in greatest dimension and ENE(-)]
+    [c)N3b:Any node(s) and clinically overt ENE(+)]
+    Level: 
+        Right[c)I|II|III|IV|V|VI|VII|Others:][//w100]
+        Left [c)I|II|III|IV|V|VI|VII|Others:][//w100]    
+    Maximal size of the largest positive node: [//w50]mm (long axis)
+5. Distant Metastasis (in this study)
+    [c)No or Equivocal||]
+    [c)Yes, location:][//w500](excludes peritoneal metastasis)    
+6. Other findings:
+    [nil//w500]
+Impression:
+Hypopharyngeal cancer, tentative staging T[//w50]N[//w50]M[X//w50].

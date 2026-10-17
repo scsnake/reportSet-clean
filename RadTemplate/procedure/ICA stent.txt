@@ -1,0 +1,25 @@
+Procedure name: [ICA stenting], [right||left|bilateral].
+Indication: [ICA stenosis].
+Anesthesia: Lidocaine HCL (Xylocaine 2%, 20 mg/mL) 200 mg local injection.
+Route: [Right||Left] femoral artery approach.
+Equipment: [6Fr Flexor Shuttle guiding sheath (Cook), FilterWire EZ (3.5-5.5mm * 190cm, Boston Scientific)].
+Balloon: [Maverick2 Monorail (3.5mm 15mm, Boston Scientific)||Sterling Monorail (4.5mm * 20mm, Boston Scientific)].
+Stent: [Carotid WALLSTENT (9mm * 40mm, Boston Scientific)||PRECISE Carotid Stent (7mm * 40mm, Cordis)].
+Medication: Heparin [3000U].
+Contrast medium: [Hexabrix||Ultravist] [40] ml.
+Complication: [nil.]
+
+Procedure:
+- Introduce guiding sheath into the [right||left] CCA. Angiography shows [severe stenosis at the proximal cervical ICA with patent intracranial circulation].
+- Advance embolic protection device through the stenosis. Deploy EPD at distal cervical ICA.  [||Balloon dilatation is done for the stenosis.]
+- Deploy stent across the stenosis with distal landing zone at CCA. [||Perform balloon dilatation.]
+- Remove embolic protection device.
+- Angiography shows patent ICA flow with restored lumen diameter and patent intracranial circulation.
+- Remove guiding sheath and apply [Angio-Seal closure device (6Fr, St. Jude Medical)||gelatin sponge] for hemostasis.
+
+Suggestion:
+- Control the SBP between 100-120 mmHg. 
+- Please keep Plavix 75mg QD and Bokey 100mg QD.
+
+Impression:
+[Right||left|bilateral] [proximal cervical] ICA stenosis s/p stenting.

@@ -1,0 +1,17 @@
+[CT||Ultrasound]-guided biopsy of the [liver tumor]:
+1. Indication: [liver tumor].
+2. Procedure:
+ 1) patient in [supine||prone|right anterior oblique] position. [Fentanyl 0.05 ml IV for pain control.]
+ 2) puncture site: [RUQ abdomen], under [CT||ultrasound] guidance.
+ 3) sterilize, draping, and local anesthesia at the puncture site.
+ 4) [19]G [10]cm coaxial needle from puncture site with tip into [right lobe of liver].
+ 5) [20]G [15]cm biopsy needle, inserted through the coaxial needle, thrust [2]cm distal to the tip of coaxial needle, to take biopsy of the lesion.
+ 6) [3] fragment of tissue stripes and 3 slides of smear were obtained from the lesion, sent for pathology and cytology studies.
+ 7) no immediate complications after the procedure. the coaxial and automatic biopsy needle were removed. [Gelfoam particles is instilled along the needle tract.]
+ 8) sterilize and dressing the skin wound for biopsy.
+ 9) post-biopsy CT showed [air pockets at biopsy site without definite complication].
+3. The patient tolerate the procedure well without any complaint.
+4. Suggest bed rest and keep [supine] position for at least 4 hours.
+
+Impression:
+[A liver tumor at S6][ status post CT-guided biopsy.]

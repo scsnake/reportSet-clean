@@ -1,0 +1,61 @@
+#cs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  border-bottom: 1px solid #d8dee6;
+  background: #f4f7fa;
+  font-size: 14px;
+}
+#cs-bar button, #cs-modal button {
+  padding: 6px 12px;
+  border: 1px solid #b8c2cf;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+#cs-bar button:disabled { opacity: 0.5; cursor: default; }
+#cs-bar .cs-primary { border-color: #1d5fbf; background: #1d5fbf; color: #fff; font-weight: 600; }
+#cs-bar .cs-who { display: flex; gap: 8px; align-items: baseline; }
+#cs-bar .cs-who span { color: #5b6776; font-size: 12px; text-transform: uppercase; }
+#cs-bar .cs-info { color: #7a5200; }
+#cs-bar .cs-check { display: flex; gap: 6px; align-items: center; }
+#cs-message { padding: 8px 20px; background: #e9f5ec; border-bottom: 1px solid #bcdcc4; font-size: 14px; }
+#cs-message.error { background: #fdecec; border-color: #f0b8b8; color: #8a1c1c; }
+.safety-pill.cs-live { background: #1d5fbf; color: #fff; }
+#cs-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 28, 38, 0.45);
+}
+#cs-modal[hidden] { display: none; }
+.cs-dialog {
+  width: min(460px, 92vw);
+  max-height: 86vh;
+  overflow: auto;
+  padding: 22px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+.cs-dialog h2 { margin: 0 0 10px; font-size: 20px; }
+.cs-dialog p { margin: 0 0 12px; color: #3d4753; font-size: 14px; }
+.cs-dialog input { display: block; width: 100%; margin: 0 0 10px; padding: 8px; border: 1px solid #b8c2cf; border-radius: 6px; font: inherit; box-sizing: border-box; }
+.cs-dialog .cs-note { min-height: 1.2em; color: #8a1c1c; }
+.cs-row { display: flex; gap: 10px; }
+.cs-names { display: grid; gap: 8px; margin-bottom: 12px; }
+.cs-names .cs-name { display: flex; justify-content: space-between; padding: 10px 14px; font-size: 16px; }
+.cs-names .cs-name span { color: #5b6776; font-size: 13px; }
+#cs-bar .cs-session { color: #3d4753; }
+#cs-bar .cs-link { border: none; background: none; padding: 6px 4px; color: #1d5fbf; text-decoration: underline; }
+.cs-dialog .cs-warn { color: #8a1c1c; font-weight: 600; }
+#cs-modal .cs-primary { border-color: #1d5fbf; background: #1d5fbf; color: #fff; font-weight: 600; }
+.cs-send-list { display: grid; gap: 10px; margin: 0 0 14px; }
+.cs-send-item { padding: 10px; border: 1px solid #d8dee6; border-radius: 6px; background: #f8fafc; font-size: 14px; }
+.cs-send-item pre { margin: 6px 0 0; white-space: pre-wrap; font-size: 13px; }

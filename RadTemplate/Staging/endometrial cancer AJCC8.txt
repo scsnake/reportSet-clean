@@ -1,0 +1,34 @@
+﻿Endometrial Cancer Staging Form
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan|MRI||]
+	Imaging Protocol
+		[MRI of the abdomen and pelvis without/with contrast enhancement]
+2. Tumor Size
+		[c)Measurable:][//w50]cm (greatest dimension) 
+		[c)Non-measurable]
+3. Tumor Invasion
+	[c)Not assessable]
+	[c)No or Equivocal]
+	[c)Yes: ]
+		[c)Tumor in uterine corpus]
+			[c)Tumor limited to endometrium or invades less than one half of the myometrium]
+			[c)Tumor invades more than one half of the myometrium]
+		[c)Tumor invades stromal connective tissue of the cervix but does not extend beyond uterus]
+		[c)Tumor invades serosa and/or adnexa]
+		[c)Parametrial involvement]
+		[c)Vaginal involvement]		
+		[c)Tumor invades bladder] ([c)mucosa])	
+		[c)Tumor invades bowel] ([c)mucosa])
+		[c)Other: ][//w200]
+4. Regional Nodal Metastasis
+	[c)No or Equivocal]
+	[c)Yes, location: ][//w200]
+5. Distant metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes, location: ][//w200]
+		[c)Non-regional lymph nodes]
+			[c)Inguinal nodes, ] [c)Rt][//w100] [c)Lt][//w100]
+			[c)Other: ][//w200]	
+6. Other findings: [//w500]

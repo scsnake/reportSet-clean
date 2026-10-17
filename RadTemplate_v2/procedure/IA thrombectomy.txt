@@ -1,0 +1,44 @@
+Procedure name: [endovascular thrombectomy for acute ischemic stroke]
+Indication: [occlusion||stenosis//vlesion] at [right||left//vaside] [MCA||VA|BA|ACA|PCA//vaname] [M1||M2|P1] [||superior devision|inferior division]
+Anesthesia: [general anesthesia||]
+Route: [right femoral artery//vaccessartery] approach [under ultrasound guidance||]
+Operator: {Dr.A||Dr.B|Dr.C|Dr.D}
+
+Device: 
+[Introducer sheath 8Fr 25cm||]
+[Neuron MAX 088||AXS Infinity LS] [80cm|90cm||]
+[JB2 catheter||H1 catheter] [125cm||100cm]
+[SOFIA Plus Aspiration Catheter||SOFIA|RED 72|RED 62|RED 43|React 68|React 71//vaspcatheter] [6Fr 125cm||6Fr 131cm|5Fr 125cm|] [||SOFIA Distal Access Catheter 5Fr 125cm]
+[SOFIA Plus Aspiration Catheter||SOFIA|RED 72|RED 62|RED 43|React 68|React 71//vaspcatheter] [6Fr 125cm||6Fr 131cm|5Fr 125cm|] [||SOFIA Distal Access Catheter 5Fr 125cm]
+[Marksman microcatheter 2.8Fr/3.2Fr 150cm|Headway 21 microcatheter 2.0Fr/2.5Fr 150cm|Headway 17 Advanced 45 Microcatheter 1.7Fr/2.4Fr 150cm||Headway DUO microcatheter 1.3Fr/2.1Fr 167cm]
+[Marksman microcatheter 2.8Fr/3.2Fr 150cm|Headway 21 microcatheter 2.0Fr/2.5Fr 150cm|Headway 17 Advanced 45 Microcatheter 1.7Fr/2.4Fr 150cm||Headway DUO microcatheter 1.3Fr/2.1Fr 167cm]
+[ASAHI CHIKAI black 0.014" 200cm||ASAHI Extension Wire 0.014" 165cm|Synchro SOFT 0.014" 200cm]
+[ASAHI CHIKAI black 0.014" 200cm||ASAHI Extension Wire 0.014" 165cm|Synchro SOFT 0.014" 200cm]
+[Solitaire||Tigertriever 1.5-6mm 32mm|Tigertriever 17 0.5-3mm 23mm|Tigertriever 13 0.5-2.5mm 20.5mm|Tigertriever XL 1.5-9mm 53mm] [4mm 20mm||]
+[Angio-Seal||] [6Fr|8Fr||]
+
+Time records:
+- Angioroom: [//w100]
+- Puncture: [//w100]
+- Initial reperfusion: [//w100]
+- Second reperfusion: [//w100]
+- Recanalization: [//w100 vrecanalizetime]
+- Procedure time: [//w100]
+
+Result: 
+mTICI [3|2C|2B||2A|1|0//vresult]
+
+Periprocedural complication: [nil]
+
+Procedure:
+- Angiography via [//v=aside] ICA shows [filling defect at ][//v=aside] [//v=aname]. 
+- Contact aspiration is performed using [//v=aspcatheter]. [The thrombus is aspirated and visualized.] Recanalization is achieved at [//v=recanalizetime]. 
+- Angiography via [left CCA and left VA] is performed. [No definite filling defects.]
+- Apply [closure device||manual compression] for hemostasis at the puncture site under ultrasound. 
+
+Suggestion:
+- Post-EVT SBP control: [below 140mmHg||below 180mmHg]
+- Monitor neurological status.
+
+Impression:
+[//v=lesion] at [//v=aside] [//v=aname], status post endovascular thrombectomy, with result of mTICI [//v=result].

@@ -1,0 +1,48 @@
+﻿CLINICAL STATEMENT:
+Indication: [for coronary artery evaluation].
+
+PROCEDURE INFORMATION:
+Description: [Coronary calcium scoring, coronary CT angiography].
+Equipment: [Optima 660 (GE Healthcare)|Discovery CT750 HD (GE Healthcare)||].
+
+RESULTS:
+Overall technical quality: [Good].
+
+Agatston score: 
+- LM: [0//w50]
+- LAD: [//w50]
+- LCX: [//w50]
+- RCA: [//w50]
+- Total: [0 (No detectable calcified plaque) atherosclerotic burden)]
+
+Coronary artery analysis:
+- [No evidence of congenital vascular anomaly.]
+- Dominance: [Right||Left].
+- LM: [Patent.//w300] 
+- LAD: [Patent.//w300]
+- LCX: [Patent.//w300]
+- RCA: [Patent.//w300]
+- Uninterpretable segments: None. 
+
+Noncoronary cardiac findings:
+- [Trileaflet aortic valve with no significant lesion. No definite lesion in the mitral valve. ]
+- [Normal left atrial appendage with no evidence of thrombosis.]
+- [Normal pericardium without pericardial thickening, calcification or effusion.]
+
+Noncardiac findings:
+- [Unremarkable lung parenchyma at the level of the heart.]
+- [No demonstrated mediastinal or hilar adenopathy.]
+
+Impression:
+Agatston score: [//w50 vcals]
+Coronary artery: [Patent. //w300]
+[Suggest OPD follow-up.||]
+心臟冠狀動脈總鈣化積分：[//w50 v=cals]
+[無明顯冠狀動脈狹窄||冠狀動脈管腔直徑變化狀況：]{||左主幹|左前降支|左迴旋支|右冠狀動脈|後降支|鈍緣支|斜支|中隔穿通支|急性緣支|中間支}[||非常輕微狹窄|輕微狹窄|中度狹窄|嚴重狹窄]
+[建議門診追蹤||]
+
+[||冠狀動脈管腔直徑變化狀況：]{||左主幹|左前降支|左迴旋支|右冠狀動脈|後降支|鈍緣支|斜支|中隔穿通支|急性緣支|中間支}[||非常輕微狹窄|輕微狹窄|中度狹窄|嚴重狹窄]
+[||冠狀動脈管腔直徑變化狀況：]{||左主幹|左前降支|左迴旋支|右冠狀動脈|後降支|鈍緣支|斜支|中隔穿通支|急性緣支|中間支}[||非常輕微狹窄|輕微狹窄|中度狹窄|嚴重狹窄]
+[||冠狀動脈管腔直徑變化狀況：]{||左主幹|左前降支|左迴旋支|右冠狀動脈|後降支|鈍緣支|斜支|中隔穿通支|急性緣支|中間支}[||非常輕微狹窄|輕微狹窄|中度狹窄|嚴重狹窄]
+[||冠狀動脈管腔直徑變化狀況：]{||左主幹|左前降支|左迴旋支|右冠狀動脈|後降支|鈍緣支|斜支|中隔穿通支|急性緣支|中間支}[||非常輕微狹窄|輕微狹窄|中度狹窄|嚴重狹窄]
+[||冠狀動脈管腔直徑變化狀況：]{||左主幹|左前降支|左迴旋支|右冠狀動脈|後降支|鈍緣支|斜支|中隔穿通支|急性緣支|中間支}[||非常輕微狹窄|輕微狹窄|中度狹窄|嚴重狹窄]

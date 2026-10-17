@@ -1,0 +1,54 @@
+﻿1. Imaging Date
+    [2018//w100]/[//w50]/[//w50] 
+   Imaging Modality
+    Imaging by [c)CT scan||MRI]
+   Imaging Body Parts
+    [c)Brain|Neck|Chest||Abdomen|Pelvis|Others:] [//w200]
+   Contrast Enhancement
+    [r)Without/With||With|Without]
+2. Tumor location/Size
+    Location:
+     [c)Right upper lobe|Right middle lobe|Right lower lobe]
+     [c)Left upper lobe|Left lower lobe]
+     [c)Other:] [//w300]
+    Size
+     [r)Non-measurable|Measurable:||][//w50]cm (greatest dimension)                
+3. Tumor Invasion
+    [c)No or Equivocal]
+    [c)T1:Tumor ≦ 3cm, surrounded by lung or visceral pleura, and not in the main bronchus]
+     [r)T1a:Tumor ≦ 1cm or limited to bronchial wall|T1b:1cm < Tumor ≦ 2cm|T1c:2cm < Tumor ≦ 3cm]
+    [c)T2:]
+     [c)3cm < Tumor ≦ 5cm]
+     [c)Involves main bronchus(without involvement of carina)]
+     [c)Invades visceral pleura|Atelectasis to hilum(focal or total)]
+     [r)T2a:3cm < Tumor ≦ 4cm|T2b:4cm < Tumor ≦ 5cm]
+    [c)T3:]
+     [c)5cm < Tumor ≦ 7cm]
+     [c)Invades parietal pleura|chest wall(including superior sulcus tumor)|phrenic nerve|parietal pericardium]
+     [c)Separate tumor nodule(s) in the same lobe] 
+    [c)T4:]
+     [c)Tumor > 7cm]
+     [c)Invades diaphragm, mediastinum, heart, great vessels, trachea, recurrent laryngeal nerve, esophagus, vertebral body, carina]
+     [c)Separate tumor nodule(s) in a different lobe of the ipsilateral lung.]
+4. Regional nodal metastasis
+    [c)No or Equivocal]
+    [c)N1:]
+     [c)Ipsilateral peribronchial|Ipsilateral hilar|Ipsilateral intrapulmonary lymph nodes]
+    [c)N2:]
+     [c)Ipsilateral mediastinal|subcarinal lymph nodes]
+    [c)N3:]
+     [c)Contralateral mediastinal|Contralateral hilar lymph nodes]
+     [c)Ipsilateral or contralateral scalene or supraclavicular lymph nodes]
+5. Distant Metastasis (in this study)
+    [c)No or Equivocal||]
+    [c)M1a:] 
+     [c)Separate tumor nodule(s) in a contralateral lobe]
+     [c)Tumor with pleural nodules or malignant pleural (or pericardial) effusion]
+    [c)M1b:] 
+     [c)Single extrathoracic metastasis (Single metastasis in single organ)]
+    [c)M1c:]
+     [c)Multiple extrathoracic metastases (multiple metastases in single organ or metastases in multiple organs)]
+6. Other findings:
+    [nil//w500]
+Impression:
+Lung cancer, [//w100], tentative staging T[//w50]N[//w50]M[0//w50].

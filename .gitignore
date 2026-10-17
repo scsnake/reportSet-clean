@@ -1,0 +1,158 @@
+PacsIE/PacsHx_*.json
+PacsIE/getJpeg.log
+PacsIE/miniPACS.exe
+PacsIE/simpleRIS_autosave/
+*.lnk
+searchOpHxResults.txt
+noLaterReport.txt
+portal.ini
+.*
+!.env.example
+qt.conf
+*.bak
+RadTemplate/RadTemplate.ahk
+FirefoxLogin/Portal_WebExt/N_Portal_Scripts.xpi
+FirefoxLogin/Portal_WebExt/background-script - Copy.js
+FirefoxLogin/Portal_WebExt/for_dev_only/
+FirefoxLogin/Portal_WebExt/jquery-ui/
+test.ahk
+git_pull_result.txt
+git_push_result.txt
+Lib/AHK RegEx Tester.ini
+PacsIE/simpleRIS_hx
+place
+*/__pycache__/*
+XRAY127*
+!*.enc
+
+.portalInfoTemp
+*.version_
+
+**/Lib/
+!/Lib/
+!/Lib/.*.ahk
+
+!.gitignore
+!.gitmodules
+
+# Compiled source #
+###################
+*.com
+*.class
+
+*.exe
+*.o
+*.so
+
+!autorun.exe
+!AutoHotkey.exe
+!RadTemplate.exe
+!XLiu.exe
+!ImpaxContextServer.exe
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+desktop.ini
+
+# Local temporary artifacts
+tmp_*.ahk
+hs_*.txt
+diff_*.txt
+*.stackdump
+__pycache__/
+
+# Generated debug/log artifacts
+CH scripts/alignment_debug_*.png
+CH scripts/query_app/analysis/logs/
+CH scripts/query_app/analysis/logs_with_tailscale/
+CH scripts/query_app/analysis/ui_smoke.png
+CH scripts/query_app/*_output.txt
+CH scripts/query_app/*_results.txt
+CH scripts/query_app/*_summary.txt
+Lib/OCR/OCR_Log.txt
+Lib/OCR/debug_capture_*.bmp
+Lib/OCR/debug_roi/
+Lib/OCR/ocr_from_file_results.txt
+
+# === Untracked cleanup (2026-05) ===
+# Stray full-project copy (NOT a registered git worktree) and self-contained nested repo
+ych_refactor_worktree/
+ahk-mcp/
+
+# Accidental / empty / temp artifacts
+/CH
+/words.csv
+__is_debug
+*.tmp
+initial_version.ahk
+tmp_*.py
+debug_dxa/
+debug_roi_*/
+Lib/OCR/ahkv2_min_test.txt
+CH scripts/query_app/FILES_CREATED_*.txt
+CH scripts/query_app/applno_findings.txt
+
+# breast_us_ocr: keep source, ignore generated/runtime state
+CH scripts/breast_us_ocr/windows/study_status.txt
+CH scripts/breast_us_ocr/windows/study_payload.json
+CH scripts/breast_us_ocr/windows/lesions_pending.json
+CH scripts/breast_us_ocr/windows/*_last.txt
+# ...but keep the schema despite the global *.sql ignore above
+!CH scripts/breast_us_ocr/shared/schema.sql
+
+# mini PACS analysis: keep tooling, ignore generated run output
+CH scripts/query_app/analysis/mini_pacs/direct_download_runs/
+CH scripts/query_app/analysis/mini_pacs/uncompress_runs/
+CH scripts/query_app/analysis/mini_pacs/logs/
+
+# OCR calibration/test logs
+Lib/OCR/drag_test_log.txt
+drag_calib_log.txt
+
+# Runtime settings; keep showLungCAD.ini.example as the tracked reference
+/showLungCAD.ini
+
+# Rotated logs and root report/debug exports
+CH scripts/TB_CXR_copy.log.*
+Lib/OCR/OCR_Log_*.txt
+Lib/OCR/Navigation_Log_*.txt
+/[0-9]*.txt
+/test_log_com.txt
+/test_log_suppress.txt
+/test_simple.txt
+
+dump_*.ahk
+*.pcapng
+# Binary & pipeline exclusions
+*.jks
+*.tab
+*.box
+*.ta_
+HANDOFF_REPORTSET_PIPELINE.md

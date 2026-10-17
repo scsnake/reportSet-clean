@@ -1,0 +1,41 @@
+<html>
+<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=5">
+<script src="/jquery.js"></script></head>
+<body>
+<!-- fixture-load -->
+<form name="MJB3WForm" action="/webcvis/MJB/MJB3W001.do" method="get">
+<select name="status"><option value="">All</option><option value="00">Unsent</option><option value="2" selected>Sent</option></select>
+<select name="mccid"><option value=""></option><option value="54">CT</option></select>
+<select name="source"><option value=""></option><option value="E">Emergency</option></select>
+<select name="checkdruserid"><option value=""></option><option value="000000">Reader</option></select>
+<input name="patno"><input id="checktimestart"><input id="checktimeend">
+<button id="QueryButton" type="button">Query</button>
+<button id="ClearAllButton" type="button">Clear</button>
+<div id="list"></div>
+</form>
+<script>
+// Model the hospital cookie plugin and its native handlers. The plugin reads
+// the first matching cookie and writes without an explicit path.
+$.cookie = function(name, value) {
+  if (value !== undefined) {
+    document.cookie = name + '=' + encodeURIComponent(value);
+    return;
+  }
+  var cookies = document.cookie.split(';'), i, item;
+  for (i = 0; i < cookies.length; i++) {
+    item = $.trim(cookies[i]);
+    if (item.indexOf(name + '=') === 0) return decodeURIComponent(item.substring(name.length + 1));
+  }
+  return null;
+};
+$('select[name=status]').change(function() { $.cookie('selected_status', this.value); });
+$('#QueryButton').click(function() { document.forms['MJB3WForm'].submit(); });
+$('#ClearAllButton').click(function() { $('select[name=status]').val(''); });
+var saved = $.cookie('selected_status');
+if (saved !== null) $('select[name=status]').attr('value', saved);
+function runTestCode(code) {
+  try { return eval(code); } catch (e) { return 'SCRIPT ERROR: ' + e.message; }
+}
+</script>
+<script src="/enhancer.js"></script>
+</body></html>

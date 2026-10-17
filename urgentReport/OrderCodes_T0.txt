@@ -1,0 +1,1057 @@
+﻿000027TH	Mammography (ONLY FOR 健康管理中心，自費醫令)	0	2000	20.000%
+000043TH	Coronary CT Angiography (自費 for comprehensive check up)	0	12000	40.000%
+000047TH	Coronary CT Angiography (HMC)	0	24500	40.000%
+0000910M	預防保健年度篩檢乳房造影	1245	1618.5	20.000%
+00009300	預防保健乳房X光攝影/40歲以上未滿45歲且兩等親內曾患/每兩年1次	1245	1618.5	20.000%
+000A0039	Activated clotting time(ACT)			0
+000BDYGP	影醫照會  ANGIOGRAPHY BODY GROUP	0	0	0
+000CTGDP	影醫照會  CT Guide			0
+000M1001	IMAGE CD                        	0	500	0
+000M1002	Requesting X-ray plain film and report(國際醫療)	0	500	80.000%
+000M1003	Requesting CT Film and Report(國際醫療)	0	2600	80.000%
+000M1004	Requesting MRI Film and Report(國際醫療)	0	4700	80.000%
+000M1101	ABDOMEN(STANDING)			0
+000M1102	ABDOMEN: SUPINE KUB			0
+000M1103	DECUBITUS  LT			0
+000M1104	DECUBITUS  RT			0
+000M1201	HAND ROUTINE L			0
+000M1202	HAND  RT			0
+000M1203	HAND ROUTINE B			0
+000M1204	WRIST  LT			0
+000M1205	WRIST  RT			0
+000M1207	FOREARM  LT			0
+000M1208	FOREARM R			0
+000M1209	FOREARM B			0
+000M1210	ELBOW  LT			0
+000M1211	ELBOW R			0
+000M1212	ELBOW B			0
+000M1213	HUMERUS  LT			0
+000M1214	HUMERUS R			0
+000M1215	HUMERUS B			0
+000M1216	SHOULDER  LT			0
+000M1217	SHOULDER  RT			0
+000M1218	AP VIEW  B			0
+000M1219	SCAPULA  LT			0
+000M1220	SCAPULA  RT			0
+000M1222	FOOT  LT			0
+000M1223	FOOT ROUTINE(PRONE)  R			0
+000M1224	FOOT TOE   B			0
+000M1225	ANKLE  LT			0
+000M1226	ANKLE RT			0
+000M1227	ANKLE ROUTINE B			0
+000M1228	LOWER LEG  LT			0
+000M1229	LOWER LEG RT			0
+000M1231	KNEE  LT			0
+000M123111	.			0
+000M1232	KNEE INTERCONDYLAR VIEW R			0
+000M1233	KNEE SUPINE B			0
+000M1234	FEMUR  LT			0
+000M1235	FEMER R			0
+000M1236	FEMER B			0
+000M1237	HIP RT			0
+000M1238	HIP ROUTINE(AP.LAT) R			0
+000M1239	HIP ROUTINE(AP.LAT) B			0
+000M1241	BONE AGE STUDY			0
+000M1243	LONG BONE SURVEY			0
+000M1251	HAND OBL			0
+000M1252	WRIST OBL			0
+000M1253	PATELLA  LT			0
+000M1254	PATELLA RT			0
+000M1256	SHOULDER BOTH ON ONE FILM			0
+000M1257	PELVIS FOR THR			0
+000M1258	PELVIS ROUTINE			0
+000M1260	LOWER EXTREMITIES			0
+000M1269	PELVIS AP & ABD & INT			0
+000M1281	ASHOA	2028	2028	0
+000M1301	CHEST: AP VIEW (SUPINE)			0
+000M1302	CHEST: PA VIEW (STANDING)			0
+000M1304	PA.  Lateral			0
+000M1305	Lordotic(apex)			0
+000M1306	CHEST: LATERAL, LEFT			0
+000M1307	Lateral - RT			0
+000M1308	Lateral - L + R			0
+000M1315	Decubitus - LT			0
+000M1316	Decubitus - RT			0
+000M1317	Decubitus - L + R			0
+000M1318	Chest Oblique - LT			0
+000M1319	Chest Oblique - RT			0
+000M1320	Chest Oblique - L + R			0
+000M1321	Chest PA View(High KV)			0
+000M1402	SKULL 2-VIEWS(AP. LAT.)			0
+000M1403	SKULL 2-VIEWS(PA. LAT.)			0
+000M1406	SKULL LAT L			0
+000M1407	SKULL LAT R			0
+000M1409	MANDIBLE			0
+000M1410	MASTOID BONE			0
+000M1411	NASAL BONE			0
+000M1413	PARANASAL SINUSES			0
+000M1415	STENVER'S VIEW			0
+000M1416	SELLA TURCICA			0
+000M1417	T-M JOINT			0
+000M1419	SKULL AP 25'			0
+000M1423	SKULL PA 15'			0
+000M1424	SKULL PA STRAIGHT			0
+000M1425	SKULL WATER'S VIEW			0
+000M1426	SKULL ZYGOMATIC ARCH			0
+000M1467	SKULL LAT R+L			0
+000M1515	SPINE SACRUM COCCYX 2-VIEW			0
+000M1516	SPINE C1-C2(AP OPEN MOOTH LAT)			0
+000M1517	SPINE CERVICAL AP. LAT			0
+000M1518	SPINE CERVICAL BOTH OBLIQUE			0
+000M1520	SPINE THORACIC AP LAT			0
+000M1522	SPINE THORACOLUMBAR AP LAT			0
+000M1523	SPINE THORACOLUMBAR BOTH OBLIQ			0
+000M1524	SPINE LUMBAR AP. LAT.			0
+000M1525	SPINE LUMBAR BOTH OBLIQUE			0
+000M1526	SPINE LUMBOSACRAL AP LAT			0
+000M1528	WHOLE SPINE AP LAT			0
+000M1529	WHOLE SPINE BENDING			0
+000M1533	SPINE NECK LAT			0
+000M1534	SPINE NECK AP			0
+000M1535	SPINE NECK AP & LAT			0
+000M2103	T-TUBE CHOLANGIOGRAPHY			0
+000M2105	CHOLECYSTOGRAPHY:P.T.C.D.			0
+000M2106	P.C.N.			0
+000M2108	PTCD REVISION--- BILIARY TRACT			0
+000M2201	L'T COM. CAROTID ARTERIOGRAPHY			0
+000M2202	Carotid arteriography--one sid			0
+000M2203	Carotid arteriography--both si			0
+000M2204	L'T INT. CAROTID ARTERIOGRAPHY			0
+000M2205	R'T INT. CAROTID ARTERIOGRAPHY			0
+000M2206	R+L INT. CAROTID ARTERIOGRAPHY			0
+000M2210	L'T VERTEBRAL ARTERIOGRAPHY			0
+000M2211	R'T VERTEBRAL ARTERIOGRAPHY			0
+000M2213	SPINAL ARTERIOGRAPHY			0
+000M2302	THORACIC AORTOGRAPHY			0
+000M2303	ABDOMINAL AORTOGRAPHY			0
+000M2304	Pelvic angiography			0
+000M2401	Abd.angiogram-1vessel			0
+000M2402	Abd.angiogram-2 vessels			0
+000M2403	Abd.angiogram -3vessels			0
+000M2404	L'T RENAL ARTERIOGRAPHY			0
+000M2405	R'T RENAL ARTERIOGRAPHY			0
+000M2407	L'T UP. EXTREMITY ARTERIOGRAPHY			0
+000M2408	R'T UP. EXTREMITY ARTERIOGRAPHY			0
+000M2410	Arteriography of extremity			0
+000M2411	R'T LOW. EXTREMITY ARTERIOGRAPHY			0
+000M2501	EMBOLIZATION  (TEA)			0
+000M2502	P T A			0
+000M2503	TRANSCATHETER INFUSION THERAPY			0
+000M2602	XENON STUDY FOR CEREBRAL BLOOD F	0	1500	0.000%
+000M2603	Yttrium-90 selective internal radiation therapy(Y-90 SIRT)	0	64800	60.750%
+000M2720	ANGIO., SPLENOPORTOGRAPHY			0
+000M2725	R'T LOW. EXTREMITY VENOGRAPHY			0
+000M2727	PELVIC VENOGRAPHY			0
+000M2803	Retrograde Inferior Petrous Sinu	0	12000	40.000%
+000M2806	Lumbar Spine 自費	0	600	20.000%
+000M2807	Hip (Left)    自費	0	600	20.000%
+000M2808	Hip (Right)  自費	0	600	20.000%
+000M2809	Whole Body Scan  自費	0	600	20.000%
+000M2810	Forearm  自費	0	600	0
+000M2830	DEXA   (國衛院）	780	780	20.000%
+000M2901	ESOPHAGUS			0
+000M2903	GI TRACT, UPPER    |GASTRO. T.			0
+000M2909	COLON BARIUM ENEMA			0
+000M2911	ESO+UPPER GI BARIUM MEAL			0
+000M2A11	IVU			0
+000M2A23	Cavernosography	0	3600	40.000%
+000M2E01	MAMMOGRAPHY			0
+000M2E06	ARTHROGRAPHY SHOULDER L			0
+000M2E08	ARTHROGRAPHY HIP L			0
+000M2E09	ARTHROGRAPHY KNEE R			0
+000M2E20	Wada'sTest			0
+000M2E21	FINE-NEEDL LOCALIZATION- BREAST( 自費)	0	4100	40.000%
+000M2E22	MammotomeRcore biopsy-Left breast	0	19500	40.000%
+000M2E23	MammotomeRcore biopsy-Right breast	0	19500	40.000%
+000M2E24	Screening Mammography FOR employee (N hospital)	0	1245	20.000%
+000M2E25	EnCor core biopsy- Right breast	0	22000	40.000%
+000M2E26	EnCor core biopsy- Left breast	0	22000	40.000%
+000M4001	CT-HEAD			0
+000M4002	CT-PELVIS			0
+000M4003	CT-ABDOMEN			0
+000M4006	LUMBAR SPINE			0
+000M4007	CT-Coronary Calcium Score(self-paid)	0	6000	40.000%
+000M4008	Coronary CT Angiography (self-paid)	0	25000	40.000%
+CT	virtual colonscopy(自費)			0
+000M4012	Low-Dose Coronary CT Angiography	0	21000	40.000%
+000M4013	Pelvic CT Angiography(自費)	0	10000	40.000%
+000M4014	EKG-gated Wide Volume Cardiovascular Structural Angiogram	0	22160	40.000%
+000M4A01	CT. Guided Biopsy(自費)-Head	0	2000	40.000%
+000M4A02	CT without contrast----Chest(low dose for screening)	0	6000	20.000%
+000M4A03	CT. Guided Biopsy(自費)-Neck	0	2000	40.000%
+000M4A04	CT. Guided Biopsy(自費)-Chest	0	2000	40.000%
+000M4A05	CT.Guided Biopsy(自費)-ABDOMEN	0	2000	40.000%
+000M4A06	CT. Guided Biopsy(自費)-Extremities	0	2000	40.000%
+000M4A07	CT. Guided Biopsy(自費)-Pelvis	0	2000	40.000%
+000M4A08	CT. Guided Biopsy(自費)-Spine	0	2000	40.000%
+000M4A14	CT-guided marker placement for Cyberknife radiotherapy	0	12740	40.000%
+000M4A15	Digital Breast Tomosynthesis(3D)	0	2560	20.000%
+000M4A16	Digital Breast Tomosynthesis(2D+3D)	0	3600	20.000%
+000M4A17	Lung Tumor Microwave Ablation (=<5cm)	0	14900	70.000%
+000M4A18	Lung Tumor Microwave Ablation (>5cm)	0	19380	70.000%
+000M4A19	Low Dose Chest CT without contrast (for Lung ca study)	0	2200	20.000%
+000M4A22	Low dose lung cancer screening CT for employee(N hospital)	0	6000	20.000%
+000M6001	MRI-LUMBAR,SACRUM,COCCYX			0
+000M6002	MRI-THORACIC			0
+000M6003	MRI-Brain			0
+000M6666	MRI-Brain			0
+000M6A01	Whole Body MRI-6D Health Checkup	0	40000	18.000%
+000M6A11	Neuroradiological MR Exam (6D)	0	13333	18.000%
+000M6A12	Body MR Examination (6D)	0	13333	18.000%
+000M6A13	Musculoskeletal MR Exam (6D)	0	13334	18.000%
+000M6A15	Brain MRI and MRA(for health check-up )	0	16000	18.000%
+000M6A17	Dedicated breast MR screening with Diffusion Weighted Image	0	18000	18.000%
+000M6A18	Single joint MRI(for health check-up)	0	8000	18.000%
+000M6A19	Both hip MRI(for health check-up)	0	12000	18.000%
+000M6A20	Both knee MRI(for health check-up)	0	12000	18.000%
+000M6A21	Whole Spine MRI (for health check-up)	0	22000	18.000%
+000M6A22	Abdominal and pelvic MRI with diffusion weighted imaging(for health check-up)	0	20000	18.000%
+000M6A23	Whole body MRI:Abdominal and pelvic MRI with DWI(for health check-up)	0	20000	18.000%
+000M6A24	Whole body MRI:Chest MRI with diffusion weighted imaging(for health check-up)	0	8000	18.000%
+000M6A25	Whole body MRI:Spine MRI(cervical,thoraic and lumbar area) with DWI (for health check-up)	0	16000	18.000%
+000M6A27	MRI Without Contrast-Spine For Two Part(Self-paid)	0	12675	0
+000M6A28	MRI With Contrast-Spine For Two Part(Self-paid)	0	22425	0
+000M6A29	MRI Without/With Contrast-Spine For Two Part(Self-paid)	0	22425	0
+000M6A30	MRI Without Contrast-Spine For Three Part(Self-paid)	0	16900	18.000%
+000M6A32	MRI Without/With Contrast-Spine For Three Part(Self-paid)	0	29900	0
+000M6A33	Medio-lateral oblique view mammography	0	1000	20.000%
+000M6A40	Whole body MRI for MR-PET	0	38000	18.000%
+000M6A41	Whole body PET for MR-PET	0	36500	25.000%
+000M6A42	Summary report for MR-PET	0	2000	18.000%
+000M6A43	Whole body MRI for MR-PET_HMC	0	45600	18.000%
+000M6A44	Whole body PET for MR-PET_HMC	0	43800	25.000%
+000M6A45	Summary report for MR-PET_HMC	0	2400	18.000%
+000MP001	Decubitus L+R	360	468	60.000%
+000MP002	Hand, Left	360	468	60.000%
+000MP003	Hand, Ritht	360	468	60.000%
+000MP004	Hand, Both	680	884	60.000%
+000MP005	Wrist, Left	360	468	60.000%
+000MP006	Wrist, Right	360	468	60.000%
+000MP007	Wrist, Both	520	676	60.000%
+000MP008	Forearm, Left	360	468	60.000%
+000MP009	Forearm,Right	360	468	60.000%
+000MP010	Forearm,Both	680	884	60.000%
+000MP011	Elbow, Left	360	468	60.000%
+000MP012	Elbow,Right	360	468	60.000%
+000MP013	Elbow,Both	680	884	60.000%
+000MP014	Humerus, Left	360	468	60.000%
+000MP015	Humerus,Right	360	468	60.000%
+000MP016	Humerus,Both	680	884	60.000%
+000MP017	Shoulder, Left	360	468	60.000%
+000MP018	Shoulder, Right	360	468	60.000%
+000MP019	Shoulder, Both	680	884	60.000%
+000MP020	Scapula, Left	360	468	60.000%
+000MP021	Scapula, Right	360	468	60.000%
+000MP022	Scapula, Both	680	884	60.000%
+000MP023	Foot, Left	360	468	60.000%
+000MP024	Foot, Right	360	468	60.000%
+000MP025	Foot, Both	680	884	60.000%
+000MP026	Ankle, Left	360	468	60.000%
+000MP027	Ankle, Right	360	468	60.000%
+000MP028	Ankle, Both	680	884	60.000%
+000MP029	Lower Leg Left	360	468	60.000%
+000MP030	Lower Leg Right	360	468	60.000%
+000MP031	Lower Leg Both	680	884	60.000%
+000MP032	Knee, Left	360	468	60.000%
+000MP033	Knee, Right	360	468	60.000%
+000MP034	Knee, Both	680	884	60.000%
+000MP035	Femur Left	360	468	60.000%
+000MP036	Femur Right	360	468	60.000%
+000MP037	Femur Both	680	884	60.000%
+000MP038	Hip, Both	680	884	60.000%
+000MP039	Pelvimetry	360	468	60.000%
+000MP040	Patella, Both	360	468	60.000%
+000MP041	Lower Extremities(Triple Film)	520	676	60.000%
+000MP043	Sternum: AP,Oblique	360	468	60.000%
+000MP044	PELVIS SACROILIAC JOINT	450	585	20.000%
+000MP045	Pelvis: AP  	520	676	60.000%
+000MP046	Club Foot : AP,Lateral	360	468	60.000%
+000MP047	CDH	360	468	0
+000MP049	Chest : Lateral L+R.	360	468	60.000%
+000MP052	Chest : Decubitus L+R.	360	468	60.000%
+000MP053	Chest : Oblique L+R	360	468	60.000%
+000MP055	Skull: 2-Views (AP. LAT. )	360	468	60.000%
+000MP056	SkullL: 2-Views(PA.+LAT.)	360	468	60.000%
+000MP057	Skull:  Mandible	520	676	60.000%
+000MP058	Skull: Mastoid Bone	520	676	60.000%
+000MP059	Skull: Nasal Bone	200	260	60.000%
+000MP060	Skull: Optic Canal	520	676	60.000%
+000MP061	Skull: Paransal Sinuses	520	676	60.000%
+000MP062	Skull: Petrous Bone	520	676	60.000%
+000MP063	Skull: Stenvers View	520	676	60.000%
+000MP064	Skull: Sella Turcica	360	468	60.000%
+000MP065	Skull: T-M Joint	680	884	60.000%
+000MP067	Skull: Zygomatic Arch	360	468	60.000%
+000MP068	SKULL LAT R+L	360	468	0
+000MP082	Spine: Sacrum Coccyx 2-Views	450	585	60.000%
+000MP083	Spine: Cervical AP, LAT.	450	585	60.000%
+000MP084	Spine: Cervical Both Oblique	450	585	60.000%
+000MP085	Spine: Cervical Flex. EXT.	450	585	60.000%
+000MP086	Spine:Thoracic AP, LAT.	450	585	60.000%
+000MP087	Spine:Thoracic Both Oblique	450	585	60.000%
+000MP088	Spine:Thoracolumbar AP, LAT.	450	585	60.000%
+000MP089	Spine:Thoracolumbar Both Oblique	450	585	60.000%
+000MP090	Spine: Lumbosacral AP, LAT.	450	585	60.000%
+000MP091	Spine:  Lumbosacral both Oblique	450	585	60.000%
+000MP092	Whole Spine AP, LAT.	850	1105	60.000%
+000MP093	Whole Spine Bending	850	1105	60.000%
+000MP094	Spine:Thoracis Bending	850	1105	60.000%
+000MP095	Whole Spine Both Oblique	850	1105	60.000%
+000MP096	Neck, AP & LAT	450	585	60.000%
+000MP097	Cervico-Thoracic Junction:AP,LAT	450	585	60.000%
+000MP098	Spine:Thoracolumbar Flex. EXT.	450	585	60.000%
+000MP103	Ankle:Left(Stress)	360	468	60.000%
+000MP104	Ankle:Right(Stress)	360	468	60.000%
+000MP105	Ankle:Both(Stress)	680	884	60.000%
+000MP106	Knee,Left(Stress)	360	468	60.000%
+000MP107	Knee,Right(Stress)	360	468	60.000%
+000MP108	Knee,Both(Stress)	680	884	60.000%
+000MP109	Hip, Left(AP,LAT View)	360	468	60.000%
+000MP110	Hip, Right(AP,LAT View)	360	468	60.000%
+000MP111	C1-C2: AP(Open Mouth),LAT	450	585	60.000%
+000MP112	Sacroiliac Joint	520	676	0
+000MP113	Skull: Jugular Foramen	360	468	20.000%
+000MP999	.			0
+000MR002	Perutaneous transluminal depl	0	1196	0
+000NEUGP	影醫照會  ANGIOGRAPHY NEURO GROUP	0	0	0
+000P0914	RIA : Digoxin serum level			0
+000P0915	RIA : Free T4			0
+000P0916	RIA : TSH			0
+000P0917	RIA : T3(Tri-iodothyroxine)			0
+000P0918	RIA : T4(Thyroxine)			0
+000P0950	RIA : CA19-9			0
+000P0951	RIA : CEA(serum)			0
+000P0953	RIA : CEA(Tissue fluid)			0
+000P0955	RIA : TPA(Serum)			0
+016BZM	CYSTOURETHROGRAPHY VOIDING (URO)	750	975	0
+05221A00	PHARMACY SERVICE FEE	365	474.5	0
+08026B00	Prothrombin time                			0
+08026BB0	Activated clotting time(ACT)			0
+19001C0M	ABDOMINAL SONOGRAPH-ABDOMEN	882	1146.6	80.000%
+19005BMB	Sona for breast                 	588	764.4	100.000%
+19006B00	Echo guided needle aspiration   			0
+19007B0M	Ultrasonic guidance for needle placement(eg, biopsy, aspiration, injection)	1500	1950	0
+20000937	Syringe For Injector	212	265	0
+20010200	Extension  Tube	6.3	7.88	0
+20029B0M	Wada's test	10310	13403	45.000%
+20050315	BIOPSYS REPL VACUUM CANNISTER	0	348	0
+20200111	Catheter(Visceral)	543	678.75	0
+20200404	JABCZENSKI DUCTOGRAM CANNULA	943	1178.75	0
+20201700	MULTIFUNCTIONAL DRAINAGE CATHETE	1720	2100	0
+20201706	CRUISER PLUS INTRODUCER SYSTEM	2700	3375	0
+20225801	One-Step Catheter Only	1720	2150	0
+20244303	VACUUM TUBING ST	0	720	0
+20260101	P.T.C. Needle	102	120	0
+20261705	BIOPSY NEEDLE (DISPOSABLE)      	623	778.75	0
+20261902	AUTO TISSUE BIOPSY NEEDLE	0	662.5	0
+20281007	MAMMOTOME ST PROBE	0	13375	0
+20300735	Nylon Suture	0	21.6	0
+20305565	RADIFOCUS Guide Wire M	744	930	0
+20305900	Breast Localization Wire	0	1043.75	0
+20321810	MAMMOTOME BIOPSYS MICROMARK CLIP	0	3000	0
+20460410	Nepnro Stony Drainage Bag	34	42.5	0
+26014BXT	Lung perfusion                  	2250	2925	25.000%
+27001A0T	RIA : T3(Tri-iodothyroxine)	315	409.5	2.000%
+27003A0T	RIA : T4(Thyroxine)	300	390	2.000%
+27004A0T	RIA : TSH	300	390	2.000%
+27027A0T	RIA : Free T4	260	338	2.500%
+27048A0T	RIA : Digoxin serum level			0
+27050AZT	RIA : CEA(serum)	400	520	1.000%
+27055A0T	RIA : CA19-9	400	520	1.000%
+27076AZT	RIA : TPA(Serum)	445	578.5	1.000%
+28008BZS	Endoscopic biliary lithotripsy	5816	7560.8	60.000%
+32001CJM	Chest : Oblique Right	200	260	60.000%
+32001CKM	Chest : Oblique Left	200	260	60.000%
+32001CMM	Chest : Decubitus Right	200	260	60.000%
+32001CNM	Chest : Decubitus Left	200	260	60.000%
+32001CUM	Chest : Lateral Right	200	260	60.000%
+32001CVM	Chest : Lateral Left	200	260	60.000%
+32001CWM	Lordotic (APEX)	200	260	60.000%
+32001CXM	Chest : PA View (Standing)	200	260	60.000%
+32001CYM	Chest : AP View (Supine)	200	260	60.000%
+32003CYM	Heart Esophagus:  PA. Lateral	600	780	0
+32004CYM	Sterno-CLAV : Right	200	260	60.000%
+32004CZM	Sterno-CLAV : Left	200	260	60.000%
+32005C0M	Sterno-CLAV : Both	360	468	60.000%
+32006C0M	Abdomen:KUB	200	260	60.000%
+32007CWM	Decubitus Right	200	260	60.000%
+32007CXM	Decubitus Left	200	260	60.000%
+32007CYM	Abdomen:Supine	200	260	60.000%
+32007CZM	Abdomen:Standing	200	260	60.000%
+32009C0M	View of Skull ---only one film	200	260	60.000%
+32009C3M	Skull:  Basal Semiaxial	200	260	0
+32009C5M	Skull: Jugular Foramen	200	260	60.000%
+32009C5N	t			0
+32009C7M	Skull: Waters View	200	260	60.000%
+32009C8M	Skull:  PA Straight	200	260	60.000%
+32009C9M	Skull:  PA (15)	200	260	60.000%
+32009CEM	Skull:  PA (10)	200	260	60.000%
+32009CFM	Skull:  AP (35)	200	260	60.000%
+32009CGM	Skull:  AP (30)	200	260	60.000%
+32009CHM	Skull:  AP (25)	200	260	60.000%
+32009CSM	Skull:  Basal Axial	200	260	0
+32009CTM	Skull: Lateral, Right	200	260	60.000%
+32009CUM	Skull: Lateral, Left	200	260	60.000%
+32009CZM	Skull: Nasal Bone	200	260	20.000%
+32011C00	View of Whole Spine - only one film	250	325	60.000%
+32011C4M	Neck: LAT	250	325	60.000%
+32011CJM	Neck: AP	250	325	60.000%
+32011CTM	View of Cervical Spine ---only one film	250	325	60.000%
+32011CUM	View of Thoracic Spine ---only one film	250	325	60.000%
+32011CVM	View of Thoracolumbar Spine ---only one film	250	325	60.000%
+32011CWM	View of Lumbosacral Spine ---only one film	250	325	60.000%
+32011CXM	View of Sacrum Coccyx Spine ---only one film	250	325	60.000%
+32011CYM	C1-C2: AP(Open Mouth),LAT	250	325	60.000%
+32011CZM	L Spine (Lateral View)	250	325	60.000%
+32012CZM	Sacroiliac Joint	200	260	60.000%
+32013CTM	Shoulder Both on One Film	200	260	60.000%
+32013CXM	View of Shoulder Joint ---only one film	200	260	60.000%
+32013CYM	View of Scapula ---only one film	200	260	60.000%
+32013CZM	View of Clavicle ---only one film	200	260	60.000%
+32015CHM	Bone Age Study	200	260	60.000%
+32015CIM	HAND, OBL.	200	260	0
+32015CSM	View of Hand ---only one film	200	260	60.000%
+32015CTM	View of Wrist ---only one film	200	260	60.000%
+32015CUM	View of Elbow ---only one film	200	260	60.000%
+32015CVM	View of Forearm ---only one film	200	260	60.000%
+32015CWM	View of Hummers ---only one film	200	260	60.000%
+32015CXM	WRIST, OBL.	200	260	0
+32017CJM	Patella, Right	200	260	60.000%
+32017CKM	Patella, Left	200	260	60.000%
+32017CUM	View of Femur---only one film	200	260	60.000%
+32017CVM	View of Knee Joint ---only one film	200	260	60.000%
+32017CWM	View of Lower Leg ---only one film	200	260	60.000%
+32017CXM	View of Ankle ---only one film	200	260	60.000%
+32017CYM	View of Foot   ---only one film	200	260	60.000%
+32017CZM	View of Club Foot ---only one film	200	260	60.000%
+32019C0M	Scanography 	450	585	60.000%
+32021BXM	BONE SURVEY FOR < 6 MONTHS	1500	1950	0
+32021BYM	LONG BONE SURVEY	1500	1950	0
+32021BZM	Bone Survey	1500	1950	60.000%
+32022CIM	View of C.D.H. ---only one film	200	260	20.000%
+32022CJM	View of Pelvis ---only one film	200	260	60.000%
+32022CQM	PELVIS STANDARD D	200	260	0
+32022CRM	PELVIS ORTHOGRADE	200	260	0
+32022CSM	Symphysis	200	260	60.000%
+32022CTM	Pelvis: for Routine	200	260	60.000%
+32022CUM	Pelvis for THR	200	260	60.000%
+32022CYM	Hip, Right	200	260	60.000%
+32022CZM	Hip, Left	200	260	60.000%
+32026C0M	Fluoroscopy	200	260	20.000%
+320987WQR	.	200	260	0
+33004B0M	Esophagus	600	780	40.000%
+33005B0M	Mammography	1245	1618.5	20.000%
+33005BZM	Ductography	1245	1618.5	40.000%
+33006B00	Esophagogram NG tube insertion	1445	1878.5	40.000%
+33006B0M	ESO.+Upper GI Barium Meal	1445	1878.5	40.000%
+33007B0M	Hypotonic Duodenography	1170	1521	40.000%
+33008BZM	BAR. Meal Follow-THRU	1470	1911	40.000%
+33009B00	Upper G-I and small bowel series	2915	3789.5	0
+33010B0M	Colon, Barium Enema(Single)	1230	1599	40.000%
+33011B0M	Colon, Double Contrast	2365	3074.5	40.000%
+33012BZM	IVU (Intravenous Urogram)	1445	1878.5	40.000%
+33013B0M	Retrograde Pyelography	1500	1950	40.000%
+33015B0M	Retrograde Cystography	660	858	40.000%
+33015BZM	Cystourethrography, Voidinggraphy			0
+33016BZM	CYSTOURETHROGRAPHY,VOIDING (URO)	750	975	40.000%
+33017B0M	Chain Cystography	750	975	40.000%
+33019B0M	Antegrade Pyelography	2100	2730	40.000%
+33022B0M	T-Tube Cholangiography	820	1066	40.000%
+33025BZM	P.T.C.---BILIARY TRACT	3150	4095	40.000%
+33026BXM	P.T.C.D. (Percutaneous transhe	9600	12480	0
+33026BZM	P.T.C.D.	9600	12480	40.000%
+33027B0M	P.T.C.D. revision	1200	1560	40.000%
+33028B0M	Fistulography	1020	1326	40.000%
+33029B0M	HSG (Hysterosalpingography)	1400	1820	40.000%
+33029BZM	Genitography	1400	1820	40.000%
+33031B0M	Retrograde Urethrography	750	975	40.000%
+33032B0M	PCN (Percutaneous Nephrostomy)	7500	9750	40.000%
+33035BYM	NASOPHARYNGOGRAPHY	1540	2002	20.000%
+33035BZM	Video Pharyngoesophagography	1540	2002	20.000%
+33037BZM	Head and Neck : Sialography Parotid  Single	1000	1300	0
+33041BZM	COMMON CAROTID ARTERY，one side	7500	9750	40.000%
+33042BYM	BIL.CAROTID ARTERIOGRAPHY	11250	14625	40.000%
+33042BZM	Caroid arteriography---both side	11250	14625	40.000%
+33043B00	Vertebral angiography	4830	6279	40.000%
+33043BVM	IVDSA:OTHERS (PLS. SPECIFY)	4830	6279	40.000%
+33043BWM	FOR NECK VESSELS	4830	6279	40.000%
+33043BZM	ANGIOGRAPHY:VA	4830	6279	40.000%
+33044B0M	ANGIOGRAPHY:SPINE	10000	13000	40.000%
+33045BYM	THORACIC AORTOGRAPHY	4830	6279	40.000%
+33045BZM	ANGIOGRAPHY:AORTA,ARCH	4830	6279	40.000%
+33046BZM	ANGIOGRAPHY:ABDOMEN,ONE VESSEL	7500	9750	40.000%
+33047BZM	angiography:KIDNEY	4830	6279	40.000%
+33048BZM	ANGIOGRAPHY,EXTREMITY	7500	9750	40.000%
+33049BYM	VENOGRAPHY, SVC	6000	7800	40.000%
+33049BZM	VENOGRAPHY, ORBITAL	6000	7800	40.000%
+33050BSM	VENOGRAPHY:Adrenal,spermatic	6000	7800	40.000%
+33050BVM	RIGHT LOW. EXTREMITY VENOGRAPHY	6000	7800	0
+33050BYM	VENOGRAPHY:UPPER EXT,RIGHT	6000	7800	40.000%
+33050BZM	VENOGRAPHY:UPPER EXT,LEFT	6000	7800	40.000%
+33051BAM	Permtaneous - tronshepatic spleen	5600	7280	40.000%
+33051BYM	SPLENOPORTOGRAPHY	5600	7280	0
+33052BYM	Seminal Vesiculography	1180	1534	0
+33052BZM	CAVERNOSOGRAPHY	1180	1534	40.000%
+33053B0M	Lymphangiography	5200	6760	40.000%
+33054B0M	MYELOGRAPHY, CERVICAL |NEURO. S.	2100	2730	40.000%
+33055B0M	MYELOGRAPHY, THORACIC |NEURO. S.	2100	2730	20.000%
+33056B0M	MYELOGRAPHY, LUMBAR   !NEURO. S.	2100	2730	20.000%
+33057BXM	MYELOGRAPHY, T+L                	2835	3685.5	20.000%
+33057BYM	MYELOGRAPHY, C+L	2835	3685.5	20.000%
+33057BZM	MYELOGRAPHY, C+T	2835	3685.5	20.000%
+33058BZM	MYELOGRAPHY, WHOLE SPINE | NEURO.	3800	4940	20.000%
+33059BZM	VENOGRAPHY:JUGULAR ,LEFT	4830	6279	20.000%
+33060BZM	VENOGRAPHY:JUGULAR ,BILATERAL	6650	8645	20.000%
+33061B0M	Pelvic angiography	4830	6279	20.000%
+33062B0M	Subclavian angiography	4830	6279	20.000%
+33063BZM	Arthrography	1800	2340	20.000%
+33064B0M	BMD BY DEXA	600	780	20.000%
+33070B0M	CT Without Contrast-Brain	3800	4940	20.000%
+33070B1M	CT Without Contrast-Head and neck	3800	4940	20.000%
+33070B2M	CT Without Contrast-Chest	3800	4940	20.000%
+33070B3M	CT Without Contrast-Abdomen	3800	4940	20.000%
+33070B4M	CT Without  Contrast-Extremities	3800	4940	0
+33070B5M	CT Without Contrast-Pelvis	3800	4940	20.000%
+33070B6M	CT Without Contrast-Whole Spine	3800	4940	0
+33070B7M	CT Without Contrast- CHD	3800	4940	20.000%
+33070BRM	CT without Contrast-Brain(for Cyberknife)	0	0	20.000%
+33070BSM	CT Without Contrast- T spine	3800	4940	20.000%
+33070BTM	CT Without Contrast- L spine	3800	4940	20.000%
+33070BUM	CT Without Contrast- S spine	3800	4940	0
+33070BVM	CT Without Contrast- Cx spine	3800	4940	20.000%
+33070BWM	CT Without Contrast- C spine	3800	4940	20.000%
+33070BXM	CT Without Contrast-Upper Extremity	3800	4940	20.000%
+33070BYM	CT Without Contrast-Lower Extremity	3800	4940	20.000%
+33071B0M	CT With Contrast-Brain	4560	5928	20.000%
+33071B1M	CT With Contrast-Head and neck	4560	5928	20.000%
+33071B2M	CT With Contrast-Chest	4560	5928	20.000%
+33071B3M	CT With Contrast-Abdomen	4560	5928	20.000%
+33071B4M	CT With  Contrast-Extremities	4560	5928	0
+33071B5M	CT With Contrast-Pelvis	4560	5928	20.000%
+33071B6M	CT With Contrast-Whole Spine	4560	5928	0
+33071B7M	CT With Contrast- CHD	4560	5928	20.000%
+33071BMM	CT With Contrast-Brain(with injector for Cyberknife)	0	0	0
+33071BNM	CT With Contrast-Brain(with hand push for Cyberknife)	0	0	0
+33071BRM	CT With Contrast- C spine	4560	5928	20.000%
+33071BSM	CT With Contrast- T spine	4560	5928	20.000%
+33071BTM	CT With Contrast- L spine	4560	5928	20.000%
+33071BUM	CT With Contrast- S spine	4560	5928	20.000%
+33071BVM	CT With Contrast- Cx spine	4560	5928	20.000%
+33071BWM	CT With Contrast- Lower Extremity	4560	5928	20.000%
+33071BXM	CT With Contrast- Upper Extremity	4560	5928	20.000%
+33072B0M	CT With/Without Contrast-Brain	5035	6545.5	20.000%
+33072B1M	CT With/Without Contrast-Head and neck	5035	6545.5	20.000%
+33072B2M	CT With/Without Contrast-Chest	5035	6545.5	20.000%
+33072B3M	CT With/Without Contrast-Abdomen	5035	6545.5	20.000%
+33072B5M	CT With/Without Contrast-Pelvis	5035	6545.5	20.000%
+33072B7M	CT With/Without Contrast- CHD	5035	6545.5	20.000%
+33072BMM	CT With/without Contrast-Brain(with hand push for Cyberknife)	0	0	20.000%
+33072BNM	CT With/without Contrast-Brain(with injector for Cyberknife)	0	0	20.000%
+33072BQM	CT With/Without- Contrast-Lower Extremity	5035	6545.5	20.000%
+33072BRM	CT With/Without- Contrast- C spine	5035	6545.5	20.000%
+33072BSM	CT With/Without- Contrast- T spine	5035	6545.5	20.000%
+33072BTM	CT With/Without- Contrast- L spine	5035	6545.5	20.000%
+33072BUM	CT With/Without- Contrast- S spine	5035	6545.5	20.000%
+33072BVM	CT With/Without- Contrast- Cx spine	5035	6545.5	20.000%
+33072BWM	CT With/Without- Contrast-Upper Extremity	5035	6545.5	20.000%
+33072BXM	CT Without /With Contrast ---EPS	5035	6545.5	20.000%
+33072BYM	CT-Perfusion C.T.               	5035	6545.5	20.000%
+33073A0M	Pulmonoangiography	4800	6240	40.000%
+33073B0M	Pulmonany arteriography	4800	6240	40.000%
+33074A0M	P.T.A. (percutaneous translumina			0
+33074B0M	P.T.A. (percutaneous translumina1 angioplasty):single	10800	14040	40.000%
+33075A0M	T.A.E.(trans-arterial emboliza	22000	28600	0
+33075B0M	T.A.E.(trans-arterial embolizati	22000	28600	70.000%
+33084A0M	M.R.I. without cont-EXTREMITIES			0
+33084B0M	MRI Without Contrast--Brain	6500	8450	18.000%
+33084B1M	MRI Without Contrast--Head and Neck	6500	8450	18.000%
+33084B2M	MRI Without Contrast--Chest	6500	8450	18.000%
+33084B3M	MRI WithoutContrast--Abdomen	6500	8450	18.000%
+33084B4M	MRI Without Contrast--Extremities	6500	8450	0
+33084B5M	MRI Without Contrast--Pelvis	6500	8450	18.000%
+33084B6M	MRI Without Contrast--Spine	6500	8450	0
+33084BHM	MRI without Contrast-Brain(for Cyberknife)	0	0	18.000%
+33084BJM	MRI Without Contrast--Brachial plexus	6500	8450	18.000%
+33084BKM	MRI Without Contrast--MRA	6500	8450	18.000%
+33084BLM	MRI without contrast--- CHD	6500	8450	18.000%
+33084BMM	MRI Without Contrast- Upper Extremity	6500	8450	18.000%
+33084BNM	MRI Without Contrast- C spine	6500	8450	18.000%
+33084BOM	MRI Without Contrast- T spine	6500	8450	18.000%
+33084BPM	MRI Without Contrast- L spine	6500	8450	18.000%
+33084BQM	MRI Without Contrast- S spine	6500	8450	0
+33084BRM	MRI Without Contrast- Cx spine	6500	8450	18.000%
+33084BSM	MRI Without Contrast- Lower Extremity 	6500	8450	18.000%
+33084BWM	MRI without contrast-Pelvis for prostate mass (without endorectal coil)	6500	8450	18.000%
+MRI	Urography/without contrast			0
+33084BYM	MRI Without Contrast--Whole Spine	6500	8450	0
+33084BZM	MRI without contrast of the KNEE	6500	8450	18.000%
+33085AXM	BRAIN MRA	11500	14950	0
+33085AYM	MRI-THORACIC			0
+33085AZM	M.R.I. with contras-EXTREMITIES			0
+33085B01	MRI With Contrast--Brachial plexus	11500	14950	0
+33085B02	MRI With/Without Contrast--Brachial plexus	11500	14950	18.000%
+33085B03	MRI With Contrast--MRA	11500	14950	18.000%
+33085B04	MRI With/Without Contrast--MRA	11500	14950	18.000%
+33085B05	MRI with contrast--- CHD	11500	14950	0
+33085B06	MRI with/without contrast--- CHD	11500	14950	18.000%
+33085B07	MRI With Contrast-Pelvis for prostate mass (with endorectal coil)	11500	14950	0
+33085B08	MRI With /Without Contrast-Pelvis for prostate mass (with endorectal coil)	11500	14950	18.000%
+33085B09	MRI With/Without Contrast -----Breast	11500	14950	18.000%
+33085B0M	MRI With/Without Contrast--Head and Neck	11500	14950	18.000%
+33085B10	MRI With Contrast-Brain(for Cyberknife)	0	0	0
+33085B11	MRI With/without Contrast-Brain(for Cyberknife)	0	0	18.000%
+33085B1M	MRI With Contrast--Head and Neck	11500	14950	18.000%
+33085B2M	MRI With/Without Contrast--Chest	11500	14950	18.000%
+33085B3M	MRI With Contrast--Chest	11500	14950	18.000%
+33085B4M	MRI With/Without Contrast--Abdomen	11500	14950	18.000%
+33085B5M	MRI With Contrast--Abdomen	11500	14950	18.000%
+33085B6M	MRI With/Without Contrast--Extremities	11500	14950	0
+33085B7M	MRI With Contrast--Extremities	11500	14950	0
+33085B8M	MRI With/Without Contrast--Pelvis	11500	14950	18.000%
+33085B9M	MRI With Contrast--Pelvis	11500	14950	18.000%
+33085BBM	MRI With/Without- Contrast- Cx spine	11500	14950	0
+33085BCM	MRI With/Without- Contrast- S spine	11500	14950	0
+33085BDM	MRI With/Without- Contrast- L spine	11500	14950	18.000%
+33085BEM	MRI With/Without- Contrast- T spine	11500	14950	18.000%
+33085BFM	MRI With/Without- Contrast- C spine	11500	14950	18.000%
+33085BGM	MRI With/Without- Contrast- Lower Extremity	11500	14950	18.000%
+33085BHM	MRI With/Without- Contrast- Upper Extremity	11500	14950	18.000%
+33085BIM	MRI With Contrast- Cx spine	11500	14950	0
+33085BJM	MRI With Contrast- S spine	11500	14950	0
+33085BKM	MRI With Contrast- L spine	11500	14950	18.000%
+33085BLM	MRI With Contrast- T spine	11500	14950	18.000%
+33085BMM	MRI With Contrast- C spine	11500	14950	18.000%
+33085BNM	MRI With Contrast- Lower Extremity	11500	14950	18.000%
+33085BOM	MRI With Contrast- Upper Extremity	11500	14950	18.000%
+33085BPM	MRI With/Without- Contrast- Whole Spine	11500	14950	0
+33085BQM	MRI With/Without Contrast-Pelvis for prostate mass (without endorectal coil)	11500	14950	18.000%
+33085BRM	MRI Urography   without / with  contrast	11500	14950	18.000%
+33085BSM	MRI with contrast-Pelvis for prostate mass (without endorectal coil)	11500	14950	18.000%
+33085BTM	MRI Urography/with contrast	11500	14950	18.000%
+MRI	With Contrast- Whole Spine			0
+33085BVM	MRI With Contrast--Spine	11500	14950	0
+33085BWM	MRI With/Without Contrast--Spine	11500	14950	0
+33085BYM	MRI With/Without Contrast--Brain	11500	14950	18.000%
+33085BZM	MRI With Contrast--Brain	11500	14950	18.000%
+33086BZM	ABDOMINAL AORTOGRAPHY	4830	6279	40.000%
+33087B00	Aorta ，T+A : Angiography	6500	8450	40.000%
+33088B0M	Visceral angiography-two vessels	11250	14625	40.000%
+33089B0M	Visceral angiography-over two vessels	15000	19500	40.000%
+33090B0M	Low-osmolar or non-ionic contras	920	1196	0
+33092B0M	Fluoroscopic reduction of intussusception	2915	3789.5	40.000%
+33093B0M	Bilateral reno-venous sampling	4000	5200	40.000%
+33095B0M	Revision of percutaneous nephrostomy tube(Pigtail)	1200	1560	40.000%
+33099B0M	Percutaneous placement of ureter	6000	7800	40.000%
+33100B0M	Percutaneous splenoportal venography and venous	5600	7280	40.000%
+33103B0M	CT guide biopsy   (電腦斷層導引下組織切片取樣剛針)	3800	4940	40.000%
+33106B0M	Percutaneous gall bladder drainage(PTCCD)	4320	5616	40.000%
+33107B0M	Replacement of percutaneous endoscopic gastrostomy	2094	2722.2	60.000%
+33108B0M	P.E.G(percutaneous endoscopic gastrostomy)	2750	3575	60.000%
+33109B0M	Percutaneous gastrostomy			0
+33110B0M	Percutaneous ureteroplasty	12100	15730	40.000%
+33111B0M	Percutaneous retrieval of ureteral stent	10832	14081.6	40.000%
+33113B0M	Transjugular Intrahepatic Portos	20250	26325	70.000%
+33115B0M	P.T.A. (percutaneous transluminal angioplasty): complex	20250	26325	40.000%
+33125C0M	Stereotactic Breast Biopsy:Bilateral	3000	3900	40.000%
+33125CYM	Stereotactic Breast Biopsy:RIGHT	3000	3900	40.000%
+33125CZM	Stereotactic Breast Biopsy:LEFT	3000	3900	40.000%
+33126B0M	Percutaneous vertebroplasty (1st	13190	17147	40.000%
+33127B0M	Percutaneous vertebroplasty (any	5231	6800.3	40.000%
+33128B0M	Stenting for head & neck vessel	10800	14040	40.000%
+33130B0M	Percutaneous transluminal deploy	16200	21060	70.000%
+33131B0M	Percutaneous transluminal cathet	30356	39462.8	23.100%
+33133B00	Stenting for Iliac vessel			0
+33133B0M	Stenting for Iliac vessel	12948	16832.4	0
+37005B00	Chemotherapy-- day	361	469.3	70.000%
+37034B00	Intraarterial chemotherapy<=1 ho	1339	1740.7	70.000%
+37042C0M	CT guide -----RFA(<3cm腫瘤>	7600	9880	70.000%
+37043C0M	CT guide -----RFA(3-5cm腫瘤)	11400	14820	70.000%
+37044C0M	CT guide -----RFA(>5CM腫瘤)	15200	19760	70.000%
+39005C00	Intraarticular injection        	135	175.5	40.000%
+39019B0M	Transcatheter infusion therapy	450	585	60.000%
+39019BZM	Transcatheter infusion therapy			0
+47017C00	Insertion of nasogastric tube	195	253.5	40.000%
+47017C0M	.			0
+47017C0S	Insertion of nasogastric tube	195	253.5	40.000%
+50035B0M	Cryotherapy for renal tumor	70000	91000	32.000%
+56030BZM	Transjugular liver biopsy	7436	9666.8	0
+68030AAM	trans - jugular liver biopsy			0
+83079B0M	NEURO Radiofrequency Coagulation/Ablation	5360	6968	65.680%
+96005C0M	Epidural injection for pain control	3300	4290	0
+96011C0M	Nerve plexus block for pain control	1060	1378	0
+96013C0M	Caudal block for pain control	1350	1755	0
+ANG1PA15	ANGIOGRAFIN 65% W/V 100ML @	0	438	0
+F00M1101	ABDOMEN: STANDING			0
+F00M1102	ABDOMEN: SUPINE KUB			0
+F00M1201	HAND, LEFT			0
+F00M1202	HAND, RIGHT			0
+F00M1204	WRIST, LEFT			0
+F00M1205	WRIST, RIGHT			0
+F00M1207	FOREARM, LEFT			0
+F00M1210	ELBOW, LEFT			0
+F00M1211	ELBOW, RIGHT			0
+F00M1213	HUMERUS, LEFT			0
+F00M1214	HUMERUS, RIGHT			0
+F00M1216	SHOULDER, LEFT			0
+F00M1217	SHOULDER, RIGHT			0
+F00M1220	SCAPULA, RIGHT			0
+F00M1222	FOOT, LEFT			0
+F00M1223	FOOT, RIGHT			0
+F00M1225	ANKLE, LEFT			0
+F00M1226	ANKLE, RIGHT			0
+F00M1228	LOWER LEG, LEFT			0
+F00M1229	LOWER LEG, RIGHT			0
+F00M1230	LOWER LEG, BOTH			0
+F00M1231	KNEE, LEFT			0
+F00M1232	KNEE, RIGHT			0
+F00M1233	KNEE, BOTH			0
+F00M1234	FEMUR, LEFT			0
+F00M1235	FEMUR, RIGHT			0
+F00M1237	HIP, LEFT			0
+F00M1238	HIP, RIGHT			0
+F00M1241	BONE AGE STUDY			0
+F00M1253	PATELLA, LEFT			0
+F00M1254	PATELLA, RIGHT			0
+F00M1255	PATELLA, BOTH			0
+F00M1256	SHOULDER BOTH ON ONE FILM			0
+F00M1257	PELVIS FOR THR			0
+F00M1258	PELVIS FOR ROUTINE			0
+F00M1264	STERNUM : AP,OBLIQUE			0
+F00M1269	PELVIS:AP & ABN & EXT			0
+F00M1302	CHEST: PA VIEW (STANDING)			0
+F00M1305	CHEST: LORDOTIC (APEX)			0
+F00M1306	CHEST: LATERAL, LEFT			0
+F00M1307	CHEST: LATERAL, RIGHT			0
+F00M1318	CHEST: OBLIQUE, LEFT			0
+F00M1402	SKULL: 2-VIEWS (AP. LAT. )			0
+F00M1406	SKULL: LATERAL, LEFT			0
+F00M1410	SKULL: MASTOID BONE			0
+F00M1413	SKULL: PARANASAL SINUSES			0
+F00M1415	SKULL: VIEW OF STENVER			0
+F00M1424	SKULL: PA. (STRA.)			0
+F00M1425	SKULL: VIEW OF WATER			0
+F00M1426	SKULL: ZYGOMATIC ARCH			0
+F00M1515	SPINE: SACRUM COCCYX 2-VIEWS			0
+F00M1517	SPINE: CERVICAL AP,LAT			0
+F00M1518	SPINE: CERVICAL BOTH OBLIQUE			0
+F00M1519	SPINE: CERVICAL FLEX.EXT.			0
+F00M1520	SPINE: THORACIC AP,LAT.			0
+F00M1522	SPINE: THORACOLUMBAR AP,LAT.			0
+F00M1524	SPINE: LUMBAR AP. LAT.			0
+F00M1525	SPINE: LUMBAR BOTH OBLIQUE			0
+F00M1526	SPINE: LUMBOSACRAL AP,LAT.			0
+F00M1527	SPINE: LUMBOSACRAL BOTH OBLIQUE			0
+F00M1528	WHOLE SPINE AP,LAT.			0
+F00M1533	NECK,LAT			0
+F00M1534	NECK,AP			0
+F00M1535	NECK, AP & LAT			0
+GLU1FA07	5% 500ML GLUCOSE/BTL            	25	22	0
+HEX1PA33	20ML HEXABRIX 320MG I/ML @      	0	363	0
+HEX1PA35	100ML HEXABRIX 320MG I/ML @	0	1063	0
+ISO1PA43	ISOVIST-300 @			0
+LIP1PA10	LIPIODOL ULTRA-FLUID 38% 10ML @	0	3750	0
+P2101C0M	Offering CT Films and  Report	1340	1742	20.000%
+P2102C0M	Offering MRI Films and Report	2445	3178.5	18.000%
+P2103C0M	Requesting CT Film and Report	1340	1742	20.000%
+P2104C0M	Requesting MRI Film and Report	2445	3178.5	18.000%
+Test	ABDOMEN:SUPINE                  			0
+ULT1PA49	100ML ULTRAVIST-300 @	0	1313	0
+000M4A02	CT Without Contrast for low dose lung cancer screening	0	6000	20.000%
+33070B1M	CT Without Contrast-Head and Neck(Skull Base to Clavicle)	3800	4940	20.000%
+33070BTM	CT Without Contrast-L Spine	3800	4940	20.000%
+33071B1M	CT With Contrast-Head and Neck(Skull Base to Clavicle)	4560	5928	20.000%
+33072BQM	CT With/Without Contrast-Lower Extremities	5035	6545.5	20.000%
+33072B1M	CT With/Without Contrast-Head and Neck(Skull Base to Clavicle)	5035	6545.5	20.000%
+33072BYM	Perfusion CT	5035	6545.5	20.000%
+37044C0M	CT Guide --- RFA (腫瘤大小 > 5 cm)	15200	19760	70.000%
+000M4007	CT-Coronary Calcium Score	0	6000	40.000%
+000M4A02	Low dose lung cancer screening CT	0	6000	20.000%
+37042C0M	CT Guide --- RFA (腫瘤大小 < 3 cm)	7600	9880	70.000%
+000M4014	EKG-gated Wide Volume Cardiovascular Structural Angiogram(self-paid)	0	22160	40.000%
+000043TH	Coronary CT Angiography(self-paid for HMC)	0	12000	40.000%
+33103B0M	CT Guide Biopsy	3800	4940	40.000%
+000M4012	Low-Dose Coronary CT Angiography(自費)	0	21000	40.000%
+000M4008	Coronary CT Angiography(self-paid)	0	25000	40.000%
+000M4015	Three dimensional CT-guided lung needle localization for thoracoscopic surgery	0	22000	70.000%
+33070BWM	CT Without Contrast-C Spine	3800	4940	20.000%
+33070BSM	CT Without Contrast-T Spine	3800	4940	20.000%
+000M4012	Low-Dose Coronary CT Angiography(self-paid)	0	21000	40.000%
+000M4008	CT-Coronary Angiography(self-paid)	0	25000	40.000%
+33070BXM	CT Without Constrast-Upper Extremities	3800	4940	20.000%
+33070BYM	CT Without Constrast-Lower Extremities	3800	4940	20.000%
+37043C0M	CT Guide --- RFA (腫瘤大小 3~5 cm)	11400	14820	70.000%
+33072BTM	CT With/Without Contrast-L Spine	5035	6545.5	20.000%
+33072BWM	CT With/Without Contrast-Upper Extremities	5035	6545.5	20.000%
+33072BXM	CT With/Without Contrast-EPS	5035	6545.5	20.000%
+000M4013	Pelvic CT Angiography	0	10000	40.000%
+33072BSM	CT With/Without Contrast-T Spine	5035	6545.5	20.000%
+000M4007	CT-Coronary Calcium Score(Self Pay)	0	6000	40.000%
+33071BWM	CT With Contrast-Lower Extremities	4560	5928	20.000%
+33071BXM	CT With Contrast-Upper Extremities	4560	5928	20.000%
+33072BRM	CT With/Without Contrast-C Spine	5035	6545.5	20.000%
+000M4A20	Tumor Cryoablation (<=5cm)	0	20000	40.000%
+000M4008	Coronary CT Angiography(自費)	0	25000	40.000%
+000M4A21	Tumor Cryoablation (>5cm)	0	24000	40.000%
+000M4A08	CT. Guided Biopsy(self-paid)-Spine	0	2000	40.000%
+000M4014	EKG-gated Wide Volume Cardiovascular Structural Angiogram(自費)	0	22160	40.000%
+000M1003	Requesting CT Film and Report (國際醫療)	0	2600	80.000%
+000M4007	CT-Coronary Calcium Score(自費)	0	6000	40.000%
+33085BEM	MRI With/Without Constrast--T Spine	11500	14950	18.000%
+33085BQM	MRI With/Without Contrast-Pelvis:prostate(without endorectal coil)	11500	14950	18.000%
+33084BOM	MRI Without Constrast--T Spine	6500	8450	18.000%
+33084BPM	MRI Without Constrast--L Spine	6500	8450	18.000%
+33085B0M	MRI With/Without Contrast-Head and Neck(Skull Base to Clavicle)	11500	14950	18.000%
+33085BFM	MRI With/Without Constrast--C Spine	11500	14950	18.000%
+33085BDM	MRI With/Without Constrast--L Spine	11500	14950	18.000%
+000M6A15	Brain MRI and MRA(HMC)	0	16000	18.000%
+33085BHM	MRI With/Without Contrast--Upper Extremities	11500	14950	18.000%
+000M6A12	Body MR examination(HMC)	0	13333	18.000%
+000M6A11	Neuroradiological MR examination(HMC)	0	13333	18.000%
+000M6A13	Musculoskeletal MR examination(HMC)	0	13334	18.000%
+33084BNM	MRI Without Constrast--C Spine	6500	8450	18.000%
+33084BMM	MRI Without Contrast--Upper Extremities	6500	8450	18.000%
+33084BSM	MRI Without Contrast--Lower Extremities	6500	8450	18.000%
+33085BGM	MRI With/Without Contrast--Lower Extremities	11500	14950	18.000%
+000M6A17	Dedicated breast MR screening with Diffusion Image	0	18000	18.000%
+000M6A25	Whole body Spine MRI: (cervical,thoraic,lumbar) with DWI(for health check)	0	16000	18.000%
+000M6A26	Whole body MRI:Brain MRI  with diffusion weighted imaging(for health check-up)	0	16000	18.000%
+33084BZM	MRI Without Contrast--Knee Joint	6500	8450	18.000%
+33084B1M	MRI Without Contrast--Head and Neck(From Skull Base to Clavicle)	6500	8450	18.000%
+33085B09	MRI With/Without Contrast--Breast	11500	14950	18.000%
+000M6A40	Whole body MRI for MR-PET(3-1)	0	38000	18.000%
+000M6A42	Summary report for MR-PET (3-3)	0	2000	18.000%
+33085B09	MRI With/Without Contrast ---Breast	11500	14950	18.000%
+33084BWM	MRI without contrast-Pelvis:prostate (without endorectal coil)	6500	8450	18.000%
+000M1004	Requesting MRI Film and Report (國際醫療)	0	4700	80.000%
+000M6A21	Whole Spine MRI( including cervical, thoracic and lumbar area)	0	22000	18.000%
+000M6A21	Whole Spine MRI	0	22000	18.000%
+000M6A45	Summary report for MR-PET_HMC (3-3)	0	2400	18.000%
+000M6A43	Whole body MRI for MR-PET_HMC (3-1)	0	45600	18.000%
+33084BPM	MRI  Without Contrast- L spine	6500	8450	18.000%
+33084B0M	MRI Without Contrast--Head	6500	8450	18.000%
+33089B0M	ANGIOGRAPHY:ABDOMEN,THREE VESSELS	15000	19500	40.000%
+33088B0M	ANGIOGRAPHY:ABDOMEN,TWO VESSELS	11250	14625	40.000%
+33086BZM	Aorta ，abdominal : Angiography	4830	6279	40.000%
+33045BYM	Aorta,thoracic:Angiography,Arch	4830	6279	40.000%
+000M2807	BMD BY  Hip (Left)    自費	0	600	20.000%
+33064B0M	BMD BY DEXA (健保)	600	780	20.000%
+000M2807	BMD BY Hip (Left)    自費	0	600	20.000%
+000M2808	BMD BY Hip (Right)  自費	0	600	20.000%
+000M2806	BMD By Lumbar Spine 自費	0	600	20.000%
+000M2807	Bone mineral density (DPA):Hip (Left)	0	600	20.000%
+000M2806	Bone mineral density (DPA):Lumbar Spine	0	600	20.000%
+000M2808	Bone mineral density(DPA):Hip (Right)	0	600	20.000%
+33064B0M	BONE MINERAL DENSITY: BMD BY DEXA	600	780	20.000%
+33064B0M	BONE MINERAL DENSITY: BMD BY DEXA (健保)	600	780	20.000%
+000M2807	BONE MINERAL DENSITY: BMD BY Hip (Left)    (self-paid)	0	600	20.000%
+000M2807	BONE MINERAL DENSITY: BMD BY Hip (Left)    自費	0	600	20.000%
+000M2808	BONE MINERAL DENSITY: BMD BY Hip (Right)  (self-paid)	0	600	20.000%
+000M2808	BONE MINERAL DENSITY: BMD BY Hip (Right)  自費	0	600	20.000%
+000M2809	BONE MINERAL DENSITY: BMD BY Whole Body Scan (For Study)(自費)	0	600	20.000%
+000M2807	BONE MINERAL DENSITY: Hip (Left)    自費	0	600	20.000%
+000M2808	BONE MINERAL DENSITY: Hip (Right)  自費	0	600	20.000%
+000M2807	BONE MINERAL DENSITY:BMD BY  Hip (Left)    自費	0	600	20.000%
+33064B0M	BONE MINERAL DENSITY:BMD BY DEXA	600	780	20.000%
+33064B0M	BONE MINERAL DENSITY:BMD BY DEXA (健保)	600	780	20.000%
+000M2807	BONE MINERAL DENSITY:BMD BY Hip (Left)    自費	0	600	20.000%
+000M2808	BONE MINERAL DENSITY:BMD BY Hip (Right)  自費	0	600	20.000%
+000M2806	BONE MINERAL DENSITY:BMD By Lumbar Spine 自費	0	600	20.000%
+000M2806	BONE MINERAL DENSITY:BMD By Lumbar Spine(self-paid)	0	600	20.000%
+33042BZM	COMMON CAROTID ARTERY:both sides	11250	14625	40.000%
+33016BZM	Cystourethrography, Voidinggraphy	750	975	40.000%
+000M4A16	Digital Breast Tomosynthesis (2D+3D)	0	3600	20.000%
+000M4A16	Digital Breast Tomosynthesis (2D+3D)(ONLY FOR 健康管理中心，自費醫令)	0	3600	20.000%
+000M4A15	Digital Breast Tomosynthesis (3D)(ONLY FOR 健康管理中心，自費醫令)	0	2560	20.000%
+33006B00	Esophagogram with NG tube insertion	1445	1878.5	40.000%
+000M2E21	FINE-NEEDL LOCALIZATION- BREAST	0	4100	40.000%
+000M2E21	FINE-NEEDLE LOCALIZATION- BREAST	0	4100	40.000%
+33029B0M	HSG (Hysterosalpingography) 子宮輸卵管造影	1400	1820	40.000%
+000M4A23	Intraductal contrast enhanced mammogram	0	7500	35.600%
+000027TH	Mammography	0	2000	20.000%
+33005B0M	Mammography 乳房造影術	1245	1618.5	20.000%
+33058BZM	MYELOGRAPHY, WHOLE SPINE | NEURO	3800	4940	20.000%
+33143B0M	Neurovascular mechanical endovascular thrombectomy in acute ischemic stroke	45059	58576.7	70.000%
+33074B0M	P.T.A. (percutaneous translumina	10800	14040	40.000%
+33115B0M	P.T.A. (percutaneous...): complex	20250	26325	40.000%
+33061B0M	Pelvic angiography(com.iliac)	4830	6279	20.000%
+33099B0M	Percutaneous placement of ureter stent(Double J)	6000	7800	40.000%
+33131B0M	Percutaneous transluminal catheter retrieval foreigh body	30356	39462.8	23.100%
+33126B0M	Percutaneous vertebroplasty (1st vertebra)	13190	17147	40.000%
+33127B0M	Percutaneous vertebroplasty (any vertebra after the first)	5231	6800.3	40.000%
+000M2E24	Screening Mammography For employee(N hospital)	0	1245	20.000%
+33128B0M	Stenting for head & neck vessel(one vessel)	10800	14040	40.000%
+33125CZM	Stereotic Breast Biopsy:Left	3000	3900	40.000%
+33125CYM	Stereotic Breast Biopsy:Right	3000	3900	40.000%
+33075B0M	T.A.E.(trans-arterial emboliza)	22000	28600	70.000%
+33113B0M	Transjugular Intrahepatic Portosystemic Shunt(TIPS)	20250	26325	70.000%
+33050BSM	VENOGRAPHY: Adrenal，spermatic	6000	7800	40.000%
+33049BYM	VENOGRAPHY: Extremity	6000	7800	40.000%
+33049BZM	VENOGRAPHY: Orbital，SVC，IVC	6000	7800	40.000%
+39019B0M	經造影導管灌注治療（天）	450	585	60.000%
+32007CXM	Abdomen: Decubitus Left	200	260	60.000%
+32006C0M	Abdomen: KUB	200	260	60.000%
+32007CZM	Abdomen: Standing	200	260	60.000%
+32007CYM	Abdomen: Supine	200	260	60.000%
+32007CXM	Abdomen:Decubitus Left	200	260	60.000%
+32007CWM	Abdomen:Decubitus Right	200	260	60.000%
+000MP028	Ankle: Both	680	884	60.000%
+000MP026	Ankle: Left	360	468	60.000%
+000MP103	Ankle: Left(Stress)	360	468	60.000%
+000MP027	Ankle: Right	360	468	60.000%
+000MP104	Ankle: Right(Stress)	360	468	60.000%
+000MP026	Ankle:Left	360	468	60.000%
+000MP111	C1-C2: AP(Open Mouth), LAT	450	585	60.000%
+000MP097	Cervico-Thoracic Junition:AP,LAT	450	585	60.000%
+32001CUM	Chest :  Lateral Right	200	260	60.000%
+32001CYM	Chest: AP View (Supine)	200	260	60.000%
+32001CVM	Chest: Lateral Left	200	260	60.000%
+32001CUM	Chest: Lateral Right	200	260	60.000%
+000MP053	Chest: Oblique L+R	360	468	60.000%
+32001CKM	Chest: Oblique Left	200	260	60.000%
+32001CJM	Chest: Oblique Right	200	260	60.000%
+32001CXM	Chest: PA View (Standing)	200	260	60.000%
+32001CWM	Chest:Lordotic (APEX)	200	260	60.000%
+000MP013	Elbow: Both	680	884	60.000%
+000MP011	Elbow: Left	360	468	60.000%
+000MP012	Elbow: Right	360	468	60.000%
+000MP013	Elbow:Both	680	884	60.000%
+000MP012	Elbow:Right	360	468	60.000%
+000MP037	Femur: Both	680	884	60.000%
+000MP035	Femur: Left	360	468	60.000%
+000MP036	Femur: Right	360	468	60.000%
+000MP025	Foot: Both	680	884	60.000%
+000MP023	Foot: Left	360	468	60.000%
+000MP024	Foot: Right	360	468	60.000%
+000MP010	Forearm: Both	680	884	60.000%
+000MP008	Forearm: Left	360	468	60.000%
+000MP009	Forearm: Right	360	468	60.000%
+000MP010	Forearm:Both	680	884	60.000%
+000MP009	Forearm:Right	360	468	60.000%
+000MP004	Hand: Both	680	884	60.000%
+000MP002	Hand: Left	360	468	60.000%
+000MP003	Hand: Right	360	468	60.000%
+000MP038	Hip: Both	680	884	60.000%
+000MP038	Hip: Both (2-View)	680	884	60.000%
+32022CZM	Hip: Left	200	260	60.000%
+32022CZM	Hip: Left (1-View)	200	260	60.000%
+000MP109	Hip: Left (2-View)	360	468	60.000%
+000MP109	Hip: Left(AP,LAT View)	360	468	60.000%
+32022CYM	Hip: Right	200	260	60.000%
+32022CYM	Hip: Right (1-View)	200	260	60.000%
+000MP110	Hip: Right (2-View)	360	468	60.000%
+000MP110	Hip: Right(AP,LAT View)	360	468	60.000%
+000MP016	Humerus: Both	680	884	60.000%
+000MP014	Humerus: Left	360	468	60.000%
+000MP015	Humerus: Right	360	468	60.000%
+000MP016	Humerus:Both	680	884	60.000%
+000MP015	Humerus:Right	360	468	60.000%
+000MP034	Knee: Both	680	884	60.000%
+000MP032	Knee: Left	360	468	60.000%
+000MP106	Knee: Left(Stress)	360	468	60.000%
+000MP033	Knee: Right	360	468	60.000%
+000MP108	Knee:Both(Stress)	680	884	60.000%
+000MP106	Knee:Left(Stress)	360	468	60.000%
+000MP107	Knee:Right(Stress)	360	468	60.000%
+000MP029	Lower Leg: Left	360	468	60.000%
+000MP030	Lower Leg: Right	360	468	60.000%
+000MP029	Lower Leg:Left	360	468	60.000%
+000MP096	Neck (AP & lateral)	450	585	60.000%
+000MP096	Neck: AP & LAT	450	585	60.000%
+32017CKM	Patella: Left	200	260	60.000%
+32017CJM	Patella: Right	200	260	60.000%
+32022CTM	Pelvis:  for Routine	200	260	60.000%
+32022CUM	Pelvis:  for THR	200	260	60.000%
+000MP045	Pelvis: AP & ABN & EXT	520	676	60.000%
+32022CUM	Pelvis: for THR	200	260	60.000%
+32012CZM	Pelvis: Sacroiliac Joint	200	260	60.000%
+000MP039	Pelvis:Pelvimetry	360	468	60.000%
+32012CZM	Pelvis:Sacroiliac Joint	200	260	60.000%
+000MP022	Scapula: Both	680	884	60.000%
+000MP020	Scapula: Left	360	468	60.000%
+000MP021	Scapula: Right	360	468	60.000%
+000MP019	Shoulder: Both	680	884	60.000%
+32013CTM	Shoulder: Both on one film (Only AP view)	200	260	60.000%
+000MP017	Shoulder: Left	360	468	60.000%
+000MP018	Shoulder: Right	360	468	60.000%
+000MP001	Abdomen: Decubitus L+R	360	468	60.000%
+32007CWM	Abdomen: Decubitus Right	200	260	60.000%
+000MP001	Abdomen:Decubitus L+R	360	468	60.000%
+000MP104	Ankle: Right (Stress)	360	468	60.000%
+000MP049	Chest : Lateral  L+R.	360	468	60.000%
+32001CWM	Chest : Lordotic (APEX)	200	260	60.000%
+000MP040	Patella: Both	360	468	60.000%
+000MP052	Chest: Decubitus L+R	360	468	60.000%
+32001CNM	Chest: Decubitus Left	200	260	60.000%
+32001CVM	Chest: Lateral (Left)	200	260	60.000%
+000MP049	Chest: Lateral L+R	360	468	60.000%
+32001CWM	Chest: Lordotic (APEX)	200	260	60.000%
+000MP039	Pelvis: Pelvimetry	360	468	60.000%
+32019C0M	Scanogram	450	585	60.000%
+000MP055	Skull: 2-view (AP & lateral)	360	468	60.000%
+000MP056	Skull: 2-Views (PA.+LAT.)	360	468	60.000%
+000MP061	Skull: Paranasal Sinuses	520	676	60.000%
+000MP065	Skull: Temporomandibular joint (TMJ)	680	884	60.000%
+32009C7M	Skull: Waters' view	200	260	60.000%
+000MP046	Club Foot (AP, Lateral)	360	468	60.000%
+000MP085	Spine:  Cervical Flex. EXT.	450	585	60.000%
+000MP091	Spine:  Lumbosacral  Both Oblique	450	585	60.000%
+000MP083	Spine: Cervical (AP & lateral)	450	585	60.000%
+000MP083	Spine: Cervical spine (AP & lateral)	450	585	60.000%
+000MP084	Spine: Cervical spine (Both oblique)	450	585	60.000%
+000MP111	Spine: Cervical spine (C1-C2 AP [open mouth] & lateral)	450	585	60.000%
+000MP085	Spine: Cervical spine (Flexion & extension)	450	585	60.000%
+000MP097	Spine: Cervico-thoracic junction (AP & lateral)	450	585	60.000%
+000MP097	Spine: Cervico-thoracic junition (AP & lateral)	450	585	60.000%
+32011CZM	Spine: Lumbar spine (Lateral)	250	325	60.000%
+000MP090	Spine: Lumbo-sacral (AP & lateral)	450	585	60.000%
+000MP003	Hand, Right	360	468	60.000%
+000MP090	Spine: Lumbo-sacral spine (AP & lateral)	450	585	60.000%
+000MP091	Spine: Lumbo-sacral spine (Both oblique)	450	585	60.000%
+000MP082	Spine: Sacro-coccygeal spine (2-View)	450	585	60.000%
+000MP086	Spine: Thoracic spine (AP & lateral)	450	585	60.000%
+000MP087	Spine: Thoracic spine (Both oblique)	450	585	60.000%
+000MP088	Spine: Thoracolumbar AP, LAT.	450	585	60.000%
+000MP088	Spine: Thoraco-lumbar spine (AP & lateral)	450	585	60.000%
+000MP089	Spine: Thoraco-lumbar spine (Both oblique)	450	585	60.000%
+000MP098	Spine: Thoraco-lumbar spine (Flexion & extension)	450	585	60.000%
+000MP092	Spine: Whole spine (AP & lateral)	850	1105	60.000%
+000MP043	Sternum (Lateral, Oblique)	360	468	60.000%
+000MP043	Sternum(Lateral,Oblique)	360	468	60.000%
+32017CXM	View of Ankle - only one film	200	260	60.000%
+32011CTM	View of Cervical Spine - only one film	250	325	60.000%
+32013CZM	View of Clavicle - only one film	200	260	60.000%
+32015CUM	View of Elbow - only one film	200	260	60.000%
+32017CUM	View of Femur - only one film	200	260	60.000%
+32017CUM	View of Femur - only one film (備註雙側)	200	260	60.000%
+32017CYM	View of Foot - only one film	200	260	60.000%
+32017CYM	View of Foot - only one film (備註雙側)	200	260	60.000%
+32015CVM	View of Forearm - only one film	200	260	60.000%
+32015CVM	View of Forearm - only one film (備註雙側)	200	260	60.000%
+32015CSM	View of Hand - only one film	200	260	60.000%
+32015CSM	View of Hand - only one film (備註雙側)	200	260	60.000%
+32015CWM	View of Hummers - only one film	200	260	60.000%
+32015CWM	View of Hummers - only one film (備註雙側)	200	260	60.000%
+32017CVM	View of Knee Joint - only one film	200	260	60.000%
+32015CTM	View of Left Wrist (Only one film)	200	260	60.000%
+32015CTM	View of Left Wrist ---only one film	200	260	60.000%
+32017CWM	View of Lower Leg - only one film	200	260	60.000%
+32017CWM	View of Lower Leg - only one film (備註雙側)	200	260	60.000%
+32011CWM	View of Lumbosacral Spine - only one film	250	325	60.000%
+32022CJM	View of Pelvis - only one film	200	260	60.000%
+32015CTM	View of Right Wrist (Only one film)	200	260	60.000%
+32015CTM	View of Right Wrist ---only one film	200	260	60.000%
+32011CXM	View of Sacrum Coccyx Spine - only one film	250	325	60.000%
+32013CYM	View of Scapula - only one film	200	260	60.000%
+32013CXM	View of Shoulder Joint - only one film	200	260	60.000%
+32009C0M	View of Skull - only one film	200	260	60.000%
+32011CUM	View of Thoracic Spine - only one film	250	325	60.000%
+32011CVM	View of Thoracolumbar Spine - only one film	250	325	60.000%
+32015CTM	View of Wrist - only one film	200	260	60.000%
+000MP007	Wrist : both	520	676	60.000%
+000MP007	Wrist :Both	520	676	60.000%
+000MP007	Wrist: Both	520	676	60.000%
+000MP005	Wrist: Left	360	468	60.000%
+000MP107	Knee: Right(Stress)	360	468	60.000%
+32006C0M	KUB	200	260	60.000%
+000MP006	Wrist: Right	360	468	60.000%
+000M4016	CT-TAVI(self-paid)	29000	0	40.000%

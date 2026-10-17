@@ -1,0 +1,41 @@
+﻿1. Imaging Date
+    [2018//w100]/[//w50]/[//w50] 
+   Imaging Modality
+    Imaging by [r)CT scan||MRI]
+   Imaging Body Parts
+    [c)Brain|Neck|Chest||Abdomen|Pelvis|Others:] [//w200]
+   Contrast Enhancement
+    [r)Without/With||With|Without]
+2. Tumor location/Size
+    Location:
+        [c)Cervical segment (hypopharynx to sternal notch)]
+        [c)Upper third of thoracic segment (sternal notch to azygos vein)]
+        [c)Middle third of thoracic segment (azygos vein to inferior pulmonary vein)]
+        [c)Lower third of thoracic segment (inferior pulmonary vein to esophagogastric junction)]
+    Size:
+        [r)Non-measurable|Measurable:||] Length:[//w50]cm, Max thickness:[//w50]cm        
+3. Tumor Invasion
+    [c)No or equivocal]
+    [c)Yes:||]
+        [c)T1:Tumor invades lamina propria, muscularis mucosae, or submucosa]
+        [c)T2:Tumor invades muscularis propria]
+        [c)T3:Tumor invades adventitia]
+        [c)T4a:Tumor invades the pleura, pericardium, azygos vein, diaphragm, or peritoneum]
+        [c)T4b:Tumor invades other adjacent structures, such as aorta, vertebral body, or trachea.]
+4. Regional Nodal Metastasis
+    [c)No or equivocal]
+    [c)Yes,] number of suspicious lymph node(s): [//w50], location:
+        Lower cervical [c)Right|Left]
+        Upper paratracheal [c)Right|Left]
+        Lower paratracheal [c)Right|Left]
+        Thoracic paraesophageal [c)Upper|Middle|Lower]
+        Pulmonary ligament [c)Right|Left]
+        [c)Subcarinal|Diaphragmatic|Paracardial|Left gastric|Common hepatic|Splenic|Celiac]
+        Others:[//w100]
+5. Distant Metastasis (in this study)
+    [c)No or Equivocal:||]
+    [c)Yes, location:][//w500]    
+6. Other findings:
+    [nil//w500]
+Impression:
+Esophageal cancer, [middle thoracic//w100], tentative staging T[//w50]N[//w50]M[0//w50].

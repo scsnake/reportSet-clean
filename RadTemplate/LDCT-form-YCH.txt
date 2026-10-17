@@ -1,0 +1,52 @@
+﻿低劑量電腦斷層攝影結果
+
+LDCT Quality: [r) Good || Acceptable | Not Acceptable]
+CTDIvol: [//w50] mGy
+Total DLP: [//w50] mGy*cm
+Comparison: [prior CT on |no prior chest CT available.||][//w100]
+	
+Lung nodule findings related to cancer screening:
+	[c) Insignificant (<6mm) lung nodule or the nodule is definitely benign (including perifissural nodule(s) <10mm)]
+          (for example, Series [//w50] Image [//w50])
+	
+	[c) Significant (>=6mm) nodule: total number]  [r)1 | 2 | 3 | >=4], and described as followings:
+		(The most worrisome nodule(s) in order)
+
+		[c) Lung nodule 1] (size, character and location)
+			Entire Nodule: [//w50]mm
+			Density: [r) non-solid | solid | part-solid](solid part:[//w50]mm)
+			Lobe: [r)RUL | RML | RLL | LUL | LLL] (SE:3, IM:[//w50]) 
+			[The nodule is unchanged.|The nodule is enlarging (>1.5mm)|The nodule is newly found (>=4mm) in follow-up|No prior chest CT comparison.||]	
+	
+		[c)Lung nodule 2] (size, character and location)
+			Entire Nodule: [//w50]mm
+			Density: [r) non-solid | solid | part-solid](solid part:[//w50]mm)
+			Lobe: [r)RUL | RML | RLL | LUL | LLL] (SE:3, IM:[//w50]) 
+			[The nodule is unchanged.|The nodule is enlarging (>1.5mm)|The nodule is newly found (>=4mm) in follow-up|No prior chest CT comparison.||]
+	
+		[c)Lung nodule 3] (size, character and location)
+			Entire Nodule: [//w50]mm
+			Density: [r) non-solid | solid | part-solid](solid part:[//w50]mm)
+			Lobe: [r)RUL | RML | RLL | LUL | LLL] (SE:3, IM:[//w50]) 
+			[The nodule is unchanged.|The nodule is enlarging (>1.5mm)|The nodule is newly found (>=4mm) in follow-up|No prior chest CT comparison.||]
+	
+		[c)Lung nodules else] [c)RUL] [c)RML] [c)RLL] [c)LUL] [c)LLL] (Series [//w50] Image [//w50])
+
+		[c)The pattern of lung nodules has the possibility of metastases.]
+		
+Other Lung Findings
+	[c)Emphysema] [c)Bronchiectasis] [c)Bronchitis/bronchiolitis] [c)Tree-in-bud pattern] [c)Centrilobular nodules]
+
+Other Findings
+	[c)Enlarged lymph nodes, location: ][//w500]
+	[c)Coronary artery calcification(s).]
+	[c)Other significant abnormal chest findings: ][//w500]
+	[c)Other significant abnormal abdominal or neck findings in this chest CT scan: ][//w500]
+
+Impression:
+Lung-RADS [Category 0: Incomplete Study.|Category 1: Negative. No nodule(s) and definitely benign nodule(s). Continue annual screening with low dose CT in 12 months.|Category 2: Benign appearance or behavior. Nodule(s) with a very low likelihood of becoming a clinically active cancer due to size or lack of growth. Continue annual screening with low dose CT in 12 months.||Category 3: Probably benign finding(s). Short term follow up suggested; includes nodule(s) with a low likelihood of becoming a clinically active cancer.|Category 4A: Suspicious findings for which additional diagnostic testing is recommended.|Category 4B/4X: Very suspicious findings for which additional diagnostic testing and/or tissue sampling is recommended.|Category S: Other. Clinically significant or potentially clinically significant findings (non lung cancer).]
+[c) 請至胸腔內科或胸腔外科門診就診。]
+
+Reference: Lung CT Screening Reporting & Data System (Lung-RADS), version 1.1
+
+註：“早期肺癌”可能以“非特異性微小結節”潛伏存在數年的時間而沒有臨床上有意義的腫瘤增長，考量不必要引起受檢者無謂的驚慌，定期追蹤這類結節是目前安全的策略，或您可與您的醫師討論‧

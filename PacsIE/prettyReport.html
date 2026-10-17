@@ -1,0 +1,26 @@
+﻿<head><style type="text/css">
+* {font-family: Verdana; font-size: 14px; line-height: 120%}
+div {white-space: Wrap; }
+body {overflow-y: auto; overflow-x: Hidden; background-color: #eeeeee; }</style>
+<script type="text/javascript">
+function clearSelection(){
+    var sel;
+    if ( (sel = document.selection) && sel.empty ) {
+        sel.empty();
+    } else {
+        if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+        }
+        var activeEl = document.activeElement;
+        if (activeEl) {
+            var tagName = activeEl.nodeName.toLowerCase();
+            if ( tagName == "textarea" ||
+                    (tagName == "input" && activeEl.type == "text") ) {
+                // Collapse the selection to the end
+                activeEl.selectionStart = activeEl.selectionEnd;
+            }
+        }
+    }
+}
+</script></head>
+<body></body>

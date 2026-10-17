@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>C hospital RIS reported history regression</title></head>
+<body>
+<input name="mciname" value="CT">
+<div id="dbrlist"><div><table id="reported-history"><tbody>
+  <tr><th colspan="9">History</th></tr>
+  <tr id="history-row" title="Report A">
+    <td>branch</td><td>eio</td><td>status</td><td>2026/09/01</td>
+    <td>CT</td><td>Study A</td><td>signed</td><td>1</td><td>site</td>
+  </tr>
+</tbody></table></div></div>
+<script src="../Lib/CH_RIS_HX_enhance.js"></script>
+<script>
+(function(){
+  var row = document.getElementById('history-row');
+  var box = document.getElementById('dbrlist');
+  var table = document.getElementById('reported-history');
+  var failures = [];
+  function check(condition, message){ if(!condition) failures.push(message); }
+  check(box.firstChild.id === 'ch-ris-hx-bar', 'reported header was not inserted');
+  check(box.getElementsByTagName('table')[0] === table, 'history table cannot be found');
+  check(row.getAttribute('data-CH-hx-native-title') === 'Report A', 'initial report was not preserved');
+  check(!row.getAttribute('title'), 'native tooltip was not suppressed');
+
+  window.chRisHxBuild();
+  check(row.getAttribute('data-CH-hx-native-title') === 'Report A', 'repeat build lost report');
+
+  row.cells[5].innerText = 'Study B';
+  row.setAttribute('title', 'Report B');
+  window.chRisHxBuild();
+  row.onmouseover();
+  check(row.getAttribute('data-CH-hx-native-title') === 'Report B', 'updated report was stale');
+  check(document.getElementById('ch-ris-hx-preview').getAttribute('data-report') === 'Report B', 'preview used stale report');
+
+  row.cells[5].innerText = 'Study C';
+  window.chRisHxBuild();
+  row.onmouseover();
+  check(row.getAttribute('data-CH-hx-native-title') === '', 'old report followed changed row');
+  check(!document.getElementById('ch-ris-hx-preview'), 'empty report left a stale preview');
+
+  var result = document.createElement('p');
+  result.id = 'test-result';
+  result.innerText = failures.length ? 'FAIL: ' + failures.join('; ') : 'PASS';
+  document.body.appendChild(result);
+})();
+</script>
+</body>
+</html>

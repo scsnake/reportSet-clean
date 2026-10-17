@@ -1,0 +1,28 @@
+﻿Imaging Report Form for Gastrointestinal Stromal Tumor
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan||MRI]
+	Imaging Protocol
+		[CT of the abdomen without/with contrast enhancement]
+2. Tumor Size
+		[c)Measurable:||][//w50]cm (greatest dimension of the largest tumor) 
+		[c)Non-measurable]
+	Tumor Location:
+		[c)Stomach|Small intestine|Large intestine]
+		[c)Peritoneum]
+		[c)Other:][//w200]
+3. Tumor Invasion 
+	[c)Not assessable]
+	[c)No evidence of primary tumor]
+	[c)Tumor 2cm or less]
+	[c)Tumor more than 2cm but not more than 5cm]
+	[c)Tumor more than 5cm but not more than 10cm]
+	[c)Tumor more than 10cm in greatest dimension]
+4. Regional nodal metastasis
+	[c)No or Equivocal]
+	[c)Regional lymph node metastasis]
+5. Distant metastasis (in this study)
+	[c)No or Equivocal]
+	[c)Yes: ][//w200]
+6. Other findings:[//w500]

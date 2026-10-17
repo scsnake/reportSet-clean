@@ -1,0 +1,47 @@
+﻿1. Imaging Date [2019//w100]/[//w50]/[//w50] 
+   Imaging Modality [c)CT scan|MRI||]
+   Imaging Body Parts
+   [c)Brain|Neck||Chest|Abdomen|Pelvis|Others:] [//w200]
+   Contrast Enhancement
+   [r)Without/With||With|Without]
+2. Tumor Location/Size
+    [r)Left|Right|Bilateral]
+    [r)Non-measurable|Measurable:||][//w50]cm (largest diameter)  		
+3. Tumor Invasion    
+    [c)TX: Primary tumor cannot be assessed]
+    [c)T0: No tumor identified, but EBV-positive cervical node(s) involvement.]
+    [c)Tis: Tumor in situ]
+    [c)T1]
+        [c)confined to nasopharynx|extends to oropharynx and/or nasal cavity without parapharyngeal involvement]
+    [c)T2] 
+        [c)Parapharyngeal space|Medial pterygoid|Lateral pterygoid|Preverebral muscles]
+    [c)T3] 
+        [c)Skull base|Cervical vertebra|Pterygoid structures]
+        Paranasal sinus: [c)Ethmoid|Maxillary sinus|Frontal sinus|Sphenoid sinus]
+    [c)T4]
+        [c)Intracranial extension|Cranial nerves:][//w500]
+        [c)Hypopharynx|Orbit|Parotid gland]
+        [c)Extensive soft tissue infiltration beyond the lateral surface of the lateral pterygoid muscle]
+        [c)Others:][//w250]
+4. Neck Lymph Node
+    [c)Nx:Regional lymph nodes cannot be assessed]
+    [c)N0:No regional lymph node metastasis]
+    [c)N1:]
+        [c)Unilateral cervical LN(S), ≦6cm in greatest dimension, above caudal border of cricoid cartilage]
+        [c)Unilateral or bilateral retropharyngeal LN(s), ≦6cm in greatest dimension, above the caudal border of cricoid cartilage]
+    [c)N2: Bilateral cervical LN(S), ≦6cm in greatest dimension, above the caudal border of cricoid cartilage]
+    [c)N3:]
+        [c)Unilateral or bilateral cervical LN(S), ＞6cm in greatest dimension]
+        [c)Extension below the caudal border of cricoid cartilage]
+    Maximal size of the largest positive node: [//w50]mm (long axis)
+    Level: 
+        Right [c)I|II|III|IV|V|VI|VII|Others:][//w100]
+        Left [c)I|II|III|IV|V|VI|VII|Others:][//w100]    
+5. Distant Metastasis (in this study)
+    [c)No or Equivocal||]
+    [c)Yes, location:] [//w500] (excludes peritoneal metastasis)   
+6. Other findings:
+    [nil//w500]
+
+Impression:
+Nasopharyngeal cancer, tentative staging T[//w50]N[//w50]M[X//w50].

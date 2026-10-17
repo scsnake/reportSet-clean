@@ -1,0 +1,43 @@
+Imaging Report Form for Bladder Cancer
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan|MRI||]
+	Imaging Protocol
+		[MRI of the abdomen and pelvis without/with contrast enhancement]
+2. Tumor Location
+		[c)Not assessable]
+		[c)Assessable||]
+			[c)Posterior wall or Trigone|Right lateral wall|Left lateral wall|Anterior wall]
+			[c)Dome or Superior wall|Inferior wall or Neck]
+			[c)Other: ][//w200]
+	Tumor Size
+		[c)Non-measurable]
+		[c)Measurable: ||][//w50] cm (greatest dimension of the largest tumor), at 
+			[c)Posterior wall or Trigone|Right lateral wall|Left lateral wall|Anterior wall]
+			[c)Dome or Superior wall|Inferior wall or Neck]
+			[c)Other: ][//w200]
+3. Greatest Tumor Invasion (for MRI)
+		[c)Not assessable]
+		[c)No or Equivocal]
+		[c)Tumor invasion to deep muscle]
+		[c)Gross tumor invasion to perivesical tissue]
+		[c)Tumor invasion to adjacent organs or structures: ][//w200]
+	Greatest Tumor Invasion (for CT)
+		[c)Not assessable]
+		[c)No or Equivocal]
+		[c)Gross tumor invasion to perivesical tissue]
+		[c)Tumor invasion to adjacent organs: ][//w200]
+4. Regional Nodal Metastasis
+	[c)No or Equivocal]
+	[c)Yes: ]
+		[c)Single]
+		[c)Multiple, location: ][//w200]
+5. Distant metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes, location: ][//w200]
+6. Other findings:
+	[c)Hydronephrosis: ][r)Right|Left|Bilateral]
+	[c)Other tumor: ]
+		[c)Right ureter|Left ureter|Right pelvicalyceal system|Left pelvicalyceal system]
+7. Other image findings: [//w500]

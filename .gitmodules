@@ -1,0 +1,4 @@
+[submodule "PacsIE/miniPACS"]
+	path = PacsIE/miniPACS
+	url = https://gitlab.com/scsnake/minipacs.git
+	ignore = dirty

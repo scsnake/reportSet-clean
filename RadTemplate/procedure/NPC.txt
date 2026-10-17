@@ -1,0 +1,48 @@
+﻿1. Imaging Date
+        [2015//w100]/[//w50]/[//w50] 
+    Imaging Modality
+        Imaging by [c)CT scan|MRI||]
+    Imaging Body Parts
+		[c)Brain|Neck||Chest|Abdomen|Pelvis|Others:] [//w200]
+    Contrast Enhancement
+		[r)Without/With||With|Without]
+2. Tumor Location
+		[c)Measurable:||] [c)Left|Right|Bilateral]
+    Tumor Size: [//w50]cm (largest diameter)  
+		[c)Non-measurable]
+3. Tumor Invasion
+    [c)No or Equivocal]
+    [c)Yes: ||]
+		T1
+		[c)Oropharynx|Nasal cavity|Nasopharynx]
+        T2 
+		[c)Parapharyngeal space]
+        T3 
+		[c)Skull base bone invasion]
+        [c)Paranasal sinus] ([c)Ethmoid|Maxillary sinus|Frontal sinus|Sphenoid sinus])
+        T4
+		[c)Intracranial|Cranial nerves]
+        [c)Infratemporal fossa|Masticator space]
+        [c)Hypopharynx|Orbit|Others][//w300]
+4. Neck Lymph Node
+    [c)No or Equivocal]
+	[c)Nx: Cannot be assessed]
+	[c)N0: No regional LN metastasis]
+	[c)N1: Unilateral, ≤6cm above supraclavicular fossa, unilateral or bilateral retropharyngeal LN, ≤6cm]
+	[c)N2: Bilateral, ≤6cm above supraclavicular fossa]
+	[c)N3: >6cm and/or involve supraclavicular fossa]
+		[c)N3a: >6cm]
+		[c)N3b: Extension to supraclavicular fossa]
+    Level: 
+		[c)RT][c)I|II|III|IV|V|VI|VII|Others:][//w100]
+		[c)LT][c)I|II|III|IV|V|VI|VII|Others:][//w100]
+    Extracapsular spread (at least one node):
+        [c)Yes|No|||Difficult to determine]
+    Maximal size of the largest positive node: [//w50]mm (long axis)
+5. Distant Metastasis (in this study)
+    [c)No or Equivocal||]
+    [c)Yes, location:] [//w500]    
+6. Other findings:
+    [nil//w500]
+Impression:
+NPC, tentative staging T[//w50]N[//w50]Mx.

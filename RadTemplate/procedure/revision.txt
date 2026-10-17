@@ -1,0 +1,19 @@
+History: []
+
+Indication: [PTCD ||PCN |pigtail ][dysfunction||malfunction].
+Catheter: [8]Fr 25cm pigtail[|| *2].
+
+Procedure:
+- Patient in [supine||prone] position. Skin disinfection. Place sterile drapes.
+- [Cholangiogram||Antegrade nephrogram|Contrast media injection] via previous pigtail catheter shows [].
+- Local anesthesia with lidocaine 2% 10 ml.
+- Advance 0.035" guidewire into the [CBD||renal collecting system|abscess] under fluoroscopic guidance. Remove the pigtail catheter.
+- Advance a new pigtail catheter; remove inner stiffener; position catheter in [CBD||renal pelvis|abscess].
+- Confirm position and drainage function with contrast injection.
+- Skin suture to fix the catheter.
+
+No obvious discomfort was complained after the procedure.
+Post-procedure vital signs: stable.
+
+Impression:
+Status post [right ||left |bilateral ][PTCD||PCN|pigtail] revision. 

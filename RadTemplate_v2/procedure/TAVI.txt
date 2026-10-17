@@ -1,0 +1,77 @@
+PROCEDURE DATA:
+Description: [Coronary calcium scoring, Coronary CT angiography, CT angiography of abdomen and pelvis]
+Equipment: [256-slice MDCT scanner (Revolution CT, GE Healthcare)||640-slice MDCT scanner (Aquilion ONE ViSION, Toshiba)].
+Acquisition: [Retrospectively EKG-gated axial scan with dose modulation. 0.5mm collimation].
+Patient parameters: Mean heart rate [//w50] bpm, regular. [No complication].
+
+RESULTS:
+Overall technical quality: [Good].
+
+Agatston score: 
+- LM: [0//w50]
+- LAD: [//w50]
+- LCX: [//w50]
+- RCA: [//w50]
+- Total: [//w300]
+- Aortic valve: [//w300]
+- Mitral valve: [//w300]
+
+Coronary artery analysis:
+- [No evidence of congenital vascular anomaly.]
+- Dominance: [Right||Left].
+- Left main coronary artery: [Patent.//w300] 
+- Left anterior descending artery: [Patent.//w300]
+- Left circumflex artery: [Patent.//w300]
+- Right coronary artery: [Patent.//w300]
+- Uninterpretable segments: [None//w300]. 
+
+LV functional analysis:
+- [No definite regional wall motion abnormality.]
+- End systolic volume: [//w50 vesv](ml)
+- End diastolic volume: [//w50 vedv](ml)
+- Stroke volume: [//w50 v=edv-esv vsv](ml)
+- Ejection fraction: [//w50 v="$0 100*sv/edv"]%
+
+TAVI measurement at [40]% cardiac phase
+(unit: mm)
+
+Max AAo: [//w50]
+
+STJ: [//w50] * [//w50]
+
+Annulus
+- Trileaflet aortic valve with [mild|moderate||severe] calcifications.
+- Diameter: [//w50 vd1] * [//w50 vd2], mean: [//w50 v=(d1+d2)/2]
+- Perimeter: [//w50], derived diameter: [//w50]
+- Area: [//w50], derived diameter: [//w50]
+- Perpendicular view: [LAO||RAO] [//w50]¢X, [caudal||cranial] [//w50]¢X
+
+Sinus of Valsalva (LCC, RCC, NCC)
+- Diameter: [//w50], [//w50], [//w50]
+- Height: [//w50], [//w50], [//w50]
+
+Coronary Ostia (Left, Right)
+- Height: [//w50], [//w50]
+
+LVOT: [//w50] * [//w50]
+
+Iliac Artery (CIA, EIA, CFA)
+- Left: [//w50] * [//w50], [//w50] * [//w50], [//w50] * [//w50]
+- Right: [//w50] * [//w50], [//w50] * [//w50], [//w50] * [//w50]
+
+Noncoronary cardiac findings:
+- [Calcifications of mitral valve.] [Cardiomegaly.]
+- [Normal left atrial appendage with no evidence of thrombosis.]
+- [Normal pericardium without pericardial thickening, calcification or effusion.]
+
+Noncardiac findings:
+- [//w600]
+- [Atherosclerosis with wall calcification of the aorta. Degenerative change of spine.]
+
+Impression:
+Agatston score: [//w50]
+Coronary artery: [Calcified atherosclerotic plaque(s) in the coronary arteries.]
+Ventricular function: [Normal.]
+Aortic stenosis.
+CAD-RADS: [2]
+[//w50]

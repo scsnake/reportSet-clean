@@ -1,0 +1,174 @@
+{
+  "source": {
+    "ris_list_enhance_js": "Lib/CH_RIS_LIST_enhance.js",
+    "switching_logic": "Lib/CH_RIS.ahk",
+    "notes": [
+      "CH_RIS_LIST_enhance.js defines RIS list modality grouping and mccid quick-filter buttons.",
+      "Lib/CH_RIS.ahk change_ahk() contains the actual YCH AHK switching rules.",
+      "Rules are ordered; first match wins."
+    ]
+  },
+  "input": {
+    "study_name_field": "mciname / examname",
+    "modality_field": "exam_type parsed from study name, or mccid when available"
+  },
+  "ris_list_modality_groups": [
+    {
+      "match_exam_type_contains": "CT",
+      "modality": "CT"
+    },
+    {
+      "match_exam_type_contains": "MR",
+      "modality": "MR"
+    },
+    {
+      "match_exam_type_contains": "X-Ray",
+      "modality": "XR"
+    },
+    {
+      "match_exam_type_contains_any": [
+        "US",
+        "Mammo"
+      ],
+      "modality": "US"
+    },
+    {
+      "match_exam_type_contains": "BMD",
+      "modality": "BMD"
+    },
+    {
+      "default": true,
+      "modality": "其他"
+    }
+  ],
+  "ris_list_mccid_filters": {
+    "US": "136",
+    "USBx": "62",
+    "Mammo": "56",
+    "CT": "54",
+    "MR": "55",
+    "XR": "52",
+    "Special": "53"
+  },
+  "parse_exam_type_rules": [
+    {
+      "exam_type": "特殊",
+      "study_name_regex": "大腸造影術-使用水溶性顯影劑|Hysterosal|ystography|消化道|食道|小腸|吞|T-tube"
+    },
+    {
+      "exam_type": "CT",
+      "study_name_regex": "\\bCT\\b|電腦斷層|心臟鈣化指數|低劑量|肺癌"
+    },
+    {
+      "exam_type": "MR",
+      "study_name_regex": "\\bMRI|MRCP|MRA\\b"
+    },
+    {
+      "exam_type": "Mammo",
+      "study_name_regex": "(?i)mammo|乳"
+    },
+    {
+      "exam_type": "US",
+      "study_name_regex": "超音波"
+    },
+    {
+      "exam_type": "X-Ray",
+      "default": true
+    }
+  ],
+  "ych_ahk_mapping_rules": [
+    {
+      "name": "Bone age helper",
+      "study_name_regex": "(?i)Bone age",
+      "run": {
+        "window_title": null,
+        "script": "boneage_CH.ahk",
+        "exe": "boneage_CH.exe"
+      }
+    },
+    {
+      "name": "Radiology-guided biopsy ultrasound",
+      "study_name_contains": "超音波導引(為組織切片)放射科",
+      "run": {
+        "window_title": "YCH_MAMMO_AHK_main",
+        "script": "YCH_Mammo_Enh.ahk",
+        "exe": "YCH_Mammo_Enh.exe"
+      }
+    },
+    {
+      "name": "Breast ultrasound / ultrasound-guided",
+      "study_name_contains": "乳房超音波|超音波導引",
+      "source_note": "This is encoded as a regex alternation in CH_RIS.ahk.",
+      "run": {
+        "window_title": "YCH_MAMMO_AHK_main",
+        "script": "YCH_Mammo_Enh.ahk",
+        "exe": "YCH_Mammo_Enh.exe"
+      }
+    },
+    {
+      "name": "BMD / density",
+      "study_name_regex": "(?i)density|\\bBMD\\b|骨密|骨質密度|自費-全身體脂肪掃描分析",
+      "mccid_equals": "57",
+      "match_operator": "study_name_regex OR mccid_equals",
+      "run": {
+        "window_title": "YCH_BMD_main",
+        "script": "YCH_BMD.ahk",
+        "exe": "YCH_BMD.exe"
+      }
+    },
+    {
+      "name": "IVP / vascular obstruction",
+      "study_name_regex": "I\\.?V\\.?P\\.?|血管阻塞",
+      "run": {
+        "window_title": "YCH_AHK_main",
+        "script": "YCH_Enh.ahk",
+        "exe": "YCH_Enh.exe"
+      }
+    },
+    {
+      "name": "Special fluoroscopy / contrast studies",
+      "exam_type": "特殊",
+      "run": {
+        "window_title": "YCH_AHK_main",
+        "script": "YCH_Enh.ahk",
+        "exe": "YCH_Enh.exe"
+      }
+    },
+    {
+      "name": "CT",
+      "exam_type": "CT",
+      "run": {
+        "window_title": "YCH_AHK_main",
+        "script": "YCH_Enh.ahk",
+        "exe": "YCH_Enh.exe"
+      }
+    },
+    {
+      "name": "MR",
+      "exam_type": "MR",
+      "run": {
+        "window_title": "YCH_AHK_main",
+        "script": "YCH_Enh.ahk",
+        "exe": "YCH_Enh.exe"
+      }
+    },
+    {
+      "name": "Mammo",
+      "exam_type": "Mammo",
+      "run": {
+        "window_title": "YCH_MAMMO_AHK_main",
+        "script": "YCH_Mammo_Enh.ahk",
+        "exe": "YCH_Mammo_Enh.exe"
+      }
+    },
+    {
+      "name": "X-Ray default",
+      "exam_type": "X-Ray",
+      "run": {
+        "window_title": "YCH_XR_main",
+        "script": "YCH_XR_Enh.ahk",
+        "exe": "YCH_XR_Enh.exe"
+      }
+    }
+  ]
+}

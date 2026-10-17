@@ -1,0 +1,30 @@
+Imaging Report Form for Hepatocellular Carcinoma
+1. Imaging Date
+    [2015]/[]/[] Date of examination(Y/M/D)
+   Imaging Modality
+    Imaging by [c)CT scan|MRI|Primovist MRI]
+   Imaging Protocol
+   []
+2. Tumor Location/Size
+    Number:
+	[c)1|2|3] [c)Multiple:] []
+	Location:
+	[c)S1|S2|S3|S4|S5|S6|S7|S8]
+	Size:
+	[c)Measurable:] []cm (the largest tumor)
+	[c)Non-measurable]
+3. Tumor Characteristics and Associated Liver Features (+, -, or equivocal)
+   [c)Typical enhancement pattern (hypervascular enhancement and early wash-out)]
+   [c)Vacular invasion, location][]
+   [c)Portal vein thrombosis, location][]
+   [c)Extrahepatic spread]
+   [c)Cirrhosis]
+   [c)Portosystemic collateral vessel]
+   [c)Ascites]
+4. Regional Nodal Metastasis
+   [c)No or equivocal]
+   [c)Yes, location][]
+5. Distant metastasis (in this study)
+   [c)No or equivocal]
+   [c)Yes, location][]
+6. Other findings: [//w500]

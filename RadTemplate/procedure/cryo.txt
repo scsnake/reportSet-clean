@@ -1,0 +1,15 @@
+History: [left] renal tumor[ (3.5cm)][, r/o renal cell carcinoma]
+
+Cryoablation is done:
+1. Pre-contrast CT is done in [prone] position for visualize the renal tumor.
+2. After skin disinfection, local anesthesia and draping, the biopsy to the renal tumor is done with a [19]G coaxial needle and [20]G biopsy needle. [4] tissue stripes and 3 imprint smears are taken for exam. 
+3. Cryosystem: Galil Medical, [IceSeed|IceSphere|IceRod||IceBulb] 1.47mm 17-gauge needle * [3] (-20C: [19 * 26.5 mm|24 * 34 mm|27 * 50 mm||28 * 55.5 mm], sample). The cryosystem is inserted to the renal tumor parallel to the coaxial needle after local anesthesia and fentanyl 0.05mg IV.
+4. Double freeze-thaw cycle was performed: 
+ 1) [10 minutes of freezing, 8 minutes of passive thawing, 2 minutes of active thawing.]
+ 2) [10 minutes of freezing, 10 minutes of passive thawing.]
+5. The range of iceball is verified by CT at the end of every freezing session during the freeze-thaw cycles. The target lesions are confirmed within the hypodence iceball coverage. 
+6. Post-procedure CT showed adequate hypodensed area covering the renal tumor. [Moderate amount of perirenal hematoma formed after the last thawing. ]The patient had tolerated the procedure well.
+7. Suggest monitor vital signs and follow up contrast-enhanced CT one month after this treatment.
+
+Impression:
+[Left] renal tumor[, r/o RCC][, s/p CT-guided biopsy and cryoablation].

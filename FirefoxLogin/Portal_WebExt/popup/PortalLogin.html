@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Portal Login</title>
+		<meta charset="utf-8">
+			<link rel="stylesheet" href="PortalLogin.css"/>
+			
+			<script src="md5.js"></script>
+			<script src="../jquery.js"></script>
+			<script src="../browser-polyfill.js"></script>
+			<script src="PortalLogin.js" ></script>
+		</head>
+
+		<body>
+			<table align=center style="padding: 20px 30px 20px 0px;">
+				<tr>
+					<td class=logIn>Portal帳號: </td>
+					<td>
+						<input type=text id=portalid value="" class=input />
+						<span class=ast>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td class=logIn>Portal密碼: </td>
+					<td>
+						<input type=password id=portalpw value=""  class=input />
+						<span class=ast>*</span>
+					</td>
+				</tr>
+				<tr style="display: none;">
+					<td class=logIn>電子簽章密碼: </td>
+					<td>
+						<input type=password id=cardpw  class=input />
+					</td>
+				</tr>
+				<tr>
+					<td class=logIn>院區: </td>
+					<td>
+						<SELECT id=hospitalCode class=input style="font-size: 0.8em; ">
+							<OPTION value=T0 selected>N總院區</OPTION>
+							<OPTION value=T4>H分院</OPTION>
+							<OPTION value=Y0>Y分院</OPTION>
+							<OPTION value=C0>CC分院</OPTION>
+							<OPTION value=T2>B分院</OPTION>
+							<OPTION value=T3>J分院</OPTION>
+							<OPTION value=T5>ZD分院</OPTION>
+						
+					</SELECT>
+				</td>
+			</tr>
+			<tr>
+			<td colspan=2 style="text-align: center;">Portal status: <span id=portalStatus></span></td>
+			</tr>
+			<!-- <tr><td colspan=2 style="text-align: center;" ><input type=checkbox id=loginNewPortal checked=checked >登入新Portal</input></td></tr> -->
+			<tr>
+				<td colspan=2 style="text-align: center;" >
+					<input type=button id=setIdPw value=登入(Enter) style="width: 150px; height: 30px; margin-left: 50px;" />
+				</td>
+			</tr>
+			
+		</table>
+
+		<div class=version>Version: <span id=version class=version ></span><br />
+		If any problem/suggestion, please call/text 00000.
+		
+		</div>
+		
+	</body>
+
+</html>

@@ -1,0 +1,1 @@
+﻿_inj_load(['jquery.js', 'NoticeDrScheduling.user.js']);

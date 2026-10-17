@@ -1,0 +1,19 @@
+History: [RUL//vlesionLobe] [nodule.]
+
+CT guided biopsy of the lung is performed in [supine||prone] position with the use of a 19G coaxial guiding needle and a 20G automatic biopsy needle. 
+-- Indication of biopsy: [tissue proof.]
+-- Size and location of the lesion: [a nodule//vlesion] (size [] mm)[] in [RUL//v=lesionLobe].[]
+-- Underlying lung condition: [no emphysema.]
+-- Total length of the needle from skin to lesion: [] mm.
+-- Total length of the needle traversing lung: [] mm.
+-- Number of coaxial needle pass: [1].
+-- Number of cutting for biopsy needle: [3].
+-- Pneumothorax: [no||minimal|mild|moderate|severe].
+-- Hemorrhage: [no||minimal|mild|moderate|severe].
+-- Hemoptysis: [no||minimal|mild|moderate|severe].
+-- Vital signs after procedure: [stable.]
+-- Recommended position after procedure: [supine||prone|right decubitus|left decubitus]. 
+-- There are total [3] tissue stripes, 3 imprint smears obtained for pathology, cytology[] studies. Suggest complete bed rest for 4 hours in [supine||prone|right decubitus|left decubitus] position and follow up chest radiography 4~6 hours later after biopsy.
+
+Impression:
+[//w100 v=lesion] in [//w100 v=lesionLobe][ status post CT-guided biopsy.]

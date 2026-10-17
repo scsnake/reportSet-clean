@@ -1,0 +1,13 @@
+CT-guided drainage of the [liver abscess]:
+- Informed consent was obtained. Patient in [supine||prone] position. 
+- [Fentanyl 0.05 mg IV push slowly. ][Local anesthesia with 2% Xylocaine 10ml.]
+- The patient was prepped and draped in the usual sterile fashion with monitoring of vital signs.
+- [Non-contrast CT||Ultrasound] showed [low density reigon with air pockets in the S6 of liver]. 
+- [The 22G chiba needle was inserted into the lesion by ][CT ][guidance. ]A [6]Fr [15]cm pigtail was inserted [parallel to the chiba needle], with the end loop positioned in center of the [abscess]. 
+- [Dark brown turbid pus] was aspirated[, sent for culture and injected into the drainage bag]. 
+- The drainage catheter was secured to the skin with a suture and the exit site was covered with a dry sterile dressing.
+- The patient tolerated the procedure well, with stable vital signs and no immediate complications.
+- Please [persue the culture report and ]keep external drainage.
+
+Impression:
+[Liver abscess][ status post CT-guided drainage.]

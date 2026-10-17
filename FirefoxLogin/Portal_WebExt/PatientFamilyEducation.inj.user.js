@@ -1,0 +1,1 @@
+﻿_inj_load(['jquery.js', 'PatientFamilyEducation.user.js']);

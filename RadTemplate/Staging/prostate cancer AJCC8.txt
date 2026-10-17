@@ -1,0 +1,42 @@
+﻿Imaging Report Form for Prostate Cancer
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan|MRI||]
+	Imaging Protocol
+		[MRI of the abdomen and pelvis without/with contrast enhancement]
+2. Tumor Location / Size (MRI only)
+	Visible tumor
+	[c)Not assessable]
+	[c)No or Equivocal]
+	[c)Yes: ] 
+		[c)Right|Left]lobe / Size [//w50]cm (largest diameter of the biggest tumor)
+3. Tumor Invasion (MRI only)
+	[c)No or Equivocal]
+	[c)Yes: ]
+		Prostate:
+			[c)One-half of one lobe or less]
+			[c)More than one-half of one lobe but not both lobes]
+			[c)Involves both lobes]
+		[c)Extracapsular extension (neurovascular bundle invasion:][c)Rt|Lt])
+		[c)Seminal vesicle invasion:][c)Rt|Lt]
+		[c)Pelvic side wall]
+		[c)Pelvic organs invasion:][c)Bladder|Rectum|Others:][//w100]
+4. Regional nodal metastasis
+	[c)No or Equivocal]
+	[c)Yes: ]
+		[c)Rt|Lt]Obturator 
+		[c)Rt|Lt]Internal iliac 
+		[c)Rt|Lt]External iliac	
+		[c)Sacral]
+		[c)Others:][//w200]
+5. Distant Metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes: ]
+		[c)Non-regional lymph nodes]
+			[c)Rt|Lt]Common iliac
+			[c)Rt|Lt]Inguinal
+			[c)Paraaortic]
+		[c)Bone]
+		[c)Others:][//w200]
+6. Other findings: [//w500]

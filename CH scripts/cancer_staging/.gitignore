@@ -1,0 +1,26 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+token.json
+queue.json
+input.tsv
+cases.json
+review.json
+review_browser_test.json
+catalog_cache.json
+batch_results.json
+batch_results.tsv
+canary_report.txt
+canary_result.json
+logs/
+dom_dump_*.txt
+*.log
+proposals.json
+archive/
+trials/
+sent_ledger.jsonl
+# Live batch state; it lists accession numbers, so it stays on this machine.
+CURRENT_HANDOFF.md
+# Import sidecar with every pasted row (accession numbers).
+*_source_rows.json

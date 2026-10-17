@@ -1,0 +1,31 @@
+Imaging Report Form for Colorectal Cancer
+1. Imaging Date
+	[2015//w100]/[//w50]/[//w50] 
+	Imaging Modality
+		Imaging by [c)CT scan||MRI]
+	Imaging Protocol
+		[CT of the abdomen and pelvis without/with contrast enhancement]
+2. Tumor Location
+		[c)Cecum|Ascending|Hepatic flexure|Transverse]
+		[c)Splenic flexure|Descending|Sigmoid|Rectum]
+		[c)Other: ][//w200]
+	Tumor Size
+		[c)Measurable: ||][//w50] cm (largest diameter)
+		[c)Non-measurable]
+3. Tumor Invasion
+	[c)Not assessable]
+	[c)No or Equivocal]
+	[c)Yes: ]
+		[c)Colonic or rectal wall]
+		[c)Invades non-peritonealized pericolonic or perirectal tissues]
+		[c)Invades visceral peritoneum or adjacent organs: ][//w200]
+4. Regional Nodal Metastasis
+	[c)No or Equivocal]
+	[c)Yes, number of suspicious lymph node][//w50], location: 
+		[c)Pericolic/perirectal|Ileocolic|Right colic|Middle colic|Left colic]
+		[c)Superior rectal|Superior mesenteric artery|Inferior mesenteric artery]
+		[Other: ][//w200]
+5. Distant metastasis (In this study)
+	[c)No or Equivocal]
+	[c)Yes, location: ][//w200]
+6. Other findings: [//w500]

@@ -1,0 +1,53 @@
+{
+  "addons": {
+    "scsnake@gmail.com": {
+      "updates": [
+        { "version": "1.8",
+          "update_link": "https://example.com/downloads/portal_scripts.xpi",
+          "update_hash": "sha256:AC33261A95DEE49F7AB974F9FE6ABD6345C24F7B99B675625B7DF3F22D2C3D54",
+                    "applications": {
+            "gecko": { 
+                            "strict_min_version": "45.0"
+                        } 
+                    } 
+                }, 
+								{ "version": "1.6",
+          "update_link": "https://example.com/downloads/portal_scripts.xpi",
+          "update_hash": "sha256:D252208AB009B14B412A9E50E56CEB70C4E815EE65D77E21B470ECFE75CF4620",
+                    "applications": {
+            "gecko": { 
+                            "strict_min_version": "45.0"
+                        } 
+                    } 
+                }, 
+								{ "version": "1.5",
+          "update_link": "https://example.com/downloads/portal_scripts.xpi",
+          "update_hash": "sha256:D325EC9864301E28335AA91B32CB4C630F84EB7604E4C82887A09BCB9AF4AA12",
+                    "applications": {
+            "gecko": { 
+                            "strict_min_version": "45.0"
+                        } 
+                    } 
+                }, 
+                { "version": "1.4",
+          "update_link": "https://example.com/downloads/portal_scripts.xpi",
+          "update_hash": "sha256:203873EC31E136CE353083F543929697D1824D2D28288F3FD77A5FBFAD5A84DD",
+                    "applications": {
+            "gecko": { 
+                            "strict_min_version": "45.0"
+                        } 
+                    } 
+                }, 
+                { "version": "1.3",
+          "update_link": "https://example.com/downloads/portal_scripts.xpi",
+          "update_hash": "sha256:900B8E2D6840B859897EB2F4CF10BB2A74AF7CA5F87B7F4303C00A3A41BB15A8" ,
+          "applications": {
+            "gecko": { 
+                            "strict_min_version": "45.0"
+                        } 
+                    } 
+                }
+      ]
+    }
+  }
+}

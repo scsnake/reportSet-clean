@@ -1,0 +1,1450 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HIS Workflow Query</title>
+    <style>
+        :root {
+            --ink: #182623;
+            --muted: #62716d;
+            --paper: #f4f6f2;
+            --surface: #ffffff;
+            --line: #dce3dd;
+            --green: #176b52;
+            --green-soft: #e3f2eb;
+            --gold: #9a6810;
+            --gold-soft: #fff2d7;
+            --red: #9f3b31;
+            --red-soft: #fbe9e5;
+            --blue: #24588f;
+            --blue-soft: #e6eff9;
+            --shadow: 0 14px 35px rgba(28, 52, 45, .08);
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top right, rgba(213, 233, 224, .72), transparent 36rem),
+                var(--paper);
+            font: 15px/1.55 Inter, "Segoe UI", "Microsoft JhengHei", system-ui, sans-serif;
+        }
+        button, input, select { font: inherit; }
+        button { cursor: pointer; }
+        .shell { width: min(1320px, calc(100% - 40px)); margin: 0 auto; padding: 38px 0 64px; }
+        header { display: flex; justify-content: space-between; gap: 30px; align-items: flex-start; margin-bottom: 30px; }
+        .eyebrow { color: var(--green); font-size: 12px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+        h1 { margin: 5px 0 8px; font-size: clamp(30px, 4vw, 48px); line-height: 1.04; letter-spacing: -.035em; }
+        .subtitle { max-width: 760px; margin: 0; color: var(--muted); font-size: 16px; }
+        .health { display: flex; align-items: center; gap: 8px; white-space: nowrap; padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.7); color: var(--muted); }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: #9aa49f; }
+        .health.ready .dot { background: #23a26d; box-shadow: 0 0 0 4px rgba(35,162,109,.12); }
+        .health.warn .dot { background: #d69622; }
+
+        .panel { border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); }
+        .search-panel { padding: 24px; }
+        .search-grid { display: grid; grid-template-columns: minmax(210px, 1.2fr) minmax(150px, .8fr) minmax(150px, .8fr) auto; gap: 14px; align-items: end; }
+        label { display: block; margin-bottom: 7px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+        input { width: 100%; min-height: 46px; border: 1px solid #cad4cd; border-radius: 10px; padding: 10px 12px; color: var(--ink); background: #fbfcfa; outline: none; }
+        input:focus, select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(23,107,82,.1); }
+        .primary { min-height: 46px; border: 0; border-radius: 10px; padding: 0 22px; color: white; background: var(--green); font-weight: 720; box-shadow: 0 8px 18px rgba(23,107,82,.18); }
+        .primary:hover { background: #105b44; }
+        .primary:disabled { cursor: progress; opacity: .65; }
+        .search-note { margin: 13px 0 0; color: var(--muted); font-size: 13px; }
+        .accession-form { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
+        .accession-grid { display: grid; grid-template-columns: minmax(210px, 420px) auto; gap: 14px; align-items: end; justify-content: start; }
+        .secondary { min-height: 46px; border: 1px solid var(--green); border-radius: 10px; padding: 0 22px; color: var(--green); background: white; font-weight: 720; }
+        .secondary:hover { background: var(--green-soft); }
+        .secondary:disabled { cursor: progress; opacity: .65; }
+        .patient-banner { display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: baseline; margin-bottom: 15px; padding: 15px 20px; }
+        .patient-banner strong { font-size: 18px; }
+        .patient-banner span { color: var(--muted); font-size: 13px; }
+        .patient-banner span b { color: var(--ink); font-weight: 650; }
+        .message { display: none; margin-top: 15px; border-radius: 10px; padding: 11px 13px; }
+        .message.show { display: block; }
+        .message.error { color: var(--red); background: var(--red-soft); }
+        .message.info { color: var(--green); background: var(--green-soft); }
+
+        .section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin: 34px 0 14px; }
+        h2 { margin: 0; font-size: 21px; letter-spacing: -.015em; }
+        .section-head p { margin: 0; color: var(--muted); font-size: 13px; }
+        .workflow-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+        .workflow { position: relative; min-height: 104px; padding: 17px 46px 17px 17px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.82); }
+        .workflow.available { cursor: pointer; }
+        .workflow.available:hover { border-color: #8db6a7; transform: translateY(-1px); }
+        .workflow.deferred { opacity: .72; }
+        .workflow.selected { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); background: #f8fcfa; }
+        .workflow-top { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+        .workflow h3 { margin: 0; font-size: 16px; }
+        .workflow p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+        .badge { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+        .badge.good { color: var(--green); background: var(--green-soft); }
+        .badge.wait { color: var(--gold); background: var(--gold-soft); }
+        .badge.plain { color: var(--muted); background: #eef1ee; }
+        .badge.info { color: var(--blue); background: var(--blue-soft); }
+        .workflow-check { position: absolute; right: 16px; top: 16px; width: 22px; height: 22px; border: 1px solid #b9c9c0; border-radius: 50%; color: transparent; text-align: center; line-height: 20px; }
+        .selected .workflow-check { color: white; border-color: var(--green); background: var(--green); }
+
+        .results { margin-top: 34px; }
+        .result-section { margin-top: 15px; overflow: hidden; }
+        .result-head { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px 20px; border-bottom: 1px solid var(--line); }
+        .result-title { display: flex; align-items: baseline; gap: 10px; }
+        .result-title h3 { margin: 0; font-size: 17px; }
+        .count { color: var(--muted); font-size: 13px; }
+        .filter { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
+        .filter label { margin: 0; text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 500; }
+        .filter select { min-height: 34px; border: 1px solid #cad4cd; border-radius: 8px; padding: 4px 8px; color: var(--ink); background: #fbfcfa; outline: none; }
+        .notice { margin: 0; padding: 11px 20px; color: var(--gold); background: var(--gold-soft); font-size: 13px; }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; min-width: 640px; }
+        th { padding: 10px 13px; color: var(--muted); background: #f7f9f6; font-size: 11px; letter-spacing: .04em; text-align: left; text-transform: uppercase; white-space: nowrap; }
+        td { max-width: 520px; padding: 10px 13px; border-top: 1px solid #edf0ed; vertical-align: top; white-space: pre-wrap; overflow-wrap: anywhere; }
+        td.narrow, th.narrow { width: 1%; white-space: nowrap; }
+        td.strong { font-weight: 620; }
+        tbody tr.data-row:hover { background: #fafcf9; }
+        .muted { color: var(--muted); }
+        .small { font-size: 12px; }
+        .empty { padding: 28px 20px; color: var(--muted); text-align: center; }
+        .detail-button { border: 1px solid #a9c1b7; border-radius: 8px; padding: 5px 11px; color: var(--green); background: white; font-size: 12px; font-weight: 650; white-space: nowrap; }
+        .detail-button:hover { background: var(--green-soft); }
+        .info-button { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 24px; height: 24px; border: 1px solid #c3cec7; border-radius: 50%; padding: 0; color: var(--muted); background: white; font: italic 700 13px/1 Georgia, "Times New Roman", serif; }
+        .info-button:hover, .info-button[aria-expanded="true"] { color: white; border-color: var(--blue); background: var(--blue); }
+        tr.extra-row td { padding: 8px 13px 12px; border-top: 0; background: #f6f9fc; }
+        .chips { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+        .chip { padding: 3px 9px; border: 1px solid #d5dfea; border-radius: 7px; color: var(--muted); background: white; font-size: 12px; white-space: normal; }
+        .chip b { color: var(--ink); font-weight: 600; }
+        .flag-high { color: var(--red); font-weight: 700; }
+        .flag-low { color: var(--blue); font-weight: 700; }
+        .badge.bad { color: var(--red); background: var(--red-soft); }
+        .organism { margin-top: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fbfcfa; white-space: normal; }
+        .organism-alert { margin-top: 3px; color: var(--red); font-size: 12px; font-weight: 600; }
+        .lab-order table.suscept { width: auto; min-width: 0; margin-top: 6px; }
+        table.suscept th, table.suscept td { padding: 3px 12px 3px 0; border: 0; background: none; font-size: 13px; white-space: nowrap; }
+
+        .lab-cascade { padding: 14px; background: #f7f9f6; }
+        .lab-cascade details { border-radius: 11px; }
+        .lab-cascade summary { list-style: none; cursor: pointer; }
+        .lab-cascade summary::-webkit-details-marker { display: none; }
+        .lab-cascade summary::before { content: "›"; display: inline-block; margin-right: 9px; color: var(--green); font-size: 20px; line-height: 1; transform-origin: center; transition: transform .15s ease; }
+        .lab-cascade details[open] > summary::before { transform: rotate(90deg); }
+        .lab-date { margin-bottom: 10px; border: 1px solid var(--line); background: white; }
+        .lab-date > summary { display: flex; align-items: center; gap: 8px; padding: 13px 15px; font-size: 16px; font-weight: 740; }
+        .lab-meta { margin-left: auto; color: var(--muted); font-size: 12px; font-weight: 500; }
+        .lab-date-body { padding: 0 12px 12px 34px; }
+        .lab-specimen { margin: 7px 0; border-left: 3px solid #8ab8a7; background: #f8fcfa; }
+        .lab-specimen > summary { display: flex; align-items: center; gap: 7px; padding: 10px 12px; font-weight: 680; }
+        .spec-icon { display: inline-flex; align-items: center; justify-content: center; width: 24px; font-size: 17px; line-height: 1; }
+        .spec-icon svg { width: 16px; height: 18px; }
+        .lab-category { margin: 5px 10px 10px 30px; border: 1px solid #dce7e1; background: white; }
+        .lab-category > summary { display: flex; align-items: center; padding: 9px 11px; color: #285b4c; font-size: 13px; font-weight: 690; }
+        .lab-orders { padding: 0 10px 10px 29px; }
+        .lab-order { margin: 8px 0; overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: white; }
+        .lab-order-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 15px; padding: 7px 11px; color: var(--muted); background: #f8f9f7; font-size: 12px; }
+        .lab-order-head .push { margin-left: auto; }
+        .lab-order-extra { padding: 8px 11px; background: #f6f9fc; }
+        .lab-order table { min-width: 520px; }
+
+        .report-list { padding: 14px; background: #f7f9f6; }
+        .report-card { margin-bottom: 10px; border: 1px solid var(--line); border-radius: 11px; background: white; }
+        .report-card > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 12px 15px; cursor: pointer; font-weight: 650; }
+        .report-card > summary .push { margin-left: auto; }
+        .report-body { padding: 4px 18px 16px; }
+        .report-body h4 { margin: 16px 0 6px; font-size: 14px; }
+        .report-body h5 { margin: 12px 0 4px; color: #285b4c; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+        .report-text { margin: 4px 0; border-left: 3px solid #a5c9bb; padding: 8px 11px; background: #f7faf8; white-space: pre-wrap; overflow-wrap: anywhere; }
+        .plain-list { margin: 4px 0; padding-left: 20px; }
+        .plain-list li { margin: 2px 0; }
+        .code { color: var(--muted); font-family: Consolas, "Courier New", monospace; font-size: 12px; }
+        details.admin { margin-top: 18px; border-top: 1px dashed var(--line); padding-top: 10px; }
+        details.admin > summary { display: inline-flex; align-items: center; gap: 7px; list-style: none; cursor: pointer; color: var(--muted); font-size: 12px; }
+        details.admin > summary::-webkit-details-marker { display: none; }
+        details.admin .chips { margin-top: 9px; }
+        .fact-line { display: flex; flex-wrap: wrap; gap: 5px 16px; margin: 0 0 6px; color: var(--muted); font-size: 13px; }
+        .fact-line b { color: var(--ink); font-weight: 620; }
+
+        dialog { width: min(920px, calc(100% - 32px)); max-height: 86vh; border: 0; border-radius: 18px; padding: 0; color: var(--ink); box-shadow: 0 28px 80px rgba(15,30,25,.3); }
+        dialog::backdrop { background: rgba(17,35,29,.5); backdrop-filter: blur(3px); }
+        .dialog-head { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 15px 20px; border-bottom: 1px solid var(--line); background: white; }
+        .dialog-head h3 { margin: 0; font-size: 17px; }
+        .close { border: 0; border-radius: 8px; padding: 6px 10px; background: var(--paper); }
+        .dialog-body { padding: 6px 20px 20px; }
+
+        @media (max-width: 900px) {
+            .search-grid { grid-template-columns: 1fr 1fr; }
+            .workflow-grid { grid-template-columns: 1fr 1fr; }
+            header { flex-direction: column; }
+        }
+        @media (max-width: 600px) {
+            .shell { width: min(100% - 22px, 1320px); padding-top: 22px; }
+            .search-grid, .workflow-grid, .accession-grid { grid-template-columns: 1fr; }
+            .primary, .secondary { width: 100%; }
+            .section-head { display: block; }
+        }
+    </style>
+</head>
+<body>
+<main class="shell">
+    <header>
+        <div>
+            <div class="eyebrow">Read-only clinical lookup</div>
+            <h1>HIS report query</h1>
+            <p class="subtitle">Look up a patient's reports, laboratory results, and inpatient notes by chart number. Or find one exam by its accession number.</p>
+        </div>
+        <div id="health" class="health"><span class="dot"></span><span>Checking</span></div>
+    </header>
+
+    <section class="panel search-panel" aria-labelledby="search-title">
+        <form id="search-form">
+            <div class="search-grid">
+                <div>
+                    <label id="search-title" for="chart-no">Chart number</label>
+                    <input id="chart-no" name="chart_no" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="Up to 10 digits" required pattern="[0-9]{1,10}">
+                </div>
+                <div>
+                    <label for="start-date">Start date</label>
+                    <input id="start-date" name="start_date" type="date" required>
+                </div>
+                <div>
+                    <label for="end-date">End date</label>
+                    <input id="end-date" name="end_date" type="date" required>
+                </div>
+                <button id="search-button" class="primary" type="submit">Search selected</button>
+            </div>
+            <p class="search-note">The date range applies to the order date. For notes it applies to the note date, and for admissions to the stay.</p>
+        </form>
+        <form id="accession-form" class="accession-form">
+            <div class="accession-grid">
+                <div>
+                    <label for="accession-no">Accession number</label>
+                    <input id="accession-no" name="accession_no" autocomplete="off" maxlength="20" placeholder="11 digits, or letters then digits" required pattern="[A-Za-z0-9]{1,20}">
+                </div>
+                <button id="accession-button" class="secondary" type="submit">Find accession</button>
+            </div>
+            <p class="search-note">No date range is necessary. An exam can be found after it is performed.</p>
+        </form>
+        <div id="message" class="message" role="alert"></div>
+    </section>
+
+    <div class="section-head">
+        <h2>What to search</h2>
+        <p id="workflow-hint">Select one or more.</p>
+    </div>
+    <section id="workflow-grid" class="workflow-grid" aria-live="polite"></section>
+
+    <section id="results" class="results" aria-live="polite" hidden>
+        <div class="section-head">
+            <h2>Results</h2>
+            <p id="result-summary"></p>
+        </div>
+        <div id="patient-banner" class="panel patient-banner" hidden></div>
+        <div id="result-list"></div>
+    </section>
+</main>
+
+<dialog id="detail-dialog">
+    <div class="dialog-head"><h3 id="detail-title">Detail</h3><button class="close" type="button">Close</button></div>
+    <div id="detail-body" class="dialog-body report-body"></div>
+</dialog>
+
+<script>
+    const selected = new Set(["radiology", "laboratory", "pathology"]);
+    const workflowMap = new Map();
+    let examKindFilter = "all";
+    let visitFilter = "noted";
+    const byId = id => document.getElementById(id);
+    const make = (tag, className, text) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined && text !== null) node.textContent = String(text);
+        return node;
+    };
+    const present = value => value !== null && value !== undefined && String(value).trim() !== "";
+    const plural = (count, one, many) => `${count} ${count === 1 ? one : many}`;
+
+    function isoDate(value) {
+        const offset = value.getTimezoneOffset();
+        return new Date(value.getTime() - offset * 60000).toISOString().slice(0, 10);
+    }
+
+    // HIS stores dates as 7-digit ROC text. An unset date is blank or all zeros.
+    function rocDate(value) {
+        const text = String(value ?? "").trim();
+        if (!/^\d{7}$/.test(text) || /^0+$/.test(text)) return "";
+        return `${Number(text.slice(0, 3)) + 1911}-${text.slice(3, 5)}-${text.slice(5, 7)}`;
+    }
+
+    function clock(value) {
+        const text = String(value ?? "").trim();
+        if (!/^\d{4}(\d{2})?$/.test(text)) return "";
+        return `${text.slice(0, 2)}:${text.slice(2, 4)}`;
+    }
+
+    function dateTime(dateValue, timeValue) {
+        const day = rocDate(dateValue);
+        if (!day) return "";
+        const time = clock(timeValue);
+        return time ? `${day} ${time}` : day;
+    }
+
+    function setDefaults() {
+        const end = new Date();
+        const start = new Date(end);
+        start.setFullYear(start.getFullYear() - 2);
+        byId("start-date").value = isoDate(start);
+        byId("end-date").value = isoDate(end);
+    }
+
+    function showMessage(text, type = "error") {
+        const node = byId("message");
+        node.textContent = text;
+        node.className = `message show ${type}`;
+    }
+
+    function clearMessage() {
+        const node = byId("message");
+        node.textContent = "";
+        node.className = "message";
+    }
+
+    async function loadHealth() {
+        const node = byId("health");
+        try {
+            const response = await fetch("/api/health");
+            const data = await response.json();
+            node.classList.add(data.database_configured ? "ready" : "warn");
+            node.lastElementChild.textContent = data.database_configured ? "Database configured" : "Database credentials missing";
+        } catch {
+            node.classList.add("warn");
+            node.lastElementChild.textContent = "Service unavailable";
+        }
+    }
+
+    async function loadWorkflows() {
+        const grid = byId("workflow-grid");
+        try {
+            const response = await fetch("/api/workflows");
+            if (!response.ok) throw new Error("Could not load the list of report types");
+            const data = await response.json();
+            data.workflows.forEach(item => workflowMap.set(item.id, item));
+            renderWorkflows(data.workflows);
+        } catch (error) {
+            grid.append(make("p", "message show error", error.message));
+        }
+    }
+
+    function renderWorkflows(items) {
+        const grid = byId("workflow-grid");
+        grid.replaceChildren();
+        byId("workflow-hint").textContent = items.some(item => item.implementation !== "available")
+            ? "Select one or more. Greyed items are not available yet."
+            : "Select one or more.";
+        items.forEach(item => {
+            const available = item.implementation === "available";
+            const card = make("article", `workflow ${available ? "available" : "deferred"}${selected.has(item.id) ? " selected" : ""}`);
+            card.dataset.workflow = item.id;
+            const top = make("div", "workflow-top");
+            top.append(make("h3", "", item.label));
+            if (!available) top.append(make("span", "badge plain", "Not available yet"));
+            card.append(top, make("p", "", item.description || ""));
+            if (available) {
+                const check = make("span", "workflow-check", "✓");
+                check.setAttribute("aria-hidden", "true");
+                card.append(check);
+                card.tabIndex = 0;
+                card.setAttribute("role", "checkbox");
+                card.setAttribute("aria-checked", selected.has(item.id));
+                const toggle = () => {
+                    selected.has(item.id) ? selected.delete(item.id) : selected.add(item.id);
+                    card.classList.toggle("selected", selected.has(item.id));
+                    card.setAttribute("aria-checked", selected.has(item.id));
+                };
+                card.addEventListener("click", toggle);
+                card.addEventListener("keydown", event => {
+                    if (event.key === " " || event.key === "Enter") { event.preventDefault(); toggle(); }
+                });
+            }
+            grid.append(card);
+        });
+    }
+
+    // ---- shared building blocks ---------------------------------------------------------
+
+    // Administrative fields stay hidden until the reader asks for them.
+    function chips(pairs) {
+        const box = make("div", "chips");
+        pairs.filter(([, value]) => present(value)).forEach(([label, value]) => {
+            const chip = make("span", "chip", `${label} `);
+            chip.append(make("b", "", value));
+            box.append(chip);
+        });
+        return box;
+    }
+
+    function infoButton(target, label = "Show administrative details") {
+        const button = make("button", "info-button", "i");
+        button.type = "button";
+        button.title = label;
+        button.setAttribute("aria-label", label);
+        button.setAttribute("aria-expanded", "false");
+        button.addEventListener("click", event => {
+            event.preventDefault();
+            event.stopPropagation();
+            target.hidden = !target.hidden;
+            button.setAttribute("aria-expanded", String(!target.hidden));
+        });
+        return button;
+    }
+
+    function adminDetails(pairs) {
+        const filled = pairs.filter(([, value]) => present(value));
+        if (!filled.length) return null;
+        const details = make("details", "admin");
+        const summary = make("summary");
+        summary.append(make("span", "info-button", "i"), make("span", "", "Administrative details"));
+        details.append(summary, chips(filled));
+        return details;
+    }
+
+    function cell(value, className) {
+        const td = make("td", className || "");
+        if (value instanceof Node) td.append(value);
+        else td.textContent = present(value) ? String(value) : "";
+        return td;
+    }
+
+    // columns: [{label, value(row), className}]; extra(row): [[label, value]]; action: {label, run(row, button)}
+    function dataTable({columns, rows, extra, action, emptyText}) {
+        if (!rows.length) return make("div", "empty", emptyText || "No results in this date range.");
+        const wrap = make("div", "table-wrap");
+        const tableNode = make("table");
+        const headRow = make("tr");
+        columns.forEach(column => headRow.append(make("th", column.className || "", column.label)));
+        if (action) headRow.append(make("th", "narrow", ""));
+        if (extra) headRow.append(make("th", "narrow", ""));
+        const head = make("thead");
+        head.append(headRow);
+        const body = make("tbody");
+        const span = columns.length + (action ? 1 : 0) + (extra ? 1 : 0);
+        rows.forEach(row => {
+            const tr = make("tr", "data-row");
+            columns.forEach(column => tr.append(cell(column.value(row), column.className)));
+            if (action) {
+                const button = make("button", "detail-button", action.label);
+                button.type = "button";
+                button.addEventListener("click", () => action.run(row, button));
+                tr.append(cell(button, "narrow"));
+            }
+            body.append(tr);
+            if (extra) {
+                const pairs = extra(row).filter(([, value]) => present(value));
+                if (pairs.length) {
+                    const extraRow = make("tr", "extra-row");
+                    extraRow.hidden = true;
+                    const td = make("td");
+                    td.colSpan = span;
+                    td.append(chips(pairs));
+                    extraRow.append(td);
+                    tr.append(cell(infoButton(extraRow), "narrow"));
+                    body.append(extraRow);
+                } else {
+                    tr.append(cell("", "narrow"));
+                }
+            }
+        });
+        tableNode.append(head, body);
+        wrap.append(tableNode);
+        return wrap;
+    }
+
+    function resultPanel(workflow, title, countText) {
+        const panel = make("section", "panel result-section");
+        panel.dataset.result = workflow;
+        const head = make("div", "result-head");
+        const titleBox = make("div", "result-title");
+        titleBox.append(make("h3", "", title), make("span", "count", countText));
+        head.append(titleBox);
+        panel.append(head);
+        return {panel, head};
+    }
+
+    // ---- exams: radiology and other -----------------------------------------------------
+
+    const EXAM_STATE = {
+        reported: ["good", "Reported"],
+        examined: ["wait", "Report pending"],
+        scheduled: ["plain", "Scheduled"],
+        ordered: ["plain", "Ordered"],
+        cancelled: ["plain", "Cancelled"],
+    };
+
+    function examState(row) {
+        if (row.state) return row.state;
+        if (rocDate(row.report_date)) return "reported";
+        if (rocDate(row.exam_date)) return "examined";
+        if (String(row.dc_flag || "").trim().toUpperCase() === "Y") return "cancelled";
+        return rocDate(row.sch_date) ? "scheduled" : "ordered";
+    }
+
+    function examStateBadge(row) {
+        const [tone, label] = EXAM_STATE[examState(row)] || EXAM_STATE.ordered;
+        return make("span", `badge ${tone}`, label);
+    }
+
+    const examName = row => row.exam_name || row.exam_type_name || row.exam_type || "Exam";
+    const examKind = row => (row.category || (String(row.source_schema).toUpperCase() === "XRAY" ? "radiology" : "other")) === "radiology"
+        ? "Radiology" : "Other exam";
+    const examAccession = row => row.access_no || row.reference_no || row.ref_no || "";
+
+    function examWhen(row) {
+        const done = rocDate(row.exam_date);
+        if (done) return done;
+        const box = make("span", "muted");
+        const planned = examState(row) === "cancelled" ? "" : rocDate(row.sch_date);
+        box.textContent = planned ? `Scheduled ${planned}` : `Ordered ${rocDate(row.order_date)}`;
+        return box;
+    }
+
+    const cancelFlag = row => String(row.dc_flag || "").trim().toUpperCase() === "Y" ? "Y" : "";
+
+    function examAdminPairs(row) {
+        return [
+            ["Accession no.", examAccession(row)],
+            ["Ordered", dateTime(row.order_date, row.order_time)],
+            ["Scheduled", dateTime(row.sch_date, row.sch_time)],
+            ["Exam group", present(row.exam_type_name) ? `${row.exam_type_name} (${row.exam_type})` : row.exam_type],
+            ["Status code", row.status],
+            ["Order stop flag", cancelFlag(row)],
+            ["Internal exam no.", row.apply_no],
+            ["Source", row.source_schema],
+        ];
+    }
+
+    function renderExamList(data) {
+        const rows = data.results;
+        const radiologyCount = rows.filter(row => examKind(row) === "Radiology").length;
+        const {panel, head} = resultPanel("radiology", workflowMap.get("radiology")?.label || "Exams", plural(rows.length, "exam", "exams"));
+
+        const filter = make("div", "filter");
+        const label = make("label", "", "Show");
+        label.htmlFor = "exam-kind-filter";
+        const select = make("select");
+        select.id = "exam-kind-filter";
+        [["all", `All exams (${rows.length})`], ["radiology", `Radiology only (${radiologyCount})`],
+         ["other", `Other exams only (${rows.length - radiologyCount})`]].forEach(([value, text]) => {
+            const option = make("option", "", text);
+            option.value = value;
+            select.append(option);
+        });
+        select.value = examKindFilter;
+        filter.append(label, select);
+        head.append(filter);
+
+        const holder = make("div");
+        const draw = () => {
+            const shown = rows.filter(row => examKindFilter === "all"
+                || (examKindFilter === "radiology") === (examKind(row) === "Radiology"));
+            holder.replaceChildren(dataTable({
+                rows: shown,
+                emptyText: rows.length ? "No exam of this kind in this date range." : "No exams in this date range.",
+                columns: [
+                    {label: "Exam date", className: "narrow", value: examWhen},
+                    {label: "Exam", className: "strong", value: examName},
+                    {label: "Kind", className: "narrow", value: examKind},
+                    {label: "Modality", className: "narrow", value: row => row.modality},
+                    {label: "Report", className: "narrow", value: row => {
+                        const box = make("span");
+                        box.append(examStateBadge(row));
+                        const reported = rocDate(row.report_date);
+                        if (reported) box.append(make("span", "muted small", ` ${reported}`));
+                        return box;
+                    }},
+                ],
+                action: {label: "Open", run: openExamReport},
+                extra: examAdminPairs,
+            }));
+        };
+        select.addEventListener("change", () => { examKindFilter = select.value; draw(); });
+        draw();
+        panel.append(holder);
+        return panel;
+    }
+
+    const GENERIC_CAPTIONS = new Set(["報告內容", "REPORT", "REPORT CONTENT"]);
+
+    // Reader-oriented exam detail: report first, then clinical information, then what was ordered.
+    function examDetailNodes(detail, row) {
+        const nodes = [];
+        const facts = make("p", "fact-line");
+        const fact = (label, value) => {
+            if (!present(value)) return;
+            const node = make("span", "", `${label} `);
+            node.append(make("b", "", value));
+            facts.append(node);
+        };
+        fact("Exam date", rocDate(row.exam_date));
+        fact("Reported", rocDate(row.report_date));
+        fact("Kind", examKind(row));
+        fact("Modality", row.modality);
+        if (facts.childElementCount) nodes.push(facts);
+
+        const sections = detail.report_sections
+            || (detail.reports || []).map(entry => ({caption: entry.caption, content: entry.content}));
+        nodes.push(make("h4", "", "Report"));
+        const withText = sections.filter(section => present(section.content));
+        if (!withText.length) {
+            nodes.push(make("p", "muted", examState(row) === "reported"
+                ? "No report text was found for this exam."
+                : examState(row) === "cancelled"
+                    ? "This order was cancelled. There is no report."
+                    : "No report yet."));
+        }
+        withText.forEach(section => {
+            const caption = String(section.caption || "").trim();
+            if (caption && !GENERIC_CAPTIONS.has(caption.toUpperCase())) nodes.push(make("h5", "", caption));
+            nodes.push(make("div", "report-text", section.content));
+        });
+
+        const clinical = detail.clinical || {
+            diagnoses: [],
+            notes: (detail.remarks || []).filter(entry => present(entry.context)).map(entry => ({type: entry.remark_type, text: entry.context})),
+        };
+        if (clinical.diagnoses.length || clinical.notes.length) {
+            nodes.push(make("h4", "", "Clinical information from the order"));
+            clinical.notes.forEach(note => nodes.push(make("div", "report-text", note.text)));
+            if (clinical.diagnoses.length) {
+                nodes.push(make("h5", "", "Diagnosis"));
+                const list = make("ul", "plain-list");
+                clinical.diagnoses.forEach(diagnosis => {
+                    const item = make("li", "", diagnosis.text || diagnosis.code);
+                    if (diagnosis.text) item.append(make("span", "code", `  ${diagnosis.code}`));
+                    list.append(item);
+                });
+                nodes.push(list);
+            }
+        }
+
+        const items = detail.items || [];
+        if (items.length) {
+            nodes.push(make("h4", "", "Ordered items"));
+            const list = make("ul", "plain-list");
+            items.forEach(entry => {
+                const name = entry.exam_name || entry.exam_full_name || entry.exam_short_name || entry.exam_code;
+                const notes = [entry.position, present(entry.side_code) ? `side ${entry.side_code}` : "", entry.order_comment].filter(present);
+                const item = make("li", "", name);
+                if (notes.length) item.append(make("span", "muted", ` — ${notes.join(" · ")}`));
+                list.append(item);
+            });
+            nodes.push(list);
+        }
+
+        const admin = adminDetails([
+            ...examAdminPairs(row),
+            ["Item codes", items.map(entry => entry.exam_code).filter(present).join(", ")],
+            ["Note types", [...new Set(clinical.notes.map(note => note.type).filter(present))].join(", ")],
+        ]);
+        if (admin) nodes.push(admin);
+        return nodes;
+    }
+
+    function openDialog(title, loadingText) {
+        byId("detail-title").textContent = title;
+        byId("detail-body").replaceChildren(make("p", "muted", loadingText));
+        byId("detail-dialog").showModal();
+        return byId("detail-body");
+    }
+
+    async function withButton(button, task) {
+        const label = button.textContent;
+        button.disabled = true;
+        button.textContent = "Loading…";
+        try { await task(); } finally {
+            button.disabled = false;
+            button.textContent = label;
+        }
+    }
+
+    async function fetchJson(url, failure) {
+        const response = await fetch(url);
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail || failure);
+        return data;
+    }
+
+    async function openExamReport(row, button) {
+        const body = openDialog(examName(row), "Loading the report…");
+        await withButton(button, async () => {
+            try {
+                const parts = [row.source_schema, row.hospital_id, row.apply_no].map(value => encodeURIComponent(value));
+                const data = await fetchJson(`/api/radiology/${parts.join("/")}`, "The report could not be loaded.");
+                body.replaceChildren(...examDetailNodes(data, row));
+            } catch (error) {
+                body.replaceChildren(make("p", "message show error", error.message));
+            }
+        });
+    }
+
+    // ---- radiology accession list -------------------------------------------------------
+
+    function renderAccessionList(data) {
+        const {panel} = resultPanel("exam_accession", workflowMap.get("exam_accession")?.label || "Accession list", plural(data.results.length, "exam", "exams"));
+        panel.append(dataTable({
+            rows: data.results,
+            emptyText: "No radiology orders in this date range.",
+            columns: [
+                {label: "Ordered", className: "narrow", value: row => rocDate(row.order_date)},
+                {label: "Exam", className: "strong", value: examName},
+                {label: "Modality", className: "narrow", value: row => row.modality},
+                {label: "Accession no.", className: "narrow", value: examAccession},
+                {label: "Scheduled", className: "narrow", value: row => examState(row) === "cancelled" ? "" : rocDate(row.sch_date)},
+                {label: "Examined", className: "narrow", value: row => rocDate(row.exam_date)},
+                {label: "Report", className: "narrow", value: examStateBadge},
+            ],
+            action: {label: "Items", run: openAccessionItems},
+            extra: row => [
+                ["Accession no. on the order", row.reference_no],
+                ["Accession no. on the exam", row.access_no],
+                ["Reported", dateTime(row.report_date, row.report_time)],
+                ["Exam group", present(row.exam_type_name) ? `${row.exam_type_name} (${row.exam_type})` : row.exam_type],
+                ["Status code", row.status],
+                ["Order stop flag", cancelFlag(row)],
+                ["Scheduled before the cancel", examState(row) === "cancelled" ? dateTime(row.sch_date, row.sch_time) : ""],
+                ["Internal exam no.", row.apply_no],
+            ],
+        }));
+        return panel;
+    }
+
+    async function openAccessionItems(row, button) {
+        const body = openDialog(examName(row), "Loading the exam items…");
+        await withButton(button, async () => {
+            try {
+                const parts = [row.hospital_id, row.apply_no].map(value => encodeURIComponent(value));
+                const data = await fetchJson(`/api/exam-accessions/${parts.join("/")}`, "The exam items could not be loaded.");
+                const nodes = [];
+                const facts = make("p", "fact-line");
+                [["Accession no.", examAccession(row)], ["Ordered", rocDate(row.order_date)], ["Examined", rocDate(row.exam_date)],
+                 ["Modality", row.modality]].filter(([, value]) => present(value)).forEach(([label, value]) => {
+                    const node = make("span", "", `${label} `);
+                    node.append(make("b", "", value));
+                    facts.append(node);
+                });
+                nodes.push(facts, make("h4", "", "Ordered items"));
+                const items = data.items || [];
+                if (!items.length) nodes.push(make("p", "muted", "No items."));
+                items.forEach(entry => {
+                    nodes.push(make("div", "report-text", entry.exam_full_name || entry.exam_short_name || entry.exam_code));
+                    const notes = chips([
+                        ["Body part", entry.position], ["Side", entry.side_code], ["Quantity", entry.total_qty],
+                        ["Comment", entry.order_comment], ["Images", entry.image_count], ["Reminder", entry.schedule_remind],
+                    ]);
+                    if (notes.childElementCount) nodes.push(notes);
+                });
+                const admin = adminDetails([
+                    ["Accession no. on the order", row.reference_no], ["Accession no. on the exam", row.access_no],
+                    ["Internal exam no.", row.apply_no], ["Status code", row.status],
+                    ["Item codes", items.map(entry => entry.exam_code).filter(present).join(", ")],
+                    ["Price codes", items.map(entry => entry.price_code).filter(present).join(", ")],
+                    ["Location", items.map(entry => entry.execute_location).filter(present).join(", ")],
+                ]);
+                if (admin) nodes.push(admin);
+                body.replaceChildren(...nodes);
+            } catch (error) {
+                body.replaceChildren(make("p", "message show error", error.message));
+            }
+        });
+    }
+
+    // ---- laboratory ---------------------------------------------------------------------
+
+    // Loose matching by meaning: the icon is a reading aid, not a classification.
+    const SPECIMEN_KINDS = [
+        ["urine", /urine|尿/i],
+        ["stool", /stool|fec|糞|rectal|肛門/i],
+        ["respiratory", /sputum|bronch|痰|氣管|lung/i],
+        ["csf", /csf|cerebrospinal|腦脊/i],
+        ["blood", /blood|serum|plasma|marrow|ctdna|血|骨髓/i],
+        ["fluid", /ascites|pleural|pericardial|synovial|fluid|effusion|amnio|gastric|腹水|胸水|關節液|體液|羊水|胃/i],
+        ["swab", /swab|throat|nasoph|nasal|喉|鼻|拭子/i],
+        ["wound", /pus|abscess|wound|discharge|膿|傷口|流液/i],
+        ["tissue", /tissue|block|aspiration|biopsy|smear|stone|組織|結石/i],
+    ];
+    const SPECIMEN_GLYPHS = {blood: "🩸", stool: "💩", respiratory: "💨", csf: "🧠", fluid: "💧", swab: "🧫", wound: "🩹", tissue: "🔬", other: "🧪"};
+
+    function specimenKind(name) {
+        const found = SPECIMEN_KINDS.find(([, pattern]) => pattern.test(String(name || "")));
+        return found ? found[0] : "other";
+    }
+
+    function specimenIcon(name) {
+        const kind = specimenKind(name);
+        const icon = make("span", "spec-icon");
+        icon.dataset.specimenKind = kind;
+        icon.setAttribute("aria-hidden", "true");
+        if (kind === "urine") {
+            const ns = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(ns, "svg");
+            svg.setAttribute("viewBox", "0 0 16 18");
+            const drop = document.createElementNS(ns, "path");
+            drop.setAttribute("d", "M8 1 C8 1 2 8.2 2 11.6 A6 6 0 0 0 14 11.6 C14 8.2 8 1 8 1 Z");
+            drop.setAttribute("fill", "#e9b824");
+            drop.setAttribute("stroke", "#b98a0c");
+            svg.append(drop);
+            icon.append(svg);
+        } else {
+            icon.textContent = SPECIMEN_GLYPHS[kind];
+        }
+        return icon;
+    }
+
+    function summaryLine(label, meta, icon) {
+        const summary = make("summary");
+        if (icon) summary.append(icon);
+        summary.append(make("span", "", label), make("span", "lab-meta", meta));
+        return summary;
+    }
+
+    function referenceRange(item) {
+        const low = item.lower_limit, high = item.upper_limit;
+        const hasLow = present(low), hasHigh = present(high);
+        if (hasLow && hasHigh && Number(low) === 0 && Number(high) === 0) return "";
+        if (hasLow && hasHigh) return `${low} – ${high}`;
+        if (hasLow) return `≥ ${low}`;
+        return hasHigh ? `≤ ${high}` : "";
+    }
+
+    function labFlag(item) {
+        const flag = String(item.result_condition || "").trim().toUpperCase();
+        if (flag === "H") return make("span", "flag-high", "High");
+        if (flag === "L") return make("span", "flag-low", "Low");
+        return flag === "N" ? "" : flag;
+    }
+
+    const SUSCEPTIBILITY = {S: ["good", "Susceptible"], I: ["wait", "Intermediate"], R: ["bad", "Resistant"]};
+
+    // Culture result: each organism with its susceptibility list.
+    function organismBlock(organism) {
+        const block = make("div", "organism");
+        const head = make("div");
+        head.append(make("strong", "", organism.germ_name || organism.germ_code || "Organism"));
+        if (present(organism.colony_count)) {
+            head.append(make("span", "muted", `  ${organism.colony_count}${present(organism.unit) ? ` ${organism.unit}` : ""}`));
+        }
+        block.append(head);
+        if (present(organism.alert)) block.append(make("div", "organism-alert", organism.alert));
+        const drugs = organism.drugs || [];
+        if (drugs.length) {
+            const tableNode = make("table", "suscept");
+            const headRow = make("tr");
+            ["Antibiotic", "Result", "Value"].forEach(label => headRow.append(make("th", "", label)));
+            tableNode.append(headRow);
+            drugs.forEach(drug => {
+                const row = make("tr");
+                const [tone, title] = SUSCEPTIBILITY[drug.result] || ["plain", ""];
+                const mark = make("span", `badge ${tone}`, drug.result || "—");
+                if (title) mark.title = title;
+                const resultCell = make("td");
+                resultCell.append(mark);
+                row.append(make("td", "", drug.name || drug.code), resultCell, make("td", "muted", drug.value || ""));
+                tableNode.append(row);
+            });
+            block.append(tableNode);
+        }
+        return block;
+    }
+
+    function labResult(item) {
+        const flag = String(item.result_condition || "").trim().toUpperCase();
+        const box = make("span", flag === "H" ? "flag-high" : flag === "L" ? "flag-low" : "", item.result_description ?? "");
+        const organisms = item.organisms || [];
+        if (!present(item.result_remark) && !organisms.length) return box;
+        const wrap = make("span");
+        wrap.append(box);
+        if (present(item.result_remark)) wrap.append(make("span", "muted small", `\n${item.result_remark}`));
+        organisms.forEach(organism => wrap.append(organismBlock(organism)));
+        return wrap;
+    }
+
+    function renderLabGroups(groups) {
+        if (!groups?.length) return make("div", "empty", "No laboratory results in this date range.");
+        const cascade = make("div", "lab-cascade");
+        groups.forEach((dateGroup, dateIndex) => {
+            const dateNode = make("details", "lab-date");
+            dateNode.open = dateIndex === 0;
+            dateNode.append(summaryLine(dateGroup.date || dateGroup.date_roc || "Unknown date", plural(dateGroup.item_count, "test", "tests")));
+            const dateBody = make("div", "lab-date-body");
+            dateGroup.specimens.forEach((specimen, specimenIndex) => {
+                const specimenNode = make("details", "lab-specimen");
+                specimenNode.open = dateIndex === 0 && specimenIndex === 0;
+                specimenNode.append(summaryLine(specimen.specimen_name, plural(specimen.item_count, "test", "tests"), specimenIcon(specimen.specimen_name)));
+                specimen.categories.forEach((category, categoryIndex) => {
+                    const categoryNode = make("details", "lab-category");
+                    categoryNode.open = dateIndex === 0 && specimenIndex === 0 && categoryIndex === 0;
+                    categoryNode.append(summaryLine(category.category_name, plural(category.item_count, "test", "tests")));
+                    const orders = make("div", "lab-orders");
+                    category.orders.forEach(order => {
+                        const orderNode = make("section", "lab-order");
+                        const head = make("div", "lab-order-head");
+                        if (clock(order.lab_order_time)) head.append(make("span", "", `Ordered ${clock(order.lab_order_time)}`));
+                        const reported = dateTime(order.report_date, order.report_time);
+                        head.append(make("span", "", reported ? `Reported ${reported}` : "Not reported yet"));
+                        const extraPairs = [
+                            ["Order no.", order.lab_no], ["Status code", order.lab_status],
+                            ["Confirmed", rocDate(order.confirmed_date)], ["Specimen code", specimen.specimen_code],
+                            ["Section code", category.category_code], ["Order diagnosis", order.diagnosis_description],
+                        ].filter(([, value]) => present(value));
+                        orderNode.append(head);
+                        if (extraPairs.length) {
+                            const extra = make("div", "lab-order-extra");
+                            extra.hidden = true;
+                            extra.append(chips(extraPairs));
+                            const toggle = infoButton(extra, "Show order details");
+                            toggle.classList.add("push");
+                            head.append(toggle);
+                            orderNode.append(extra);
+                        }
+                        orderNode.append(dataTable({
+                            rows: order.items,
+                            columns: [
+                                {label: "Test", className: "strong", value: item => item.lab_name || item.lab_code || item.code},
+                                {label: "Result", value: labResult},
+                                {label: "Unit", className: "narrow", value: item => item.unit},
+                                {label: "Reference", className: "narrow", value: referenceRange},
+                                {label: "Flag", className: "narrow", value: labFlag},
+                            ],
+                            extra: item => [
+                                ["Test code", item.lab_code || item.code],
+                                ["Order item code", present(item.lab_code) && item.code !== item.lab_code ? item.code : ""],
+                                ["Row", item.unique_seq],
+                                ["Organism codes", (item.organisms || []).map(organism => organism.germ_code).filter(present).join(", ")],
+                                ["Source", item.source_schema],
+                            ],
+                        }));
+                        orders.append(orderNode);
+                    });
+                    categoryNode.append(orders);
+                    specimenNode.append(categoryNode);
+                });
+                dateBody.append(specimenNode);
+            });
+            dateNode.append(dateBody);
+            cascade.append(dateNode);
+        });
+        return cascade;
+    }
+
+    // ---- pathology and cytology ---------------------------------------------------------
+
+    const PATHOLOGY_STATE = {
+        confirmed: ["good", "Final report"],
+        reported: ["wait", "Reported, not confirmed"],
+        received: ["wait", "Report pending"],
+        ordered: ["plain", "Specimen not received"],
+    };
+
+    function renderPathology(reports) {
+        if (!reports.length) return make("div", "empty", "No pathology or cytology orders in this date range.");
+        const list = make("div", "report-list");
+        reports.forEach((report, index) => {
+            const [tone, stateLabel] = PATHOLOGY_STATE[report.state] || PATHOLOGY_STATE.ordered;
+            const card = make("details", "report-card");
+            card.open = index === 0;
+            const summary = make("summary");
+            summary.append(
+                make("span", "", rocDate(report.order_date) || "Unknown date"),
+                make("span", "", report.kind || "Pathology"),
+                make("span", "muted", report.specimen_name || ""),
+                make("span", `badge ${tone} push`, stateLabel),
+            );
+            const body = make("div", "report-body");
+            const sections = report.sections || [];
+            const parts = [...new Set(sections.map(section => section.part))];
+            if (!sections.length) {
+                const coded = (report.result_codes || []).length;
+                body.append(make("p", "muted", report.state === "ordered"
+                    ? "The laboratory has not received the specimen. There is no report."
+                    : report.state === "received"
+                        ? "The specimen is received. The report is not issued yet."
+                        : coded
+                            ? "This result is stored as codes. The readable text is not available in this app yet."
+                            : "No report text was found for this order."));
+            }
+            parts.forEach(part => {
+                if (parts.length > 1) body.append(make("h4", "", `Specimen part ${part}`));
+                sections.filter(section => section.part === part).forEach(section => {
+                    body.append(make("h5", "", section.label), make("div", "report-text", section.content));
+                });
+            });
+            if (present(report.specimen_content)) body.append(make("h5", "", "Specimen"), make("div", "report-text", report.specimen_content));
+            if (present(report.diagnosis_description)) {
+                body.append(make("h5", "", "Clinical diagnosis on the order"), make("div", "report-text", report.diagnosis_description));
+            }
+            const admin = adminDetails([
+                ["Pathology no.", report.pathology_no], ["Order no.", report.lab_no],
+                ["Received", rocDate(report.receive_date)], ["Reported", rocDate(report.report_date)],
+                ["Confirmed", rocDate(report.confirmed_date)], ["Specimen code", report.specimen_code],
+                ["Result codes", (report.result_codes || []).join(", ")],
+            ]);
+            if (admin) body.append(admin);
+            card.append(summary, body);
+            list.append(card);
+        });
+        return list;
+    }
+
+    // ---- admissions and inpatient notes -------------------------------------------------
+
+    function stayLength(row) {
+        const start = rocDate(row.admit_date);
+        if (!start) return "";
+        const end = rocDate(row.discharge_date);
+        const days = Math.round((new Date(end || isoDate(new Date())) - new Date(start)) / 86400000);
+        return `${days} ${days === 1 ? "day" : "days"}${end ? "" : " so far"}`;
+    }
+
+    function renderAdmissions(data) {
+        const {panel} = resultPanel("admission", workflowMap.get("admission")?.label || "Admissions", plural(data.results.length, "stay", "stays"));
+        panel.append(dataTable({
+            rows: data.results,
+            emptyText: "No hospital stay in this date range.",
+            columns: [
+                {label: "Admitted", value: row => dateTime(row.admit_date, row.admit_time)},
+                {label: "Discharged", value: row => dateTime(row.discharge_date, row.discharge_time) || make("span", "badge info", "In hospital")},
+                {label: "Length of stay", value: stayLength},
+            ],
+            extra: row => [["Admission no.", row.admit_no], ["Segment", row.cut_no], ["Status code", row.status]],
+        }));
+        return panel;
+    }
+
+    // A note with no signature date is listed and marked; it is usually the newest note of the stay.
+    const noteState = row => row.state || (rocDate(row.signed_date) ? "signed" : "unsigned");
+
+    function noteStateBadge(row) {
+        return noteState(row) === "signed" ? make("span", "badge good", "Signed") : make("span", "badge wait", "Not signed");
+    }
+
+    function renderNotes(data) {
+        const {panel} = resultPanel("inpatient_note", workflowMap.get("inpatient_note")?.label || "Inpatient notes", plural(data.results.length, "note", "notes"));
+        panel.append(dataTable({
+            rows: data.results,
+            emptyText: "No inpatient notes in this date range.",
+            columns: [
+                {label: "Date", className: "narrow", value: row => dateTime(row.note_date, row.note_time)},
+                {label: "Note type", className: "strong", value: row => row.note_type_name || row.note_type},
+                {label: "Summary", value: row => row.remark},
+                {label: "Status", className: "narrow", value: noteStateBadge},
+            ],
+            action: {label: "Open", run: openNote},
+            extra: row => [
+                ["Admission no.", row.admit_no], ["Division", row.div_no], ["Written by", row.note_clerk],
+                ["Signed", rocDate(row.signed_date)], ["Signed by", row.signed_doctor_no],
+                ["Status code", row.status], ["Type code", row.note_type],
+            ],
+        }));
+        return panel;
+    }
+
+    async function openNote(row, button) {
+        const body = openDialog(`${row.note_type_name || "Inpatient note"} · ${dateTime(row.note_date, row.note_time)}`, "Loading the note…");
+        await withButton(button, async () => {
+            try {
+                const parts = [row.admit_no, row.note_date, row.note_time].map(value => encodeURIComponent(value));
+                const data = await fetchJson(`/api/inpatient-notes/${parts.join("/")}`, "The note could not be loaded.");
+                const sections = data.sections || [];
+                const nodes = [];
+                if (noteState(row) !== "signed") {
+                    const mark = make("p", "fact-line");
+                    mark.append(make("span", "badge wait", "Not signed"), make("span", "", "The doctor has not signed this note."));
+                    nodes.push(mark);
+                }
+                if (!sections.length) nodes.push(make("p", "muted", "This note has no text."));
+                const problems = [...new Set(sections.map(section => section.problem_no))].filter(problem => problem && problem !== "000");
+                let lastProblem = null;
+                sections.forEach(section => {
+                    if (problems.length > 1 && section.problem_no !== lastProblem && section.problem_no !== "000") {
+                        nodes.push(make("h4", "", `Problem ${Number(section.problem_no) || section.problem_no}`));
+                    }
+                    lastProblem = section.problem_no;
+                    if (section.section_label) nodes.push(make("h5", "", section.section_label));
+                    nodes.push(make("div", "report-text", section.content));
+                });
+                const admin = adminDetails([
+                    ["Admission no.", row.admit_no], ["Division", row.div_no], ["Status code", row.status],
+                    ["Section codes", [...new Set(sections.map(section => section.section_type))].join(", ")],
+                ]);
+                if (admin) nodes.push(admin);
+                body.replaceChildren(...nodes);
+            } catch (error) {
+                body.replaceChildren(make("p", "message show error", error.message));
+            }
+        });
+    }
+
+    // ---- outpatient and emergency notes -------------------------------------------------
+
+    const OUTPATIENT_MONTHS_KEPT = 60;
+
+    function renderOutpatient(data) {
+        const visits = data.results;
+        const noted = visits.filter(visit => visit.has_note).length;
+        const {panel, head} = resultPanel("opd_note", workflowMap.get("opd_note")?.label || "Outpatient notes",
+            plural(visits.length, "visit", "visits"));
+
+        const filter = make("div", "filter");
+        const label = make("label", "", "Show");
+        label.htmlFor = "visit-filter";
+        const select = make("select");
+        select.id = "visit-filter";
+        [["noted", `Visits with a note (${noted})`], ["all", `All visits (${visits.length})`]].forEach(([value, text]) => {
+            const option = make("option", "", text);
+            option.value = value;
+            select.append(option);
+        });
+        select.value = visitFilter;
+        filter.append(label, select);
+        head.append(filter);
+
+        // The monthly archive keeps 60 months. Say so when the search starts earlier.
+        const limit = new Date();
+        limit.setDate(1);
+        limit.setMonth(limit.getMonth() - (OUTPATIENT_MONTHS_KEPT - 1));
+        if (data.start_date && data.start_date < isoDate(limit)) {
+            panel.append(make("p", "notice", `Outpatient notes are kept for ${OUTPATIENT_MONTHS_KEPT} months. Visits before ${isoDate(limit).slice(0, 7)} are not shown.`));
+        }
+
+        const holder = make("div");
+        const draw = () => {
+            const shown = visits.filter(visit => visitFilter === "all" || visit.has_note);
+            if (!shown.length) {
+                holder.replaceChildren(make("div", "empty", visits.length
+                    ? "No visit in this date range has a note. Select \"All visits\" to list the visits."
+                    : "No outpatient or emergency visits in this date range."));
+                return;
+            }
+            const list = make("div", "report-list");
+            shown.forEach((visit, index) => {
+                const card = make("details", "report-card");
+                card.open = index === 0;
+                const summary = make("summary");
+                summary.append(
+                    make("span", "", rocDate(visit.clinic_date) || "Unknown date"),
+                    make("span", "", visit.div_name || visit.div_english_name || "Clinic"),
+                );
+                if (present(visit.doctor_name)) summary.append(make("span", "muted", visit.doctor_name));
+                if (visit.kind === "emergency") summary.append(make("span", "badge info", "Emergency"));
+                const upcoming = rocDate(visit.clinic_date) > isoDate(new Date());
+                if (!visit.has_note) summary.append(make("span", `badge ${upcoming ? "info" : "plain"} push`, upcoming ? "Upcoming" : "No note"));
+                const body = make("div", "report-body");
+                const sections = visit.sections || [];
+                if (!sections.length) {
+                    body.append(make("p", "muted", upcoming ? "This visit is in the future." : "No note is recorded for this visit."));
+                }
+                sections.forEach(section => {
+                    body.append(make("h5", "", section.label || "Other note"), make("div", "report-text", section.content));
+                });
+                const admin = adminDetails([
+                    ["Division", present(visit.div_english_name) ? `${visit.div_english_name} (${visit.div_no})` : visit.div_no],
+                    ["Doctor code", visit.doctor_no], ["Clinic no.", visit.clinic_no], ["Session code", visit.clinic_apn],
+                    ["Visit sequence", visit.duplicate_no], ["Visit type code", visit.clinic_flag],
+                    ["Order state code", visit.order_state],
+                    ["Written by", [...new Set(sections.map(section => section.clerk_id).filter(present))].join(", ")],
+                    ["Section codes", [...new Set(sections.map(section => `${section.so_type}${section.sub_type ? `-${section.sub_type}` : ""}`))].join(", ")],
+                    ["Source", visit.source_schema],
+                ]);
+                if (admin) body.append(admin);
+                card.append(summary, body);
+                list.append(card);
+            });
+            holder.replaceChildren(list);
+        };
+        select.addEventListener("change", () => { visitFilter = select.value; draw(); });
+        draw();
+        panel.append(holder);
+        return panel;
+    }
+
+    // ---- discharge summaries ------------------------------------------------------------
+
+    function summaryStateBadge(row) {
+        return row.state === "confirmed" ? make("span", "badge good", "Confirmed") : make("span", "badge wait", "Not confirmed");
+    }
+
+    function summaryAdminPairs(row) {
+        return [
+            ["Document no.", row.document_no], ["Admission no.", row.admit_no], ["Segment", row.cut_no],
+            ["Division", present(row.work_div_name) ? `${row.work_div_name} (${row.div_no})` : row.div_no],
+            ["Attending code", row.vs_no], ["Bed", row.bed_no], ["Confirmed", rocDate(row.confirmed_date)],
+            ["Status code", [row.status, row.complete_flag].filter(present).join(" / ")],
+        ];
+    }
+
+    function renderDischargeSummaries(data) {
+        const {panel} = resultPanel("discharge_summary", workflowMap.get("discharge_summary")?.label || "Discharge summaries",
+            plural(data.results.length, "summary", "summaries"));
+        panel.append(dataTable({
+            rows: data.results,
+            emptyText: "No discharge summary for a stay in this date range.",
+            columns: [
+                {label: "Admitted", className: "narrow", value: row => rocDate(row.admit_date)},
+                {label: "Discharged", className: "narrow", value: row => rocDate(row.discharge_date) || make("span", "muted", "Not recorded")},
+                {label: "Length of stay", className: "narrow", value: row => rocDate(row.discharge_date) ? stayLength(row) : ""},
+                {label: "Written", className: "narrow", value: row => rocDate(row.created_date)},
+                {label: "Status", value: summaryStateBadge},
+            ],
+            action: {label: "Open", run: openDischargeSummary},
+            extra: summaryAdminPairs,
+        }));
+        return panel;
+    }
+
+    async function openDischargeSummary(row, button) {
+        const stay = [rocDate(row.admit_date), rocDate(row.discharge_date)].filter(present).join(" to ");
+        const body = openDialog(`Discharge summary${stay ? ` · ${stay}` : ""}`, "Loading the discharge summary…");
+        await withButton(button, async () => {
+            try {
+                const data = await fetchJson(`/api/discharge-summaries/${encodeURIComponent(row.document_no)}`, "The discharge summary could not be loaded.");
+                const sections = data.sections || [];
+                const nodes = [];
+                const facts = make("p", "fact-line");
+                [["Admitted", rocDate(row.admit_date)], ["Discharged", rocDate(row.discharge_date)], ["Written", rocDate(row.created_date)]]
+                    .filter(([, value]) => present(value)).forEach(([label, value]) => {
+                        const node = make("span", "", `${label} `);
+                        node.append(make("b", "", value));
+                        facts.append(node);
+                    });
+                facts.append(summaryStateBadge(row));
+                nodes.push(facts);
+                if (!sections.length) nodes.push(make("p", "muted", "This discharge summary has no text."));
+                sections.forEach(section => {
+                    nodes.push(make("h5", "", section.section_name || `Section ${section.section_no}`), make("div", "report-text", section.content));
+                });
+                const admin = adminDetails(summaryAdminPairs(row));
+                if (admin) nodes.push(admin);
+                body.replaceChildren(...nodes);
+            } catch (error) {
+                body.replaceChildren(make("p", "message show error", error.message));
+            }
+        });
+    }
+
+    // ---- operation notes ----------------------------------------------------------------
+
+    const OPERATION_STATE = {
+        noted: ["good", "Operative note", ""],
+        recorded: ["plain", "No note text", "No operative note text is stored for this operation."],
+        performed: ["wait", "Note pending", "The operation was performed. The operative note is not recorded yet."],
+        scheduled: ["plain", "Scheduled", "This operation is scheduled. There is no note yet."],
+        cancelled: ["plain", "Cancelled", "This operation was cancelled."],
+    };
+
+    function clockNumber(value) {
+        if (!present(value) || Number(value) <= 0) return "";
+        return clock(String(Math.trunc(Number(value))).padStart(4, "0"));
+    }
+
+    function renderOperations(operations) {
+        if (!operations.length) return make("div", "empty", "No operations in this date range.");
+        const list = make("div", "report-list");
+        operations.forEach((operation, index) => {
+            const [tone, stateLabel, stateText] = OPERATION_STATE[operation.state] || OPERATION_STATE.scheduled;
+            const procedures = (operation.procedures || []).filter(procedure => present(procedure.or_name) || present(procedure.or_code));
+            const names = [...new Set(procedures.map(procedure => procedure.or_name || procedure.or_code))];
+            const card = make("details", "report-card");
+            card.open = index === 0;
+            const summary = make("summary");
+            summary.append(
+                make("span", "", rocDate(operation.or_date) || "Unknown date"),
+                make("span", "", names.length ? names.join("; ") : "Operation"),
+                make("span", `badge ${tone} push`, stateLabel),
+            );
+            const body = make("div", "report-body");
+            if (present(operation.note)) {
+                body.append(make("h5", "", "Operative note"), make("div", "report-text", operation.note));
+            } else {
+                body.append(make("p", "muted", stateText));
+            }
+            if (names.length > 1) {
+                const items = make("ul", "plain-list");
+                names.forEach(name => items.append(make("li", "", name)));
+                body.append(make("h5", "", "Procedures"), items);
+            }
+            const diagnoses = operation.diagnoses || [];
+            if (diagnoses.length) {
+                const items = make("ul", "plain-list");
+                diagnoses.forEach(diagnosis => {
+                    const item = make("li", "", diagnosis.name || diagnosis.code);
+                    if (diagnosis.name && diagnosis.code) item.append(make("span", "code", `  ${diagnosis.code}`));
+                    items.append(item);
+                });
+                body.append(make("h5", "", "Diagnosis"), items);
+            }
+            const admin = adminDetails([
+                ["Procedure codes", procedures.map(procedure => procedure.or_code).filter(present).join(", ")],
+                ["Surgeon codes", [...new Set(procedures.map(procedure => procedure.or_doctor_no).filter(present))].join(", ")],
+                ["Attending code", operation.vs_no], ["Division", operation.div_no], ["Room", operation.or_room_no],
+                ["Room in", clockNumber(operation.or_in_time)], ["Room out", clockNumber(operation.or_out_time)],
+                ["Admission no.", operation.admit_no], ["Source code", operation.or_source],
+                ["Sequence on the day", operation.or_duplicate_no], ["Status code", operation.status],
+                ["Cancelled", rocDate(operation.cancel_date)], ["Cancel reason code", operation.cancel_reason],
+            ]);
+            if (admin) body.append(admin);
+            card.append(summary, body);
+            list.append(card);
+        });
+        return list;
+    }
+
+    // ---- patient banner and searches ----------------------------------------------------
+
+    async function loadPatient(chart) {
+        const banner = byId("patient-banner");
+        banner.hidden = true;
+        banner.replaceChildren();
+        try {
+            const data = await fetchJson(`/api/patient/${encodeURIComponent(chart)}`, "Patient lookup failed");
+            if (!data.found) {
+                banner.append(make("span", "", `No patient was found for chart ${data.chart_no}.`));
+            } else {
+                const patient = data.patient;
+                banner.append(make("strong", "", patient.pt_name || "(no name)"));
+                const fact = (label, value) => {
+                    if (!present(value)) return;
+                    const node = make("span", "", `${label} `);
+                    node.append(make("b", "", value));
+                    banner.append(node);
+                };
+                fact("Chart", patient.chart_no);
+                fact("Sex", patient.sex);
+                fact("Born", patient.birth_date_iso || patient.birth_date);
+                fact("Blood type", patient.blood_type);
+                fact("Last OPD", rocDate(patient.last_opd_date));
+                fact("Last admission", rocDate(patient.last_admit_date));
+                fact("Last discharge", rocDate(patient.last_discharge_date));
+            }
+        } catch (error) {
+            banner.append(make("span", "", `Patient information is unavailable: ${error.message}`));
+        }
+        banner.hidden = false;
+    }
+
+    function renderResult(data) {
+        const item = workflowMap.get(data.workflow);
+        let panel;
+        if (data.workflow === "radiology") panel = renderExamList(data);
+        else if (data.workflow === "exam_accession") panel = renderAccessionList(data);
+        else if (data.workflow === "admission") panel = renderAdmissions(data);
+        else if (data.workflow === "inpatient_note") panel = renderNotes(data);
+        else if (data.workflow === "opd_note") panel = renderOutpatient(data);
+        else if (data.workflow === "discharge_summary") panel = renderDischargeSummaries(data);
+        else if (data.workflow === "operation_note") {
+            ({panel} = resultPanel("operation_note", item?.label || "Operation notes", plural(data.count, "operation", "operations")));
+            panel.append(renderOperations(data.results));
+        }
+        else if (data.workflow === "laboratory") {
+            ({panel} = resultPanel("laboratory", item?.label || "Laboratory results", plural(data.count, "test", "tests")));
+            panel.append(renderLabGroups(data.groups));
+        } else {
+            ({panel} = resultPanel(data.workflow, item?.label || data.workflow, plural(data.count, "report", "reports")));
+            panel.append(renderPathology(data.results));
+        }
+        byId("result-list").append(panel);
+    }
+
+    function renderFailure(workflow, title, message) {
+        const {panel, head} = resultPanel(workflow, title, "");
+        head.append(make("span", "badge wait", "Search failed"));
+        panel.append(make("p", "notice", message));
+        byId("result-list").append(panel);
+    }
+
+    async function search(event) {
+        event.preventDefault();
+        clearMessage();
+        if (!selected.size) { showMessage("Select at least one item to search."); return; }
+        const form = event.currentTarget;
+        if (!form.reportValidity()) return;
+        const chart = byId("chart-no").value.trim();
+        const start = byId("start-date").value;
+        const end = byId("end-date").value;
+        if (start > end) { showMessage("Start date must not be after end date."); return; }
+
+        const button = byId("search-button");
+        button.disabled = true;
+        button.textContent = "Searching…";
+        byId("result-list").replaceChildren();
+        byId("results").hidden = false;
+        byId("result-summary").textContent = `${chart.padStart(10, "0")} · ${start} to ${end}`;
+        loadPatient(chart);
+
+        const order = [...workflowMap.keys()];
+        const outcomes = await Promise.all([...selected].map(async workflow => {
+            const query = new URLSearchParams({chart_no: chart, start_date: start, end_date: end});
+            try {
+                return {workflow, data: await fetchJson(`/api/search/${encodeURIComponent(workflow)}?${query}`, "The search failed.")};
+            } catch (error) {
+                return {workflow, error};
+            }
+        }));
+        outcomes.sort((a, b) => order.indexOf(a.workflow) - order.indexOf(b.workflow)).forEach(outcome => {
+            if (outcome.error) renderFailure(outcome.workflow, workflowMap.get(outcome.workflow)?.label || outcome.workflow, outcome.error.message);
+            else renderResult(outcome.data);
+        });
+        button.disabled = false;
+        button.textContent = "Search selected";
+        byId("results").scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    async function searchAccession(event) {
+        event.preventDefault();
+        clearMessage();
+        const form = event.currentTarget;
+        if (!form.reportValidity()) return;
+        const accession = byId("accession-no").value.trim();
+        const button = byId("accession-button");
+        button.disabled = true;
+        button.textContent = "Searching…";
+        byId("result-list").replaceChildren();
+        byId("patient-banner").hidden = true;
+        byId("results").hidden = false;
+        byId("result-summary").textContent = `Accession ${accession.toUpperCase()}`;
+        try {
+            const data = await fetchJson(`/api/accession/${encodeURIComponent(accession)}`, "The search failed.");
+            const {panel} = resultPanel("accession", `Accession ${data.accession_no}`, plural(data.count, "exam", "exams"));
+            if (!data.count) {
+                panel.append(make("div", "empty", "No exam has this accession number. An exam gets its accession number when it is performed."));
+            } else {
+                const list = make("div", "report-list");
+                data.results.forEach(result => {
+                    const card = make("details", "report-card");
+                    card.open = true;
+                    const summary = make("summary");
+                    summary.append(make("span", "", examName(result)), examStateBadge(result));
+                    summary.lastChild.classList.add("push");
+                    const body = make("div", "report-body");
+                    body.append(...examDetailNodes(result, result));
+                    card.append(summary, body);
+                    list.append(card);
+                });
+                panel.append(list);
+                loadPatient(data.results[0].chart_no);
+            }
+            byId("result-list").append(panel);
+        } catch (error) {
+            renderFailure("accession", "Accession search", error.message);
+        }
+        button.disabled = false;
+        button.textContent = "Find accession";
+        byId("results").scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    byId("search-form").addEventListener("submit", search);
+    byId("accession-form").addEventListener("submit", searchAccession);
+    byId("detail-dialog").querySelector(".close").addEventListener("click", () => byId("detail-dialog").close());
+    setDefaults();
+    loadHealth();
+    loadWorkflows();
+</script>
+</body>
+</html>

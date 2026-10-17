@@ -1,0 +1,26 @@
+﻿Imaging Report Form for Gastric Cancer
+1. Imaging Date
+        [2015//w100]/[//w50]/[//w50] 
+    Imaging Modality
+        Imaging by [c)CT scan||MRI]
+    Imaging Protocol
+        [CT of the abdomen without/with contrast enhancement]
+2. Tumor Location
+	[c)Cardia|Fundus|Body: Lesser/Greater curvature|Antrum|Pylorus]
+	[c)Other: ][//w200]
+	Tumor Size:
+        [c)Measurable: ||] [//w50] cm in greatest dimension
+        [c)Non-measurable]
+3. Tumor Invasion Depth
+	[c)Not assessable]
+	[c)Assessable, tumor invasion to:]
+		[c)Gastric wall|Perigastric tissue|Adjacent organs or structures: ][//w100]
+		[c)Other: ][//w200]
+4. Regional Nodal Metastasis
+	[c)No or equivocal]
+	[c)Yes, number of suspicious lymph nodes] [//w50] and location: [//w500]
+5. Distant Metastasis (in this study)
+	[c)No or Equivocal:||][]
+	[c)Yes]
+		[c)Non-regional lymph nodes|Distant organ], location: [//w500]
+6. Other findings: [//w500]

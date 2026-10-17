@@ -1,0 +1,26 @@
+﻿Imaging Report Form for Pancreatic Cancer
+1. Imaging Date
+        [2015//w100]/[//w50]/[//w50] 
+    Imaging Modality
+        Imaging by [c)CT scan||MRI]
+    Imaging Protocol
+        [CT of the abdomen without/with contrast enhancement]
+2. Tumor Location
+	[c)Pancreatic head and neck|Pancreatic body|Pancreatic tail]
+	[c)Other: ][//w200]
+	Tumor Size:
+        [c)Measurable: ||] [//w50] cm in greatest dimension
+        [c)Non-measurable]
+3. Tumor Invasion or Encasement
+	[c)Tumor limited to the pancreas]
+	[c)Yes: ]
+		[c)Celiac trunk|Superior mesenteric artery|Superior mesenteric vein|Common hepatic artery]
+		[c)Adjacent organs: ][//w200]
+		[c)Other: ][//w200]
+4. Regional Nodal Metastasis
+	[c)No or equivocal]
+	[c)Yes, location: ][//w500]
+5. Distant Metastasis (in this study)
+	[c)No or Equivocal:||][]
+	[c)Yes, location: ][//w500]
+6. Other findings: [//w500]

@@ -1,0 +1,47 @@
+﻿1. Imaging Date [2019//w100]/[//w50]/[//w50] 
+   Imaging Modality [c)CT scan|MRI||]
+   Imaging Body Parts
+   [c)Brain|Neck||Chest|Abdomen|Pelvis|Others:] [//w200]
+   Contrast Enhancement
+   [r)Without/With||With|Without]
+2. Tumor location/Size
+   Tumor size: [//w50]mm (largest diameter) [c)Not assessable]   
+   Tumor Laterality: [r)Left|Right|Bilateral]
+   Tumor Location:
+   [c)Upper lip|Lower lip|Upper gingivobuccal mucosa|Lower gingivobuccal mucosa]
+   [c)Hard palate|Oral tongue|Mouth floor|Retromolar trigone]
+   [c)Others:] [//w300]
+3. Tumor Invasion
+    *DOI is depth of invasion and not tumor thickness.
+    [c)TX:Primary tumor cannot be assessed]  
+    [c)Tis:Carcinoma in situ]  
+    [c)T1:Tumor≦2cm with DOI≦5mm]
+    [c)T2:Tumor≦2cm with DOI>5mm|T2:2<Tumor≦4cm with DOI≦10mm]
+    [c)T3:2<Tumor≦4cm with DOI>10mm|T3:Tumor>4cm with DOI≦10mm]
+    [c)T4a:Moderately advanced local disease]
+        [c)Tumor>4 cm with DOI>10 mm]
+        [c)Tumor invades adjacent structures only]: 
+            through cortical bone of [c)mandible|maxilla]
+            involve [c)maxillary sinus|skin of face]
+    [c)T4b:Very advanced local disease]
+	    [c)Masticator space|Pterygoid plates|Skull base|Encases internal carotid artery]
+4. Regional nodal metastasis
+    [c)NX:Regional lymph nodes cannot be assessed]
+    [c)N0:No regional lymph node metastasis]
+    [c)N1:Single ipsilateral lymph node, ≤ 3 cm in greatest dimension and ENE(-)]
+    [c)N2a:Single ipsilateral lymph node > 3 cm, ≤ 6 cm in greatest dimension and ENE(-)]
+    [c)N2b:Multiple ipsilateral lymph nodes, ≤ 6 cm in greatest dimension and ENE(-)]
+    [c)N2c:Bilateral or contralateral lymph nodes, ≤ 6 cm in greatest dimension and ENE(-)]
+    [c)N3a:Lymph node >6 cm in greatest dimension and ENE(-)]
+    [c)N3b:Any node(s) and clinically overt ENE(+)]
+    Level: 
+        Right[c)I|II|III|IV|V|VI|VII|Others:][//w100]
+        Left [c)I|II|III|IV|V|VI|VII|Others:][//w100]
+    Maximal size of the largest positive node: [//w50]mm (long axis)
+5. Distant Metastasis (in this study)
+    [c)No or Equivocal||]
+    [c)Yes, location:][//w500]    
+6. Other findings:
+    [nil//w500]
+Impression:
+Oral cancer, [//w100], tentative staging T[//w50]N[//w50]M[X//w50].
